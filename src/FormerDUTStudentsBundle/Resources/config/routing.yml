@@ -1,0 +1,82 @@
+################################ Route to students methods ######################################
+
+students:
+    path:     /students
+    defaults:
+        _controller: FormerDUTStudentsBundle:Student\Student:getStudents
+        _format: json
+    methods:  [GET]
+
+student:
+    path:     /students/{id}
+    defaults:
+        _controller: FormerDUTStudentsBundle:Student\Student:getStudent
+    methods:  [GET]
+    requirements:
+        id: \d+
+
+add_student:
+    path:     /students
+    defaults:
+        _controller: FormerDUTStudentsBundle:Student\Student:addStudent
+    methods:  [POST]
+
+delete_student:
+    path:     /students/{id}
+    defaults:
+        _controller: FormerDUTStudentsBundle:Student\Student:deleteStudent
+    methods:  [DELETE]
+    requirements:
+        id: \d+
+
+delete_students:
+    path:     /students
+    defaults:
+        _controller: FormerDUTStudentsBundle:Student\Student:deleteStudents
+    methods:  [DELETE]
+    requirements:
+        id: \d+
+
+edit_student:
+    path:     /students/{id}
+    defaults:
+        _controller: FormerDUTStudentsBundle:Student\Student:editStudent
+    methods:  [PUT]
+    requirements:
+        id: \d+
+
+self:
+    path:     /self
+    defaults:
+        _controller: FormerDUTStudentsBundle:Student\Student:self
+    methods:  [GET]
+
+test:
+    path:     /test
+    defaults:
+        _controller: FormerDUTStudentsBundle:Student\Student:test
+    methods:  [POST]
+
+################################ Route to security methods ######################################
+
+check_if_logged:
+    path:     /isLogged
+    defaults:
+        _controller: FormerDUTStudentsBundle:Security\Login:isLogged
+    methods:  [GET]
+
+login:
+    path: /login
+    defaults:
+        _controller: FormerDUTStudentsBundle:Security\Login:login
+
+login_check:
+    path: /login_check
+
+logout:
+    path: /logout
+
+################################ Route to formation methods ######################################
+
+
+

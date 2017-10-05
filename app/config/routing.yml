@@ -1,0 +1,6 @@
+former_dut_students:
+    resource: "@FormerDUTStudentsBundle/Resources/config/routing.yml"
+    prefix:   /
+    # src/OC/PlatformBundle/Resources/config/routing.yml
+
+

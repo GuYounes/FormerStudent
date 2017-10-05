@@ -1,0 +1,17 @@
+services:
+#    former_dut_students.example:
+#        class: FormerDUTStudentsBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]
+
+    former_dut_students.credentials:
+          class: FormerDUTStudentsBundle\Model\Security\Credentials
+          arguments:
+              - "@doctrine.orm.entity_manager"
+
+
+    former_dut_students.user:
+          class: FormerDUTStudentsBundle\Model\User\User
+          arguments:
+              - "@former_dut_students.credentials"
+
+

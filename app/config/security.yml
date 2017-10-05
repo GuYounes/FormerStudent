@@ -1,0 +1,41 @@
+# To get started with security, check out the documentation:
+# https://symfony.com/doc/current/security.html
+security:
+  encoders:
+    FormerDUTStudentsBundle\Entity\User: plaintext
+
+  role_hierarchy:
+    ROLE_STUDENT: ROLE_STUDENT
+    ROLE_ADMIN: [ROLE_STUDENT, ROLE_ADMIN, ROLE_ALLOWED_TO_SWITCH]
+
+  providers:
+    main:
+      entity:
+        class: FormerDUTStudentsBundle\Entity\User
+        property: username
+
+  firewalls:
+    dev:
+      pattern: ^/(_(profiler|wdt)|css|images|js)/
+      security: false
+
+    main_login:
+      # Allow to login
+      pattern:   ^/login$
+      anonymous: true
+      provider: main
+
+    main:
+      pattern: ^/
+      anonymous: false
+      provider: main
+      form_login:
+        login_path: login
+        check_path: login_check
+        default_target_path: self
+      logout:
+        path:       logout
+        target:     login
+
+  access_control:
+    #- { path: ^/login, roles: IS_AUTHENTICATED_ANONYMOUSLY, requires_channel: https }
