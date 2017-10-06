@@ -9,6 +9,7 @@
 namespace FormerDUTStudentsBundle\Controller\Security;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 
@@ -36,22 +37,25 @@ class LoginController extends Controller
         $user = $this->getUser();
 
         if($user === null) return new Response($this->get('templating')->render('FormerDUTStudentsBundle:Default:formulaire.html.twig'));
-        else return ($this->get('jms_serializer')->serialize($user, 'json'));
+        else return ($this->get('jms_serializer')->serialize($user, 'json', SerializationContext::create()->setGroups(array('toSerialize'))));
     }
 
     /**
      * @param Request $request
-     * @return Response
+     * @return Reponse|Response
      *
-     * Return either the user is connected or not
+     * If the user connected return his inforrmations, else return false
      */
     public function isLoggedAction(Request $request)
     {
         $user = $this->getUser();
 
-        $content = ($user === null) ? "false" : "true";
+        if($user === null) return new Response("false");
 
-        return new Response($content);
+        // Serialize the user to send it
+        $data = $this->get('jms_serializer')->serialize($users, 'json', SerializationContext::create()->setGroups(array('toSerialize')));
+        return new Reponse($data);
+
     }
 
 }

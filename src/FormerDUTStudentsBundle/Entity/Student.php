@@ -22,6 +22,8 @@ class Student
 
     /**
      * @ORM\ManyToMany(targetEntity="FormerDUTStudentsBundle\Entity\Formation", cascade={"persist"}, inversedBy="students")
+     *
+     * @Serializer\Groups({"toSerialize"})
      */
     private $formations;
 

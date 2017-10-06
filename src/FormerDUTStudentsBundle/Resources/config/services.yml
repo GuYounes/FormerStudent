@@ -4,14 +4,18 @@ services:
 #        arguments: ["@service_id", "plain_value", "%parameter%"]
 
     former_dut_students.credentials:
-          class: FormerDUTStudentsBundle\Model\Security\Credentials
+          class: FormerDUTStudentsBundle\Model\Credentials
           arguments:
               - "@doctrine.orm.entity_manager"
 
-
     former_dut_students.user:
-          class: FormerDUTStudentsBundle\Model\User\User
+          class: FormerDUTStudentsBundle\Model\User
           arguments:
               - "@former_dut_students.credentials"
 
+    former_dut_students.mail:
+              class: FormerDUTStudentsBundle\Model\Mail
+              arguments:
+                  - "@mailer"
+                  - %mailer_user%
 

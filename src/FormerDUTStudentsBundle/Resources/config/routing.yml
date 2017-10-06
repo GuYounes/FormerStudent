@@ -49,10 +49,12 @@ self:
     path:     /self
     defaults:
         _controller: FormerDUTStudentsBundle:Student\Student:self
+        _format: json
     methods:  [GET]
 
+
 test:
-    path:     /test
+    path:     /test/{id}
     defaults:
         _controller: FormerDUTStudentsBundle:Student\Student:test
     methods:  [POST]

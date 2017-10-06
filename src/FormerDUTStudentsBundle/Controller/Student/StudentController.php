@@ -102,9 +102,6 @@ class StudentController extends Controller
             ->getManager()
             ->getRepository('FormerDUTStudentsBundle:Student');
 
-        // Get an array of student's IDs
-        $students = json_decode($request->getContent(), true);
-
         // This method will delete student but also the related user
         // No need to flush
         $studentRepository->deleteStudentById($id);
@@ -136,23 +133,40 @@ class StudentController extends Controller
 
     /**
      * @param Request $request
+     * @param $id
+     * Id of the student we want to update
+     *
      * @return Response
      *
-     * Edit a student
+     * Update a student's information
      */
-    public function editStudentAction(Request $request)
+    public function editStudentAction(Request $request, $id)
     {
         $studentRepository = $this->getDoctrine()
             ->getManager()
             ->getRepository('FormerDUTStudentsBundle:Student');
 
-        // Get an array of student's IDs
-        $students = json_decode($request->getContent(), true);
+        $student = $studentRepository->findOneById($id);
 
-        // This method will delete student but also the related user
-        $studentRepository->deleteStudents($students);
+        // Get the body of the request
+        $data = $request->getContent();
 
-        return new Response("true");
+        // Deserialize the json into an object
+        $newStudent = $this->get('jms_serializer')->deserialize($data, 'FormerDUTStudentsBundle\Entity\Student', 'json');
+
+        if($newStudent->getName() != null) $student->setName($newStudent->getName());
+        if($newStudent->getLastName() != null) $student->setLastName($newStudent->getLastName());
+        if($newStudent->getMail() != null) $student->setMail($newStudent->getMail());
+        if($newStudent->getGraduationYear() != null) $student->setGraduationYear($newStudent->getGraduationYear());
+        if($newStudent->getPhone() != null) $student->setPhone($newStudent->getPhone());
+        if($newStudent->getCompany() != null) $student->setCompany($newStudent->getCompany());
+        if($newStudent->getJob() != null) $student->setJob($newStudent->getJob());
+
+        $this->getDoctrine()
+            ->getManager()
+            ->flush();
+
+        return new Response($this->get('jms_serializer')->serialize($student, 'json', SerializationContext::create()->setGroups(array('toSerialize'))));
     }
 
     /**
@@ -177,7 +191,7 @@ class StudentController extends Controller
      *
      * Delete several students
      */
-    public function testAction(Request $request)
+    public function testAction(Request $request, $id)
     {
         $studentRepository = $this->getDoctrine()
             ->getManager()
@@ -185,8 +199,7 @@ class StudentController extends Controller
 
         $students = json_decode($request->getContent(), true);
 
-        // This method will delete student but also the related user
-        $studentRepository->deleteStudents($students);
+        $student = $studentRepository->find($id);
 
         return new Response("true");
     }

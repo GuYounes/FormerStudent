@@ -184,18 +184,18 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                 goto not_self;
             }
 
-            return array (  '_controller' => 'FormerDUTStudentsBundle\\Controller\\Student\\StudentController::selfAction',  '_route' => 'self',);
+            return array (  '_controller' => 'FormerDUTStudentsBundle\\Controller\\Student\\StudentController::selfAction',  '_format' => 'json',  '_route' => 'self',);
         }
         not_self:
 
         // test
-        if ('/test' === $pathinfo) {
+        if (0 === strpos($pathinfo, '/test') && preg_match('#^/test/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
             if ('POST' !== $canonicalMethod) {
                 $allow[] = 'POST';
                 goto not_test;
             }
 
-            return array (  '_controller' => 'FormerDUTStudentsBundle\\Controller\\Student\\StudentController::testAction',  '_route' => 'test',);
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'test')), array (  '_controller' => 'FormerDUTStudentsBundle\\Controller\\Student\\StudentController::testAction',));
         }
         not_test:
 
