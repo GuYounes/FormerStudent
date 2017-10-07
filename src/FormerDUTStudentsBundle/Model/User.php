@@ -1,14 +1,14 @@
 <?php
 
-namespace FormerDUTStudentsBundle\Model\User;
+namespace FormerDUTStudentsBundle\Model;
 
 use FormerDUTStudentsBundle\Entity\Student;
 use FormerDUTStudentsBundle\Entity\User as UserEntity;
-use FormerDUTStudentsBundle\Model\Security\Credentials;
+use FormerDUTStudentsBundle\Model\Credentials;
 
 /**
  * Class User
- * @package FormerDUTStudentsBundle\Model\User
+ * @package FormerDUTStudentsBundle\Model
  *
  * Class used to generate User Entity Class From a student
  */
@@ -23,7 +23,7 @@ class User
 
     /**
      * User constructor.
-     * @param Credentials $credentials
+     * @param \FormerDUTStudentsBundle\Model\Credentials $credentials
      */
     public function __construct(Credentials $credentials)
     {

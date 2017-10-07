@@ -57,7 +57,9 @@ class StudentRepository extends \Doctrine\ORM\EntityRepository
     }
 
     /**
-     * @param $students
+     * @param array $students
+     * Array of students IDs
+     *
      * @return array
      *
      * Get students with an array of IDs

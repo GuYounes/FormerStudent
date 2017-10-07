@@ -33,7 +33,7 @@ class Formation
     /**
      * @var string
      *
-     * @ORM\Column(name="name", type="string", length=255)
+     * @ORM\Column(name="name", type="string", unique = true, length=255)
      *
      * @Serializer\Groups({"toSerialize"})
      */
@@ -45,6 +45,7 @@ class Formation
      * @ORM\Column(name="creation_date", type="integer")
      *
      * @Serializer\Groups({"toSerialize"})
+     * @Serializer\SerializedName("creationDate")
      */
     private $creationDate;
 
@@ -54,6 +55,7 @@ class Formation
      * @ORM\Column(name="closing_date", type="integer", nullable=true)
      *
      * @Serializer\Groups({"toSerialize"})
+     * @Serializer\SerializedName("closingDate")
      */
     private $closingDate;
 

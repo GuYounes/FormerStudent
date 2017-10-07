@@ -3,14 +3,15 @@
 students:
     path:     /students
     defaults:
-        _controller: FormerDUTStudentsBundle:Student\Student:getStudents
+        _controller: FormerDUTStudentsBundle:Student:getStudents
         _format: json
     methods:  [GET]
 
 student:
     path:     /students/{id}
     defaults:
-        _controller: FormerDUTStudentsBundle:Student\Student:getStudent
+        _controller: FormerDUTStudentsBundle:Student:getStudent
+        _format: json
     methods:  [GET]
     requirements:
         id: \d+
@@ -18,13 +19,13 @@ student:
 add_student:
     path:     /students
     defaults:
-        _controller: FormerDUTStudentsBundle:Student\Student:addStudent
+        _controller: FormerDUTStudentsBundle:Student:addStudent
     methods:  [POST]
 
 delete_student:
     path:     /students/{id}
     defaults:
-        _controller: FormerDUTStudentsBundle:Student\Student:deleteStudent
+        _controller: FormerDUTStudentsBundle:Student:deleteStudent
     methods:  [DELETE]
     requirements:
         id: \d+
@@ -32,7 +33,7 @@ delete_student:
 delete_students:
     path:     /students
     defaults:
-        _controller: FormerDUTStudentsBundle:Student\Student:deleteStudents
+        _controller: FormerDUTStudentsBundle:Student:deleteStudents
     methods:  [DELETE]
     requirements:
         id: \d+
@@ -40,15 +41,23 @@ delete_students:
 edit_student:
     path:     /students/{id}
     defaults:
-        _controller: FormerDUTStudentsBundle:Student\Student:editStudent
+        _controller: FormerDUTStudentsBundle:Student:editStudent
     methods:  [PUT]
+    requirements:
+        id: \d+
+
+add_formations_to_student:
+    path:     /students/{id}/formations
+    defaults:
+        _controller: FormerDUTStudentsBundle:Student:addFormationsToStudent
+    methods:  [POST]
     requirements:
         id: \d+
 
 self:
     path:     /self
     defaults:
-        _controller: FormerDUTStudentsBundle:Student\Student:self
+        _controller: FormerDUTStudentsBundle:Student:self
         _format: json
     methods:  [GET]
 
@@ -56,21 +65,21 @@ self:
 test:
     path:     /test/{id}
     defaults:
-        _controller: FormerDUTStudentsBundle:Student\Student:test
+        _controller: FormerDUTStudentsBundle:Student:test
     methods:  [POST]
 
-################################ Route to security methods ######################################
+################################ Route to securities methods ######################################
 
 check_if_logged:
     path:     /isLogged
     defaults:
-        _controller: FormerDUTStudentsBundle:Security\Login:isLogged
+        _controller: FormerDUTStudentsBundle:Login:isLogged
     methods:  [GET]
 
 login:
     path: /login
     defaults:
-        _controller: FormerDUTStudentsBundle:Security\Login:login
+        _controller: FormerDUTStudentsBundle:Login:login
 
 login_check:
     path: /login_check
@@ -78,7 +87,67 @@ login_check:
 logout:
     path: /logout
 
-################################ Route to formation methods ######################################
+################################ Route to formations methods ######################################
 
+formations:
+    path:     /formations
+    defaults:
+        _controller: FormerDUTStudentsBundle:Formation:getFormations
+        _format: json
+    methods:  [GET]
 
+formation:
+    path:     /formations/{id}
+    defaults:
+        _controller: FormerDUTStudentsBundle:Formation:getFormation
+    methods:  [GET]
+    requirements:
+        id: \d+
 
+add_formation:
+    path:     /formations
+    defaults:
+        _controller: FormerDUTStudentsBundle:Formation:addFormation
+    methods:  [POST]
+
+delete_formation:
+    path:     /formations/{id}
+    defaults:
+        _controller: FormerDUTStudentsBundle:Formation:deleteFormation
+    methods:  [DELETE]
+    requirements:
+        id: \d+
+
+delete_formations:
+    path:     /formations
+    defaults:
+        _controller: FormerDUTStudentsBundle:Formation:deleteFormations
+    methods:  [DELETE]
+    requirements:
+        id: \d+
+
+edit_formation:
+    path:     /formations/{id}
+    defaults:
+        _controller: FormerDUTStudentsBundle:Formation:editFormation
+    methods:  [PUT]
+    requirements:
+        id: \d+
+
+################################ Route to credentials methods ######################################
+
+edit_user:
+    path:     /user/{id}
+    defaults:
+        _controller: FormerDUTStudentsBundle:User:editUser
+    methods:  [PUT]
+    requirements:
+        id: \d+
+
+################################ Route to mails methods ######################################
+
+send_mails:
+    path:     /mail
+    defaults:
+        _controller: FormerDUTStudentsBundle:Mail:sendMail
+    methods:  [POST]

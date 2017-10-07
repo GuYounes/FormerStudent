@@ -10,4 +10,66 @@ namespace FormerDUTStudentsBundle\Repository;
  */
 class FormationRepository extends \Doctrine\ORM\EntityRepository
 {
+    /**
+     * @param array $formations
+     * Contains the Ids of the students we want to delete
+     *
+     * @return array
+     *
+     * Delete several formations in once
+     */
+    public function deleteStudents($formations)
+    {
+        $qb = $this->createQueryBuilder('f');
+
+        $qb->delete('FormerDUTStudentsBundle:Formation','f');
+
+        foreach($formations as $id)
+        {
+            $qb->orWhere($qb->expr()->eq('f.id', $id));
+        }
+
+        return $qb
+            ->getQuery()
+            ->getResult();
+    }
+
+    /**
+     * @param int $id
+     * The id of the formation we want to delete
+     *
+     * @return array
+     *
+     * Delete one formation by his Id
+     */
+    public function deleteStudentById($id)
+    {
+        $qb = $this->createQueryBuilder('f');
+
+        $qb->delete('FormerDUTStudentsBundle:Formation','f');
+
+        $qb->Where($qb->expr()->eq('f.id', $id));
+
+        return $qb
+            ->getQuery()
+            ->getResult();
+    }
+
+    /**
+     * @param array $formations
+     * Array of formations IDs
+     *
+     * @return array
+     */
+    public function findFormations($formations)
+    {
+        $qb = $this->createQueryBuilder('f');
+
+        $qb->where($qb->expr()->in('f.id', $formations));
+
+        return $qb
+            ->getQuery()
+            ->getResult();
+
+    }
 }

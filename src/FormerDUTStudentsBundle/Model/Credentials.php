@@ -1,11 +1,17 @@
 <?php
 
-namespace FormerDUTStudentsBundle\Model\Security;
+namespace FormerDUTStudentsBundle\Model;
 
 use Doctrine\ORM\EntityManager;
 use Doctrine\ORM\EntityRepository;
 use FormerDUTStudentsBundle\Entity\Student;
 
+/**
+ * Class Credentials
+ * @package FormerDUTStudentsBundle\Model
+ *
+ * Create credentials for a student
+ */
 class Credentials
 {
 

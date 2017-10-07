@@ -116,7 +116,7 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                     goto not_students;
                 }
 
-                return array (  '_controller' => 'FormerDUTStudentsBundle\\Controller\\Student\\StudentController::getStudentsAction',  '_format' => 'json',  '_route' => 'students',);
+                return array (  '_controller' => 'FormerDUTStudentsBundle\\Controller\\StudentController::getStudentsAction',  '_format' => 'json',  '_route' => 'students',);
             }
             not_students:
 
@@ -127,7 +127,7 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                     goto not_student;
                 }
 
-                return $this->mergeDefaults(array_replace($matches, array('_route' => 'student')), array (  '_controller' => 'FormerDUTStudentsBundle\\Controller\\Student\\StudentController::getStudentAction',));
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'student')), array (  '_controller' => 'FormerDUTStudentsBundle\\Controller\\StudentController::getStudentAction',  '_format' => 'json',));
             }
             not_student:
 
@@ -138,7 +138,7 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                     goto not_add_student;
                 }
 
-                return array (  '_controller' => 'FormerDUTStudentsBundle\\Controller\\Student\\StudentController::addStudentAction',  '_route' => 'add_student',);
+                return array (  '_controller' => 'FormerDUTStudentsBundle\\Controller\\StudentController::addStudentAction',  '_route' => 'add_student',);
             }
             not_add_student:
 
@@ -149,7 +149,7 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                     goto not_delete_student;
                 }
 
-                return $this->mergeDefaults(array_replace($matches, array('_route' => 'delete_student')), array (  '_controller' => 'FormerDUTStudentsBundle\\Controller\\Student\\StudentController::deleteStudentAction',));
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'delete_student')), array (  '_controller' => 'FormerDUTStudentsBundle\\Controller\\StudentController::deleteStudentAction',));
             }
             not_delete_student:
 
@@ -160,7 +160,7 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                     goto not_delete_students;
                 }
 
-                return array (  '_controller' => 'FormerDUTStudentsBundle\\Controller\\Student\\StudentController::deleteStudentsAction',  '_route' => 'delete_students',);
+                return array (  '_controller' => 'FormerDUTStudentsBundle\\Controller\\StudentController::deleteStudentsAction',  '_route' => 'delete_students',);
             }
             not_delete_students:
 
@@ -171,9 +171,20 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                     goto not_edit_student;
                 }
 
-                return $this->mergeDefaults(array_replace($matches, array('_route' => 'edit_student')), array (  '_controller' => 'FormerDUTStudentsBundle\\Controller\\Student\\StudentController::editStudentAction',));
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'edit_student')), array (  '_controller' => 'FormerDUTStudentsBundle\\Controller\\StudentController::editStudentAction',));
             }
             not_edit_student:
+
+            // add_formations_to_student
+            if (preg_match('#^/students/(?P<id>\\d+)/formations$#s', $pathinfo, $matches)) {
+                if ('POST' !== $canonicalMethod) {
+                    $allow[] = 'POST';
+                    goto not_add_formations_to_student;
+                }
+
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'add_formations_to_student')), array (  '_controller' => 'FormerDUTStudentsBundle\\Controller\\StudentController::addFormationsToStudentAction',));
+            }
+            not_add_formations_to_student:
 
         }
 
@@ -184,7 +195,7 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                 goto not_self;
             }
 
-            return array (  '_controller' => 'FormerDUTStudentsBundle\\Controller\\Student\\StudentController::selfAction',  '_format' => 'json',  '_route' => 'self',);
+            return array (  '_controller' => 'FormerDUTStudentsBundle\\Controller\\StudentController::selfAction',  '_format' => 'json',  '_route' => 'self',);
         }
         not_self:
 
@@ -195,7 +206,7 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                 goto not_test;
             }
 
-            return $this->mergeDefaults(array_replace($matches, array('_route' => 'test')), array (  '_controller' => 'FormerDUTStudentsBundle\\Controller\\Student\\StudentController::testAction',));
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'test')), array (  '_controller' => 'FormerDUTStudentsBundle\\Controller\\StudentController::testAction',));
         }
         not_test:
 
@@ -206,14 +217,14 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                 goto not_check_if_logged;
             }
 
-            return array (  '_controller' => 'FormerDUTStudentsBundle\\Controller\\Security\\LoginController::isLoggedAction',  '_route' => 'check_if_logged',);
+            return array (  '_controller' => 'FormerDUTStudentsBundle\\Controller\\LoginController::isLoggedAction',  '_route' => 'check_if_logged',);
         }
         not_check_if_logged:
 
         if (0 === strpos($pathinfo, '/login')) {
             // login
             if ('/login' === $pathinfo) {
-                return array (  '_controller' => 'FormerDUTStudentsBundle\\Controller\\Security\\LoginController::loginAction',  '_route' => 'login',);
+                return array (  '_controller' => 'FormerDUTStudentsBundle\\Controller\\LoginController::loginAction',  '_route' => 'login',);
             }
 
             // login_check
@@ -226,6 +237,75 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
         // logout
         if ('/logout' === $pathinfo) {
             return array('_route' => 'logout');
+        }
+
+        if (0 === strpos($pathinfo, '/formations')) {
+            // formations
+            if ('/formations' === $pathinfo) {
+                if ('GET' !== $canonicalMethod) {
+                    $allow[] = 'GET';
+                    goto not_formations;
+                }
+
+                return array (  '_controller' => 'FormerDUTStudentsBundle\\Controller\\FormationController::getFormationsAction',  '_format' => 'json',  '_route' => 'formations',);
+            }
+            not_formations:
+
+            // formation
+            if (preg_match('#^/formations/(?P<id>\\d+)$#s', $pathinfo, $matches)) {
+                if ('GET' !== $canonicalMethod) {
+                    $allow[] = 'GET';
+                    goto not_formation;
+                }
+
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'formation')), array (  '_controller' => 'FormerDUTStudentsBundle\\Controller\\FormationController::getFormationAction',));
+            }
+            not_formation:
+
+            // add_formation
+            if ('/formations' === $pathinfo) {
+                if ('POST' !== $canonicalMethod) {
+                    $allow[] = 'POST';
+                    goto not_add_formation;
+                }
+
+                return array (  '_controller' => 'FormerDUTStudentsBundle\\Controller\\FormationController::addFormationAction',  '_route' => 'add_formation',);
+            }
+            not_add_formation:
+
+            // delete_formation
+            if (preg_match('#^/formations/(?P<id>\\d+)$#s', $pathinfo, $matches)) {
+                if ('DELETE' !== $canonicalMethod) {
+                    $allow[] = 'DELETE';
+                    goto not_delete_formation;
+                }
+
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'delete_formation')), array (  '_controller' => 'FormerDUTStudentsBundle\\Controller\\FormationController::deleteFormationAction',));
+            }
+            not_delete_formation:
+
+            // delete_formations
+            if ('/formations' === $pathinfo) {
+                if ('DELETE' !== $canonicalMethod) {
+                    $allow[] = 'DELETE';
+                    goto not_delete_formations;
+                }
+
+                return array (  '_controller' => 'FormerDUTStudentsBundle\\Controller\\FormationController::deleteFormationsAction',  '_route' => 'delete_formations',);
+            }
+            not_delete_formations:
+
+            // edit_formation
+            if (preg_match('#^/formations/(?P<id>\\d+)$#s', $pathinfo, $matches)) {
+                if ('PUT' !== $canonicalMethod) {
+                    $allow[] = 'PUT';
+                    goto not_edit_formation;
+                }
+
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'edit_formation')), array (  '_controller' => 'FormerDUTStudentsBundle\\Controller\\FormationController::editFormationAction',));
+            }
+            not_edit_formation:
+
         }
 
         throw 0 < count($allow) ? new MethodNotAllowedException(array_unique($allow)) : new ResourceNotFoundException();
