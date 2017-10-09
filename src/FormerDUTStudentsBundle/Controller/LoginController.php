@@ -12,6 +12,8 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
+use JMS\Serializer\SerializationContext;
+
 
 /**
  * Class LoginController
@@ -53,8 +55,8 @@ class LoginController extends Controller
         if($user === null) return new Response("false");
 
         // Serialize the user to send it
-        $data = $this->get('jms_serializer')->serialize($users, 'json', SerializationContext::create()->setGroups(array('toSerialize')));
-        return new Reponse($data);
+        $data = $this->get('jms_serializer')->serialize($user, 'json', SerializationContext::create()->setGroups(array('toSerialize')));
+        return new Response($data);
 
     }
 

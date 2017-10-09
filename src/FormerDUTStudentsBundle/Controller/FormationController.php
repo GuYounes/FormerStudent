@@ -22,7 +22,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
  * CRUD on formations
  * Only available to admin
  *
- * @Security("is_granted('ROLE_ADMIN')")
+ *
  */
 class FormationController extends Controller
 {
@@ -120,12 +120,12 @@ class FormationController extends Controller
     {
         $repository = $this->getDoctrine()
             ->getManager()
-            ->getRepository('FormerDUTStudentsBundle:Student');
+            ->getRepository('FormerDUTStudentsBundle:Formation');
 
         // Get an array of formation's IDs
         $formations = json_decode($request->getContent(), true);
 
-        // This method will delete formation but also the related user
+        // This method will delete formation
         // No need to flush
         $repository->deleteFormations($formations);
 

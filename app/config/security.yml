@@ -14,20 +14,30 @@ security:
         class: FormerDUTStudentsBundle\Entity\User
         property: username
 
+  access_control:
+    - { path: ^/login, role: IS_AUTHENTICATED_ANONYMOUSLY }
+    - { path: ^/isLogged, role: IS_AUTHENTICATED_ANONYMOUSLY }
+
   firewalls:
     dev:
       pattern: ^/(_(profiler|wdt)|css|images|js)/
       security: false
 
-    main_login:
-      # Allow to login
-      pattern:   ^/login$
-      anonymous: true
-      provider: main
+    #main_login:
+       #Allow to login
+      #pattern:   ^/login$
+      #anonymous: true
+      #provider: main
+
+    #is_logged:
+      # Allow to check if logged
+      #pattern:   ^/isLogged$
+      #anonymous: true
+      #provider: main
 
     main:
       pattern: ^/
-      anonymous: false
+      anonymous: ~
       provider: main
       form_login:
         login_path: login
@@ -37,5 +47,4 @@ security:
         path:       logout
         target:     login
 
-  access_control:
-    #- { path: ^/login, roles: IS_AUTHENTICATED_ANONYMOUSLY, requires_channel: https }
+

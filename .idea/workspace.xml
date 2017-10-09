@@ -2,110 +2,99 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="31a26862-ed86-4941-a5fe-a71dfd0666d8" name="Default" comment="DataBase, doing login v2">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/FormerDUTStudentsBundle/Controller/FormationController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/FormerDUTStudentsBundle/Controller/UserController.php" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/jms_serializer/FormerDUTStudentsBundle-Entity-User.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/+/B/CoZffszk0rVH7qA1fWlY" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/+/C/JsXU7iAPHCH6LoGlf5m5" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/+/V/jbfQFhIll2+qtRoFzaOe" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/-/P/hvI7Ach98JOFnPZriMWi" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/0/J/s+MQqTLYqt2Hs-UEEkEc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/2/2/4GB7r6-yslo4kxMunhCA" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/2/Q/5jPliRUXKVRL9l1Jgt24" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/3/W/e+pKx2Gq1eztWj8Q7zKK" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/4/M/lUZhVj-t8FloFgwxlidH" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/5/2/MUVGUY3JR1lyD5hA76dk" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/7/Y/CmyGnXOXBfe-LbkYYlMF" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/A/6/fs+xzTc4eSSmPsJ8Yzpj" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/A/O/R9eECM59QmwWnD8KoKq+" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/A/S/pO1oNaOjd7PIX0YdFqUg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/A/X/BuULFbnEr-APjkch1euC" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/C/I/7CT1mwXYJCyPEYQPPnW3" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/E/5/k-8evRJaab1eTPWmxXZA" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/E/A/9DZg2eD-D-caD0sRW-6R" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/E/D/Ot3i9rvo38E1+QDdXafv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/E/J/Dje1tTeWtSOJTQwwiayW" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/F/S/Nkh4CKmTxRGEEaJ8ZHKZ" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/G/B/tGLfC904Ldgel4R84zr2" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/H/-/nGLJ9y6Pb8345ufMcnl+" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/I/I/Ei2UEBeBcF7k1Bs9YN8K" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/J/4/6hAk9MkG00aTkWByRYel" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/J/B/WB5tdp9wJ9KrTpurIT-B" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/J/R/vut6EOUZ4idAmmhM5lfS" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/L/1/8bl9qot4cHHq41FEFFff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/M/A/UtTd2IwZehQmhQcvb6-N" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/N/X/G5ttLkI6NlkdyKmjw4UL" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/O/B/a3YPF1H8RM8UDt3vF0sN" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/O/Y/RywkjSkuntxW80VVXKaJ" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/P/6/iAkhu6E3pat5XTjOvt0J" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/P/I/NR1g7BRg4yV-tYLZzREG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/Q/N/1HFNUvqpqhGOvB4A6m6g" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/Q/Q/VrdXH9emfRlkncVIIKkB" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/S/2/BQ8W7WgOY7QXQ7+jJNHi" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/S/L/UO-pr0BiZRfDIINjyPbZ" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/S/O/BtQhlcblcUPBhqoqg80U" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/T/U/qdlv0+hR-lHWcQ4XBqTg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/U/C/-DpgkxE8c3fKKq4+lvQs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/V/7/ajJaaXTu+GHcAimvaaoB" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/W/K/eFS01SfNw9HtTkF1+EAe" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/X/B/6zNtC4mA44GMzyvACsr9" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/X/M/8pqWGSHzc4spUkJhET7B" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/Y/Y/riD8lIQ-A98fs5tCQr9T" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/Z/G/wNYp4GjKQOeOYq4xRprR" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/Z/P/MiH1Fn7ihT1VS9x0uz+Z" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/profiler/03/2a/652a03" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/profiler/0c/b4/5db40c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/profiler/0e/62/6f620e" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/profiler/11/86/f88611" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/profiler/1a/e4/3fe41a" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/profiler/1d/e4/1ee41d" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/profiler/22/2b/482b22" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/profiler/31/18/5f1831" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/profiler/44/08/a30844" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/profiler/45/cb/7dcb45" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/profiler/46/82/738246" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/profiler/4e/6d/cf6d4e" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/profiler/50/2a/052a50" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/profiler/51/87/1f8751" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/profiler/5b/cc/3dcc5b" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/profiler/5d/c0/8ac05d" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/profiler/60/b1/91b160" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/profiler/6c/d7/2dd76c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/profiler/77/cc/9fcc77" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/profiler/78/d1/35d178" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/profiler/88/b2/9db288" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/profiler/aa/8e/d18eaa" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/profiler/b9/5e/435eb9" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/profiler/ba/de/a2deba" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/profiler/bc/b5/d7b5bc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/profiler/bd/e5/40e5bd" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/profiler/c3/c8/79c8c3" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/profiler/d0/2c/d22cd0" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/profiler/d2/ed/60edd2" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/profiler/f5/05/3005f5" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/profiler/f6/55/c955f6" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/profiler/fa/f1/1cf1fa" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/profiler/fa/fb/5bfbfa" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/FormerDUTStudentsBundle/Controller/Mail/MailController.php" afterPath="$PROJECT_DIR$/src/FormerDUTStudentsBundle/Controller/MailController.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/FormerDUTStudentsBundle/Controller/Security/LoginController.php" afterPath="$PROJECT_DIR$/src/FormerDUTStudentsBundle/Controller/LoginController.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/FormerDUTStudentsBundle/Controller/Student/StudentController.php" afterPath="$PROJECT_DIR$/src/FormerDUTStudentsBundle/Controller/StudentController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/sessions/dev/sess_bkmo6n82clj2gfo5hd5tfm6842" afterPath="$PROJECT_DIR$/var/sessions/dev/sess_bkmo6n82clj2gfo5hd5tfm6842" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/doctrine/orm/Proxies/__CG__FormerDUTStudentsBundleEntityUser.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/jms_serializer/FormerDUTStudentsBundle-Entity-Formation.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/1/C/IsYkPSlOfrT88uBBhchG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/1/R/+PyDIYBTnFjchEc70iZl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/3/O/cdPhMww3cjR2fhsjMTwG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/3/Q/Ws2ppVb44jWUqiOwARXX" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/7/0/iHBeNwMpbpx4k8vAkzlI" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/8/J/EMC69b8+kobmfKoD-NDS" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/8/R/NnQN3a0oQWqj7WikNJSd" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/A/J/id3I7vAUg55YFTAU1eg-" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/B/6/N-Pr9R89F98r4aHISsDH" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/C/A/FV79WAsAw9tXXUcFDVI+" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/C/G/maDUmsGEfuEtYqc7Y14y" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/E/Y/rY-POgkelC1W0rUW0If-" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/F/O/EIxTKP5+2YSjhy9yUR+N" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/F/V/B2vhZI1sTenSf5+XYmUt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/I/L/AnBRmVZh5SEpN8TF27jE" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/I/R/oM9TlRRwSS3+FlafbGVh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/K/T/gQRUmXMn8SpsEO5ioULV" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/K/T/x+lf9CobxPojSgfOKno+" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/L/8/rhBkhpvsXpn0dpRdryVs" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/L/J/FP6i2Gxch5dSGYQxDxhu" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/M/Y/HF50kVtk4Ebl1wcDH+bL" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/N/D/cmsa03iXz4S7ZrJbRp4M" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/O/I/gVSz-sVQ3KnIIcL+RgpC" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/Q/+/zqaAZSbX4d9Tqi+hirEA" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/Q/4/ZpjFMrsAeW8cOyNc4P2n" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/Q/9/lmchOrxgPrblwuGrLL+2" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/Q/D/znlrmk8iycdt+33clsht" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/R/5/rKckDkVq0fNUJ7mM5PmH" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/S/R/u5fvNvgEug8NAX2bpeye" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/T/E/fEprcV4Z44bPQNzCMQ9a" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/T/S/pzTO3eCBA-SAYBbqcytz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/U/W/KL1gVIN3RUHuOb+EM5ub" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/V/N/1JW-KoT-oKkzjcsbN0Xd" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/W/V/QsFQ25TPbBXPA4lRql-v" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/X/S/tm0Z-FH5a+wwDGYtOHg0" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/Z/I/haCvRfBcGt-GQJ-0od2l" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/profiler/04/13/4f1304" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/profiler/08/0a/180a08" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/profiler/10/16/821610" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/profiler/1a/3b/603b1a" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/profiler/26/bd/78bd26" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/profiler/44/82/0c8244" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/profiler/59/5f/855f59" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/profiler/5b/36/d5365b" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/profiler/6b/01/de016b" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/profiler/6c/68/29686c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/profiler/74/2e/af2e74" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/profiler/74/5b/305b74" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/profiler/76/9a/f59a76" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/profiler/77/d1/1fd177" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/profiler/81/b3/f3b381" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/profiler/84/63/116384" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/profiler/97/eb/f6eb97" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/profiler/9f/03/5d039f" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/profiler/a7/f5/3af5a7" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/profiler/b4/c3/ebc3b4" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/profiler/b6/5c/cd5cb6" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/profiler/b8/76/7a76b8" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/profiler/bc/72/ff72bc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/profiler/c9/75/d975c9" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/profiler/c9/f8/3ff8c9" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/profiler/d2/7b/687bd2" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/profiler/da/cd/01cdda" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/profiler/e1/9c/829ce1" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/profiler/f1/de/87def1" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/profiler/f3/6a/076af3" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/profiler/fb/80/0980fb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/profiler/fe/4e/d34efe" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/profiler/fe/e9/b0e9fe" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/sessions/dev/sess_bkmo6n82clj2gfo5hd5tfm6842" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/D/M/ztLss9tt4wU1p9Fja435" afterPath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/D/M/ztLss9tt4wU1p9Fja435" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/R/D/phZRcnn+XvxYoG-f-d3k" afterPath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/R/D/phZRcnn+XvxYoG-f-d3k" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/FormerDUTStudentsBundle/Entity/Formation.php" afterPath="$PROJECT_DIR$/src/FormerDUTStudentsBundle/Entity/Formation.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/FormerDUTStudentsBundle/Model/Credentials.php" afterPath="$PROJECT_DIR$/src/FormerDUTStudentsBundle/Model/Credentials.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/FormerDUTStudentsBundle/Model/User.php" afterPath="$PROJECT_DIR$/src/FormerDUTStudentsBundle/Model/User.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/security.yml" afterPath="$PROJECT_DIR$/app/config/security.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/FormerDUTStudentsBundle/Controller/FormationController.php" afterPath="$PROJECT_DIR$/src/FormerDUTStudentsBundle/Controller/FormationController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/FormerDUTStudentsBundle/Controller/LoginController.php" afterPath="$PROJECT_DIR$/src/FormerDUTStudentsBundle/Controller/LoginController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/FormerDUTStudentsBundle/Controller/StudentController.php" afterPath="$PROJECT_DIR$/src/FormerDUTStudentsBundle/Controller/StudentController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/FormerDUTStudentsBundle/Entity/User.php" afterPath="$PROJECT_DIR$/src/FormerDUTStudentsBundle/Entity/User.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/FormerDUTStudentsBundle/Repository/FormationRepository.php" afterPath="$PROJECT_DIR$/src/FormerDUTStudentsBundle/Repository/FormationRepository.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/FormerDUTStudentsBundle/Repository/StudentRepository.php" afterPath="$PROJECT_DIR$/src/FormerDUTStudentsBundle/Repository/StudentRepository.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/FormerDUTStudentsBundle/Resources/config/routing.yml" afterPath="$PROJECT_DIR$/src/FormerDUTStudentsBundle/Resources/config/routing.yml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainer.php" afterPath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainer.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainer.php.meta" afterPath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainer.php.meta" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainer.xml" afterPath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainer.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainer.xml.meta" afterPath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainer.xml.meta" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainerCompiler.log" afterPath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainerCompiler.log" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainerUrlGenerator.php" afterPath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainerUrlGenerator.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainerUrlMatcher.php" afterPath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainerUrlMatcher.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/jms_serializer/Doctrine-Common-Collections-AbstractLazyCollection.cache.php" afterPath="$PROJECT_DIR$/var/cache/dev/jms_serializer/Doctrine-Common-Collections-AbstractLazyCollection.cache.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/jms_serializer/Doctrine-ORM-PersistentCollection.cache.php" afterPath="$PROJECT_DIR$/var/cache/dev/jms_serializer/Doctrine-ORM-PersistentCollection.cache.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/jms_serializer/FormerDUTStudentsBundle-Entity-Student.cache.php" afterPath="$PROJECT_DIR$/var/cache/dev/jms_serializer/FormerDUTStudentsBundle-Entity-Student.cache.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/+/-/Y4BNeZD-Q6GGnXmJxWvN" afterPath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/+/-/Y4BNeZD-Q6GGnXmJxWvN" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/+/4/+I3X5W4ODIcBORgbiyF+" afterPath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/+/4/+I3X5W4ODIcBORgbiyF+" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/+/E/9aHLZeUtrbF33tGJbTdQ" afterPath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/+/E/9aHLZeUtrbF33tGJbTdQ" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/+/T/OR+MdP55H6Unvn1yV7Xf" afterPath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/+/T/OR+MdP55H6Unvn1yV7Xf" />
@@ -132,7 +121,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/0/V/IT0cTMbf+RaXuFVYkEty" afterPath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/0/V/IT0cTMbf+RaXuFVYkEty" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/1/7/yhwPqrj3HLgZBPBzzJNW" afterPath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/1/7/yhwPqrj3HLgZBPBzzJNW" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/1/B/-yccUXhRMeZX1uRHh5l4" afterPath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/1/B/-yccUXhRMeZX1uRHh5l4" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/1/C/IsYkPSlOfrT88uBBhchG" afterPath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/1/C/IsYkPSlOfrT88uBBhchG" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/1/F/xJVAJfbA1Q1NSlYfic4U" afterPath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/1/F/xJVAJfbA1Q1NSlYfic4U" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/1/K/P26K1ErjqYiX5lnAYulI" afterPath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/1/K/P26K1ErjqYiX5lnAYulI" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/1/K/mdMDbKyur3tHIDDMFofu" afterPath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/1/K/mdMDbKyur3tHIDDMFofu" />
@@ -237,7 +225,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/B/W/9WHxgIN6-GeEDxduUaqV" afterPath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/B/W/9WHxgIN6-GeEDxduUaqV" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/B/Z/TxQ7oSlbLMRz81Jy22nd" afterPath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/B/Z/TxQ7oSlbLMRz81Jy22nd" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/B/Z/xte-HVhKTFNE5xtRL25L" afterPath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/B/Z/xte-HVhKTFNE5xtRL25L" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/C/A/FV79WAsAw9tXXUcFDVI+" afterPath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/C/A/FV79WAsAw9tXXUcFDVI+" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/C/G/gw95zZzKEpvp4Ww9MS5W" afterPath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/C/G/gw95zZzKEpvp4Ww9MS5W" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/C/I/RgfYeCiSmG1vVXTi1JpZ" afterPath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/C/I/RgfYeCiSmG1vVXTi1JpZ" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/C/L/FJDQoQixRa2UOd85eQi0" afterPath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/C/L/FJDQoQixRa2UOd85eQi0" />
@@ -249,6 +236,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/C/V/VfeVjYq2FFy8ttQi1k7g" afterPath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/C/V/VfeVjYq2FFy8ttQi1k7g" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/C/Y/Ulw8LWAGe2DZw7HuB5-f" afterPath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/C/Y/Ulw8LWAGe2DZw7HuB5-f" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/C/Z/D8ORl-VV9F3bCpW8mEc3" afterPath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/C/Z/D8ORl-VV9F3bCpW8mEc3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/D/6/mdqIp0k6O2SmFHjFWR5Y" afterPath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/D/6/mdqIp0k6O2SmFHjFWR5Y" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/D/9/zey5vuaRPL7DzhkLcMjX" afterPath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/D/9/zey5vuaRPL7DzhkLcMjX" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/D/A/W4Cuz+wFe+DB8su4bY+l" afterPath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/D/A/W4Cuz+wFe+DB8su4bY+l" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/D/D/qoMoCz6fgaarAZhA4IYc" afterPath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/D/D/qoMoCz6fgaarAZhA4IYc" />
@@ -367,7 +355,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/K/P/zXX6IUFjl89cb17EZxD6" afterPath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/K/P/zXX6IUFjl89cb17EZxD6" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/K/S/LSj3IpgnLsrrMcVyXCBV" afterPath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/K/S/LSj3IpgnLsrrMcVyXCBV" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/K/S/c-WWANS2zwo+vJ8eEW07" afterPath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/K/S/c-WWANS2zwo+vJ8eEW07" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/K/T/gQRUmXMn8SpsEO5ioULV" afterPath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/K/T/gQRUmXMn8SpsEO5ioULV" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/K/T/w49vmyOtdHFguuUjSyTi" afterPath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/K/T/w49vmyOtdHFguuUjSyTi" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/K/X/QHsqOaZBbUCsFC7xEX9x" afterPath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/K/X/QHsqOaZBbUCsFC7xEX9x" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/L/-/uSi36FS9YIM5WMDtYvcn" afterPath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/L/-/uSi36FS9YIM5WMDtYvcn" />
@@ -445,7 +432,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/P/Y/oPDPEoz8MJvXAklesqGl" afterPath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/P/Y/oPDPEoz8MJvXAklesqGl" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/Q/C/2xv23xSvvUDEt0jhEZMt" afterPath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/Q/C/2xv23xSvvUDEt0jhEZMt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/Q/D/ipwEtyBNyKeAxSMQwkP4" afterPath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/Q/D/ipwEtyBNyKeAxSMQwkP4" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/Q/D/znlrmk8iycdt+33clsht" afterPath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/Q/D/znlrmk8iycdt+33clsht" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/Q/E/FI92Mb0b03atDK+DNqUL" afterPath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/Q/E/FI92Mb0b03atDK+DNqUL" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/Q/F/6TimC5hs+uzvZvZKs25n" afterPath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/Q/F/6TimC5hs+uzvZvZKs25n" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/Q/F/fvZ5q2EJOIP5DaRUj8-Z" afterPath="$PROJECT_DIR$/var/cache/dev/pools/PEhk+ENofM/Q/F/fvZ5q2EJOIP5DaRUj8-Z" />
@@ -822,6 +808,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/twig/fe/fec0f0d3ea0b5f0394422ddb38a496fd312457f23c4ec4336aac5525ed21f495.php" afterPath="$PROJECT_DIR$/var/cache/dev/twig/fe/fec0f0d3ea0b5f0394422ddb38a496fd312457f23c4ec4336aac5525ed21f495.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/twig/ff/fff62482daaca218ec9cd246fab81d19d0048109c792dce0a77d0ccde6a70d1c.php" afterPath="$PROJECT_DIR$/var/cache/dev/twig/ff/fff62482daaca218ec9cd246fab81d19d0048109c792dce0a77d0ccde6a70d1c.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/logs/dev.log" afterPath="$PROJECT_DIR$/var/logs/dev.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/sessions/dev/sess_h70n0mtmru2ggu8r83u6udqehf" afterPath="$PROJECT_DIR$/var/sessions/dev/sess_h70n0mtmru2ggu8r83u6udqehf" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -832,20 +819,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="routing.yml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/FormerDUTStudentsBundle/Resources/config/routing.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="141" column="58" lean-forward="false" selection-start-line="141" selection-start-column="58" selection-end-line="141" selection-end-column="58" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserController.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="UserController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/FormerDUTStudentsBundle/Controller/UserController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="402">
+            <state relative-caret-position="521">
               <caret line="50" column="21" lean-forward="false" selection-start-line="50" selection-start-column="21" selection-end-line="50" selection-end-column="21" />
               <folding>
                 <element signature="e#138#178#0#PHP" expanded="true" />
@@ -854,23 +831,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MailController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/FormerDUTStudentsBundle/Controller/MailController.php">
+      <file leaf-file-name="LoginController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/FormerDUTStudentsBundle/Controller/LoginController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-40">
-              <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="StudentController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/FormerDUTStudentsBundle/Controller/StudentController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="141">
-              <caret line="148" column="8" lean-forward="true" selection-start-line="148" selection-start-column="8" selection-end-line="149" selection-end-column="39" />
+            <state relative-caret-position="232">
+              <caret line="52" column="0" lean-forward="false" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
               <folding>
-                <element signature="e#54#94#0#PHP" expanded="true" />
+                <element signature="e#137#194#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -879,7 +846,7 @@
       <file leaf-file-name="Student.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/FormerDUTStudentsBundle/Entity/Student.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5559">
+            <state relative-caret-position="5916">
               <caret line="349" column="5" lean-forward="false" selection-start-line="349" selection-start-column="5" selection-end-line="349" selection-end-column="5" />
               <folding />
             </state>
@@ -889,9 +856,21 @@
       <file leaf-file-name="User.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/FormerDUTStudentsBundle/Entity/User.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="21" column="82" lean-forward="false" selection-start-line="21" selection-start-column="75" selection-end-line="21" selection-end-column="82" />
+            <state relative-caret-position="187">
+              <caret line="22" column="42" lean-forward="false" selection-start-line="22" selection-start-column="42" selection-end-line="22" selection-end-column="42" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StudentController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/FormerDUTStudentsBundle/Controller/StudentController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2023">
+              <caret line="206" column="61" lean-forward="false" selection-start-line="206" selection-start-column="61" selection-end-line="206" selection-end-column="61" />
+              <folding>
+                <element signature="e#54#94#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -899,8 +878,8 @@
       <file leaf-file-name="FormationController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/FormerDUTStudentsBundle/Controller/FormationController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="26" column="44" lean-forward="true" selection-start-line="26" selection-start-column="44" selection-end-line="26" selection-end-column="44" />
+            <state relative-caret-position="255">
+              <caret line="122" column="62" lean-forward="false" selection-start-line="122" selection-start-column="62" selection-end-line="122" selection-end-column="62" />
               <folding>
                 <element signature="e#138#178#0#PHP" expanded="true" />
               </folding>
@@ -908,33 +887,41 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Formation.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/FormerDUTStudentsBundle/Entity/Formation.php">
+      <file leaf-file-name="StudentRepository.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/FormerDUTStudentsBundle/Repository/StudentRepository.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+            <state relative-caret-position="204">
+              <caret line="12" column="7" lean-forward="true" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LoginController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/FormerDUTStudentsBundle/Controller/LoginController.php">
+      <file leaf-file-name="ObjectManager.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/doctrine/common/lib/Doctrine/Common/Persistence/ObjectManager.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-448">
-              <caret line="13" column="46" lean-forward="true" selection-start-line="13" selection-start-column="46" selection-end-line="13" selection-end-column="46" />
-              <folding>
-                <element signature="e#137#194#0#PHP" expanded="true" />
-              </folding>
+            <state relative-caret-position="158">
+              <caret line="128" column="20" lean-forward="false" selection-start-line="128" selection-start-column="20" selection-end-line="128" selection-end-column="20" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ErrorHandler.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Debug/ErrorHandler.php">
+      <file leaf-file-name="FormationRepository.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/FormerDUTStudentsBundle/Repository/FormationRepository.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="193">
-              <caret line="521" column="0" lean-forward="false" selection-start-line="521" selection-start-column="0" selection-end-line="521" selection-end-column="0" />
+            <state relative-caret-position="-176">
+              <caret line="44" column="35" lean-forward="false" selection-start-line="44" selection-start-column="35" selection-end-line="44" selection-end-column="35" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Formation.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/FormerDUTStudentsBundle/Entity/Formation.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -964,12 +951,10 @@
         <option value="$PROJECT_DIR$/app/config/routing.yml" />
         <option value="$PROJECT_DIR$/src/FormerDUTStudentsBundle/DependencyInjection/Configuration.php" />
         <option value="$PROJECT_DIR$/src/FormerDUTStudentsBundle/DependencyInjection/FormerDUTStudentsExtension.php" />
-        <option value="$PROJECT_DIR$/src/FormerDUTStudentsBundle/Entity/User.php" />
         <option value="$PROJECT_DIR$/src/FormerDUTStudentsBundle/Controller/ApiController.php" />
         <option value="$PROJECT_DIR$/src/FormerDUTStudentsBundle/Model/Security/Credentials.php" />
         <option value="$PROJECT_DIR$/src/FormerDUTStudentsBundle/Model/User/User.php" />
         <option value="$PROJECT_DIR$/src/FormerDUTStudentsBundle/Repository/UserRepository.php" />
-        <option value="$PROJECT_DIR$/app/config/security.yml" />
         <option value="$PROJECT_DIR$/src/FormerDUTStudentsBundle/Controller/Student/StudentController.php" />
         <option value="$PROJECT_DIR$/src/FormerDUTStudentsBundle/Controller/Security/LoginController.php" />
         <option value="$PROJECT_DIR$/app/config/config.yml" />
@@ -978,19 +963,21 @@
         <option value="$PROJECT_DIR$/src/FormerDUTStudentsBundle/Resources/config/services.yml" />
         <option value="$PROJECT_DIR$/src/FormerDUTStudentsBundle/Model/Mail.php" />
         <option value="$PROJECT_DIR$/src/FormerDUTStudentsBundle/Controller/Mail/MailController.php" />
-        <option value="$PROJECT_DIR$/src/FormerDUTStudentsBundle/Controller/LoginController.php" />
         <option value="$PROJECT_DIR$/src/FormerDUTStudentsBundle/Model/Credentials.php" />
         <option value="$PROJECT_DIR$/src/FormerDUTStudentsBundle/Model/User.php" />
         <option value="$PROJECT_DIR$/src/FormerDUTStudentsBundle/Entity/Formation.php" />
         <option value="$PROJECT_DIR$/src/FormerDUTStudentsBundle/Repository/StudentRepository.php" />
-        <option value="$PROJECT_DIR$/src/FormerDUTStudentsBundle/Repository/FormationRepository.php" />
         <option value="$PROJECT_DIR$/src/FormerDUTStudentsBundle/Entity/Student.php" />
-        <option value="$PROJECT_DIR$/src/FormerDUTStudentsBundle/Controller/FormationController.php" />
         <option value="$PROJECT_DIR$/src/FormerDUTStudentsBundle/Controller/MailController.php" />
-        <option value="$PROJECT_DIR$/src/FormerDUTStudentsBundle/Controller/StudentController.php" />
         <option value="$PROJECT_DIR$/src/FormerDUTStudentsBundle/Controller/CredentialsController.php" />
-        <option value="$PROJECT_DIR$/src/FormerDUTStudentsBundle/Resources/config/routing.yml" />
         <option value="$PROJECT_DIR$/src/FormerDUTStudentsBundle/Controller/UserController.php" />
+        <option value="$PROJECT_DIR$/src/FormerDUTStudentsBundle/Resources/config/routing.yml" />
+        <option value="$PROJECT_DIR$/src/FormerDUTStudentsBundle/Controller/LoginController.php" />
+        <option value="$PROJECT_DIR$/app/config/security.yml" />
+        <option value="$PROJECT_DIR$/src/FormerDUTStudentsBundle/Entity/User.php" />
+        <option value="$PROJECT_DIR$/src/FormerDUTStudentsBundle/Controller/StudentController.php" />
+        <option value="$PROJECT_DIR$/src/FormerDUTStudentsBundle/Controller/FormationController.php" />
+        <option value="$PROJECT_DIR$/src/FormerDUTStudentsBundle/Repository/FormationRepository.php" />
       </list>
     </option>
   </component>
@@ -1009,10 +996,9 @@
   <component name="PhpWebServerValidation" path_to_validation_script="C:\xampp\htdocs\Symfony\" selected_validation_type="LOCAL" web_path_to_validation_script="http://127.0.0.1/Symfony\" />
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1400" />
-    <option name="height" value="820" />
+    <option name="x" value="793" />
+    <option name="width" value="814" />
+    <option name="height" value="867" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -1112,7 +1098,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../front" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
@@ -1151,7 +1137,7 @@
       <workItem from="1506345607112" duration="7764000" />
       <workItem from="1506426987584" duration="14523000" />
       <workItem from="1506804882508" duration="103149000" />
-      <workItem from="1507207262146" duration="36494000" />
+      <workItem from="1507207262146" duration="56160000" />
     </task>
     <task id="LOCAL-00001" summary="DataBase, doing login">
       <created>1506949326775</created>
@@ -1171,7 +1157,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="161930000" />
+    <option name="totallyTimeSpent" value="181596000" />
   </component>
   <component name="TodoView" selected-index="4">
     <todo-panel id="selected-file">
@@ -1262,11 +1248,6 @@
           <option name="timeStamp" value="74" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/src/FormerDUTStudentsBundle/Controller/StudentController.php</url>
-          <line>204</line>
-          <option name="timeStamp" value="75" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/src/FormerDUTStudentsBundle/Controller/FormationController.php</url>
           <line>78</line>
           <option name="timeStamp" value="76" />
@@ -1276,20 +1257,21 @@
           <line>178</line>
           <option name="timeStamp" value="80" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/src/FormerDUTStudentsBundle/Controller/FormationController.php</url>
+          <line>120</line>
+          <option name="timeStamp" value="88" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="81" />
+      <option name="time" value="89" />
     </breakpoint-manager>
-    <watches-manager />
+    <watches-manager>
+      <configuration name="app_dev.php">
+        <watch expression="$GLOBALS" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/FormerDUTStudentsBundle/FormerDUTStudentsBundle.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="10" lean-forward="false" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/ConfigurationInterface.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -1340,6 +1322,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="263">
           <caret line="140" column="0" lean-forward="false" selection-start-line="140" selection-start-column="0" selection-end-line="140" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1355,6 +1338,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="1635" column="0" lean-forward="false" selection-start-line="1635" selection-start-column="0" selection-end-line="1635" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1421,14 +1405,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/doctrine/orm/lib/Doctrine/ORM/EntityRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="78" column="20" lean-forward="false" selection-start-line="78" selection-start-column="20" selection-end-line="78" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/app_dev.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="296">
@@ -1441,14 +1417,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
           <caret line="27" column="15" lean-forward="false" selection-start-line="27" selection-start-column="15" selection-end-line="27" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/security.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="14" column="26" lean-forward="false" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
           <folding />
         </state>
       </provider>
@@ -1514,7 +1482,7 @@
         <state relative-caret-position="221">
           <caret line="13" column="3" lean-forward="false" selection-start-line="13" selection-start-column="3" selection-end-line="13" selection-end-column="3" />
           <folding>
-            <element signature="e#49#80#0#PHP" expanded="true" />
+            <element signature="e#49#80#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1527,26 +1495,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Controller/ControllerTrait.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="359" column="0" lean-forward="false" selection-start-line="359" selection-start-column="0" selection-end-line="359" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/doctrine/common/lib/Doctrine/Common/Persistence/AbstractManagerRegistry.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="337">
           <caret line="182" column="0" lean-forward="false" selection-start-line="182" selection-start-column="0" selection-end-line="182" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Container.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="340" column="0" lean-forward="false" selection-start-line="340" selection-start-column="0" selection-end-line="340" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1556,32 +1508,8 @@
         <state relative-caret-position="272">
           <caret line="25" column="69" lean-forward="false" selection-start-line="25" selection-start-column="69" selection-end-line="25" selection-end-column="69" />
           <folding>
-            <element signature="e#49#92#0#PHP" expanded="true" />
+            <element signature="e#49#92#0#PHP" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="151">
-          <caret line="69" column="0" lean-forward="false" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/FormerDUTStudentsBundle/Repository/StudentRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="60" column="24" lean-forward="false" selection-start-line="60" selection-start-column="24" selection-end-line="60" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/FormerDUTStudentsBundle/Repository/FormationRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="67" column="37" lean-forward="false" selection-start-line="67" selection-start-column="37" selection-end-line="67" selection-end-column="37" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1609,54 +1537,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/FormerDUTStudentsBundle/Entity/Student.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5559">
-          <caret line="349" column="5" lean-forward="false" selection-start-line="349" selection-start-column="5" selection-end-line="349" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/FormerDUTStudentsBundle/Entity/Formation.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/FormerDUTStudentsBundle/Entity/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="21" column="82" lean-forward="false" selection-start-line="21" selection-start-column="75" selection-end-line="21" selection-end-column="82" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/FormerDUTStudentsBundle/Controller/LoginController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-448">
-          <caret line="13" column="46" lean-forward="true" selection-start-line="13" selection-start-column="46" selection-end-line="13" selection-end-column="46" />
-          <folding>
-            <element signature="e#137#194#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/FormerDUTStudentsBundle/Controller/FormationController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="26" column="44" lean-forward="true" selection-start-line="26" selection-start-column="44" selection-end-line="26" selection-end-column="44" />
-          <folding>
-            <element signature="e#138#178#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/FormerDUTStudentsBundle/Controller/MailController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-40">
+        <state relative-caret-position="164">
           <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Controller/ControllerTrait.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="83">
+          <caret line="373" column="0" lean-forward="false" selection-start-line="373" selection-start-column="0" selection-end-line="373" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Container.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="158">
+          <caret line="223" column="0" lean-forward="false" selection-start-line="223" selection-start-column="0" selection-end-line="223" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/security.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="164">
+          <caret line="18" column="24" lean-forward="false" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="24" />
           <folding />
         </state>
       </provider>
@@ -1664,28 +1572,112 @@
     <entry file="file://$PROJECT_DIR$/src/FormerDUTStudentsBundle/Resources/config/routing.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="266">
-          <caret line="141" column="58" lean-forward="false" selection-start-line="141" selection-start-column="58" selection-end-line="141" selection-end-column="58" />
+          <caret line="60" column="21" lean-forward="false" selection-start-line="60" selection-start-column="21" selection-end-line="60" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FormerDUTStudentsBundle/Controller/UserController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="521">
+          <caret line="50" column="21" lean-forward="false" selection-start-line="50" selection-start-column="21" selection-end-line="50" selection-end-column="21" />
+          <folding>
+            <element signature="e#138#178#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/doctrine/common/lib/Doctrine/Common/Persistence/ObjectManager.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="158">
+          <caret line="128" column="20" lean-forward="false" selection-start-line="128" selection-start-column="20" selection-end-line="128" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FormerDUTStudentsBundle/Controller/LoginController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="52" column="0" lean-forward="false" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
+          <folding>
+            <element signature="e#137#194#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="69" column="0" lean-forward="false" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/doctrine/orm/lib/Doctrine/ORM/EntityRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="141">
+          <caret line="222" column="22" lean-forward="false" selection-start-line="222" selection-start-column="22" selection-end-line="222" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FormerDUTStudentsBundle/Entity/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="22" column="42" lean-forward="false" selection-start-line="22" selection-start-column="42" selection-end-line="22" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FormerDUTStudentsBundle/Entity/Formation.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/FormerDUTStudentsBundle/Controller/StudentController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="141">
-          <caret line="148" column="8" lean-forward="true" selection-start-line="148" selection-start-column="8" selection-end-line="149" selection-end-column="39" />
+        <state relative-caret-position="2023">
+          <caret line="206" column="61" lean-forward="false" selection-start-line="206" selection-start-column="61" selection-end-line="206" selection-end-column="61" />
           <folding>
             <element signature="e#54#94#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/FormerDUTStudentsBundle/Controller/UserController.php">
+    <entry file="file://$PROJECT_DIR$/src/FormerDUTStudentsBundle/Controller/FormationController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="402">
-          <caret line="50" column="21" lean-forward="false" selection-start-line="50" selection-start-column="21" selection-end-line="50" selection-end-column="21" />
+        <state relative-caret-position="255">
+          <caret line="122" column="62" lean-forward="false" selection-start-line="122" selection-start-column="62" selection-end-line="122" selection-end-column="62" />
           <folding>
             <element signature="e#138#178#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FormerDUTStudentsBundle/Repository/StudentRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="7" lean-forward="true" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FormerDUTStudentsBundle/Entity/Student.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5916">
+          <caret line="349" column="5" lean-forward="false" selection-start-line="349" selection-start-column="5" selection-end-line="349" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FormerDUTStudentsBundle/Repository/FormationRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-176">
+          <caret line="44" column="35" lean-forward="false" selection-start-line="44" selection-start-column="35" selection-end-line="44" selection-end-column="35" />
+          <folding />
         </state>
       </provider>
     </entry>

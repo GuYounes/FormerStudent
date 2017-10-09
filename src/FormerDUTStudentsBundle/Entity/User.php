@@ -20,6 +20,7 @@ class User implements UserInterface
     /**
     * @ORM\OneToOne(targetEntity="FormerDUTStudentsBundle\Entity\Student", cascade={"persist", "remove"}, mappedBy="user")
     * @ORM\JoinColumn(name="student_id", referencedColumnName="id", nullable=true)
+     * @Serializer\Groups({"toSerialize"})
     */
     private $student;
 

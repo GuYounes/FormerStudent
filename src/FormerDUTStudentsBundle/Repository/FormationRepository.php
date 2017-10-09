@@ -18,7 +18,7 @@ class FormationRepository extends \Doctrine\ORM\EntityRepository
      *
      * Delete several formations in once
      */
-    public function deleteStudents($formations)
+    public function deleteFormations($formations)
     {
         $qb = $this->createQueryBuilder('f');
 
@@ -42,7 +42,7 @@ class FormationRepository extends \Doctrine\ORM\EntityRepository
      *
      * Delete one formation by his Id
      */
-    public function deleteStudentById($id)
+    public function deleteFormationById($id)
     {
         $qb = $this->createQueryBuilder('f');
 

@@ -217,7 +217,7 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                 goto not_check_if_logged;
             }
 
-            return array (  '_controller' => 'FormerDUTStudentsBundle\\Controller\\LoginController::isLoggedAction',  '_route' => 'check_if_logged',);
+            return array (  '_controller' => 'FormerDUTStudentsBundle\\Controller\\LoginController::isLoggedAction',  '_format' => 'json',  '_route' => 'check_if_logged',);
         }
         not_check_if_logged:
 
@@ -307,6 +307,28 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
             not_edit_formation:
 
         }
+
+        // edit_user
+        if (0 === strpos($pathinfo, '/user') && preg_match('#^/user/(?P<id>\\d+)$#s', $pathinfo, $matches)) {
+            if ('PUT' !== $canonicalMethod) {
+                $allow[] = 'PUT';
+                goto not_edit_user;
+            }
+
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'edit_user')), array (  '_controller' => 'FormerDUTStudentsBundle\\Controller\\UserController::editUserAction',));
+        }
+        not_edit_user:
+
+        // send_mails
+        if ('/mail' === $pathinfo) {
+            if ('POST' !== $canonicalMethod) {
+                $allow[] = 'POST';
+                goto not_send_mails;
+            }
+
+            return array (  '_controller' => 'FormerDUTStudentsBundle\\Controller\\MailController::sendMailAction',  '_route' => 'send_mails',);
+        }
+        not_send_mails:
 
         throw 0 < count($allow) ? new MethodNotAllowedException(array_unique($allow)) : new ResourceNotFoundException();
     }

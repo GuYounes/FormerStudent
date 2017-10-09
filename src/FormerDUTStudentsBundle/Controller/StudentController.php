@@ -204,7 +204,7 @@ class StudentController extends Controller
     {
         $user = $this->getUser();
 
-        $data = $this->get('jms_serializer')->serialize($user->getStudent(), 'json', SerializationContext::create()->setGroups(array('toSerialize')));
+        $data = $this->get('jms_serializer')->serialize($user, 'json', SerializationContext::create()->setGroups(array('toSerialize')));
 
         return new Response($data);
     }
