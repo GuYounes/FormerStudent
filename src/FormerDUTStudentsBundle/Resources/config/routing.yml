@@ -54,6 +54,14 @@ add_formations_to_student:
     requirements:
         id: \d+
 
+remove_formations_from_student:
+    path:     /students/{id}/formations
+    defaults:
+        _controller: FormerDUTStudentsBundle:Student:removeFormationsFromStudent
+    methods:  [PUT]
+    requirements:
+        id: \d+
+
 self:
     path:     /self
     defaults:

@@ -195,6 +195,32 @@ class StudentController extends Controller
 
     /**
      * @param Request $request
+     * @param int $id
+     *
+     * Remove formations from a student by giving an array of formations IDs
+     */
+    public function removeFormationsFromStudentAction(Request $request, $id)
+    {
+        // Get an array of formation's IDs
+        $ids =  json_decode($request->getContent(), true);
+
+        $em = $this->getDoctrine()->getManager();
+        $formationRepository = $em->getRepository('FormerDUTStudentsBundle:Formation');
+        $studentRepository = $em->getRepository('FormerDUTStudentsBundle:Student');
+
+        $student = $studentRepository->find($id);
+        $formations = $formationRepository->findFormations($ids);
+
+        foreach($formations as $formation)
+        {
+            $student->removeFormation($formation);
+        }
+
+        $em->flush();
+    }
+
+    /**
+     * @param Request $request
      * @return Response
      *
      * Return the current student, the connected one

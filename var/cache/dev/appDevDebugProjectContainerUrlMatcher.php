@@ -186,6 +186,17 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
             }
             not_add_formations_to_student:
 
+            // remove_formations_from_student
+            if (preg_match('#^/students/(?P<id>\\d+)/formations$#s', $pathinfo, $matches)) {
+                if ('PUT' !== $canonicalMethod) {
+                    $allow[] = 'PUT';
+                    goto not_remove_formations_from_student;
+                }
+
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'remove_formations_from_student')), array (  '_controller' => 'FormerDUTStudentsBundle\\Controller\\StudentController::removeFormationsFromStudentAction',));
+            }
+            not_remove_formations_from_student:
+
         }
 
         // self
