@@ -41,7 +41,7 @@ class User
         $password = $this->credentials->generatePassword();
         $username = $this->credentials->generateUsername($student);
 
-        $user = new UserEntity("$username", "$password", "", ["ROLE_STUDENT"]);
+        $user = new UserEntity("$username", "$password", "", ["ROLE_STUDENT"], false);
 
         return $user;
     }

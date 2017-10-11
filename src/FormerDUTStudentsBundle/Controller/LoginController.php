@@ -35,6 +35,8 @@ class LoginController extends Controller
      * But obligatory
      *
      * Call login_check directly
+     *
+     * /login
      */
     public function loginAction(Request $request)
     {
@@ -49,6 +51,8 @@ class LoginController extends Controller
      * @return Reponse|Response
      *
      * If the user connected return his information, else return false
+     *
+     * /isLogged
      */
     public function isLoggedAction(Request $request)
     {

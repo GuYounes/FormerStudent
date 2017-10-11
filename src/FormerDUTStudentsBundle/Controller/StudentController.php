@@ -3,6 +3,7 @@
 namespace FormerDUTStudentsBundle\Controller;
 
 use FormerDUTStudentsBundle\Entity\StudentFormation;
+use FormerDUTStudentsBundle\Entity\Student;
 use JMS\Serializer\SerializationContext;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
@@ -25,7 +26,10 @@ class StudentController extends Controller
      * @return Response
      *
      * Get all students
+     *
      * @Security("has_role('ROLE_ADMIN')")
+     *
+     * /students GET
      */
     public function getStudentsAction(Request $request)
     {
@@ -53,6 +57,8 @@ class StudentController extends Controller
      * Get a student from his id
      *
      * @Security("has_role('ROLE_ADMIN')")
+     *
+     * /students/{id} GET
      */
     public function getStudentAction(Request $request, $id)
     {
@@ -88,6 +94,8 @@ class StudentController extends Controller
      * }
      *
      * Parameters from mail2 to job are optional
+     *
+     * /students POST
      */
     public function addStudentAction(Request $request)
     {
@@ -111,6 +119,67 @@ class StudentController extends Controller
         return new Response("true");
     }
 
+
+    /**
+     * @param Request $request
+     * @return Response
+     *
+     * Create students from an array
+     * The users are automatically validated
+     * JSON:
+     * {
+     *      "students":
+     *      [
+     *          {
+     *              "name": "Younes",
+     *              "lastName": "Guarssifi",
+     *              "mail": "younes.gua@gmail.com"
+     *          },
+     *          {
+     *              "name": "Jane",
+     *              "lastName": "Doe",
+     *              "mail": "jane.doe@gmail.com"
+     *          }
+     *      ]
+     * }
+     *
+     * @Security("has_role('ROLE_ADMIN')")
+     *
+     * /students/import POST
+     */
+    public function addStudentsAction(Request $request)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $userGenerator = $this->get('former_dut_students.user');
+
+        // Get the json
+        $data = $request->getContent();
+
+        // Get an array of students
+        $students = json_decode($request->getContent(), true)["students"];
+
+        foreach($students as $studentArray)
+        {
+            $student = new Student($studentArray["name"], $studentArray["lastName"], $studentArray["mail"]);
+
+            // Generate the user => login, password, roles...
+            $user = $userGenerator->generateUser($student);
+            $user->setValidated(true);
+            $student->setUser($user);
+
+            // Save
+            $em->persist($user);
+
+            //TODO send mail to student
+        }
+
+        $em->flush();
+
+        return new Response("true");
+    }
+
+
+
     /**
      * @param Request $request
      * @param int $id
@@ -120,6 +189,8 @@ class StudentController extends Controller
      *
      * Delete one student
      * @Security("has_role('ROLE_ADMIN')")
+     *
+     * /students/{id} DELETE
      */
     public function deleteStudentAction(Request $request, $id)
     {
@@ -141,10 +212,12 @@ class StudentController extends Controller
      * Delete several students from an array of IDs
      * JSON:
      * {
-     *      [12, 2]
+     *      "students": [12, 2]
      * }
      *
      * @Security("has_role('ROLE_ADMIN')")
+     *
+     * /students DELETE
      */
     public function deleteStudentsAction(Request $request)
     {
@@ -153,7 +226,7 @@ class StudentController extends Controller
             ->getRepository('FormerDUTStudentsBundle:Student');
 
         // Get an array of student's IDs
-        $students = json_decode($request->getContent(), true);
+        $students = json_decode($request->getContent(), true)["students"];
 
         // This method will delete student but also the related user
         // No need to flush
@@ -182,6 +255,8 @@ class StudentController extends Controller
      * }
      *
      * All properties are optional
+     *
+     * /students/{id} PUT
      */
     public function editStudentAction(Request $request, $id)
     {
@@ -237,6 +312,8 @@ class StudentController extends Controller
      * }
      * graduationYear[0] is the graduation year of formation[0]
      * graduationYear[1] is the graduation year of formation[1]...
+     *
+     * /students/{id}/formations PUT
      */
     public function addFormationsToStudentAction(Request $request, $id)
     {
@@ -266,7 +343,7 @@ class StudentController extends Controller
         for($i=0; $i< count($formations); $i++)
         {
             $studentFormations = new StudentFormation($graduationYear[$i]);
-            $studentFormations->setFormation($formations[i]);
+            $studentFormations->setFormation($formations[$i]);
             $studentFormations->setStudent($student);
 
             // Save
@@ -288,10 +365,12 @@ class StudentController extends Controller
      *
      * JSON  :
      * {
-     *      [10, 5]
+     *      "formations": [10, 5]
      * }
      *
      * Remove formations from a student by giving an array of formations IDs
+     *
+     * /students/{id}/formations DELETE
      */
     public function removeFormationsFromStudentAction(Request $request, $id)
     {
@@ -300,7 +379,7 @@ class StudentController extends Controller
         if($this->getUser()->getStudent()->getId() != $id && !($this->get('security.authorization_checker')->isGranted('ROLE_ADMIN'))) return new Response("You are not authorized");
 
         // Get an array of formation's IDs from the JSON
-        $ids =  json_decode($request->getContent(), true);
+        $ids =  json_decode($request->getContent(), true)["formations"];
 
         // Getting the Entity Manager and the Repositories to manage objects
         $em = $this->getDoctrine()->getManager();
@@ -317,7 +396,7 @@ class StudentController extends Controller
         // For each formation, we delete the studentFormation
         foreach ($formations as $formation)
         {
-            $studentFormation = $repository->findby(array('student' => $student, 'formation' => $formation));
+            $studentFormation = $repository->findOneby(array('student' => $student, 'formation' => $formation));
 
             $em->remove($studentFormation);
         }
@@ -334,6 +413,8 @@ class StudentController extends Controller
      *
      * Return the current student, the connected one
      * Only use it when connected with student
+     *
+     * /self GET
      */
     public function selfAction(Request $request)
     {
@@ -342,6 +423,35 @@ class StudentController extends Controller
 
         // Serialize the user into a json with the "toSerialize" Group
         $data = $this->get('jms_serializer')->serialize($user, 'json', SerializationContext::create()->setGroups(array('toSerialize')));
+
+        return new Response($data);
+    }
+
+
+    /**
+     * @param Request $request
+     * @param $id
+     * @return Response
+     *
+     * @Security("has_role('ROLE_ADMIN')")
+     *
+     * /students/validate GET
+     */
+    public function validateAction(Request $request, $id)
+    {
+        $em = $this->getDoctrine()
+            ->getManager();
+
+        $repository = $em->getRepository('FormerDUTStudentsBundle:Student');
+
+        // Get student
+        $student = $repository->find($id);
+
+        // Validate the student
+        $student->getUser()->setValidated(true);
+
+        // Serialize the student into a json with the "toSerialize" Group
+        $data = $this->get('jms_serializer')->serialize($student, 'json', SerializationContext::create()->setGroups(array('toSerialize')));
 
         return new Response($data);
     }

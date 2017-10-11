@@ -59,7 +59,7 @@ class Student
     /**
      * @var string
      *
-     * @ORM\Column(name="mail", type="string", unique = true, length=255)
+     * @ORM\Column(name="mail", type="string", length=255)
      *
      * @Serializer\Groups({"toSerialize"})
      */
@@ -68,7 +68,7 @@ class Student
     /**
      * @var string
      *
-     * @ORM\Column(name="mail2", type="string", unique = true, length=255, nullabe=true)
+     * @ORM\Column(name="mail2", type="string", unique = true, length=255, nullable=true)
      *
      * @Serializer\Groups({"toSerialize"})
      */

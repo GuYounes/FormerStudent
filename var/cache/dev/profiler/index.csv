@@ -1,3 +1,2 @@
-1234eb,127.0.0.1,POST,http://127.0.0.1/FormerDUTStudents/web/app_dev.php/login_check,1507707092,,302
-7f5ee5,127.0.0.1,GET,http://127.0.0.1/FormerDUTStudents/web/app_dev.php/self,1507707202,,200
-c9c1e2,127.0.0.1,POST,http://127.0.0.1/FormerDUTStudents/web/app_dev.php/login_check,1507707208,,302
+7867d3,127.0.0.1,GET,http://127.0.0.1/FormerDUTStudents/web/app_dev.php/students/10,1507721784,158155,200
+158155,127.0.0.1,GET,http://127.0.0.1/FormerDUTStudents/web/app_dev.php/students/10,1507721784,,500

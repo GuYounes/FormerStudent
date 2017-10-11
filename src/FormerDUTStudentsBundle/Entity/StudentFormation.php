@@ -14,7 +14,7 @@ use JMS\Serializer\Annotation as Serializer;
 class StudentFormation
 {
     /**
-     * @ORM\ManyToOne(targetEntity="FormerDUTStudentsBundle\Entity\Formation", cascade={"persist", "remove"}, inversedBy="studentFormations")
+     * @ORM\ManyToOne(targetEntity="FormerDUTStudentsBundle\Entity\Formation", cascade={"persist"}, inversedBy="studentFormations")
      * @ORM\JoinColumn(nullable=false)
      *
      * @Serializer\Groups({"toSerialize"})
@@ -22,7 +22,7 @@ class StudentFormation
     private $formation;
 
     /**
-     * @ORM\ManyToOne(targetEntity="FormerDUTStudentsBundle\Entity\Student", cascade={"persist", "remove"}, inversedBy="studentFormations")
+     * @ORM\ManyToOne(targetEntity="FormerDUTStudentsBundle\Entity\Student", cascade={"persist"}, inversedBy="studentFormations")
      * @ORM\JoinColumn(nullable=false)
      */
     private $student;

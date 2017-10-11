@@ -31,6 +31,8 @@ class FormationController extends Controller
      * @return Response
      *
      * Get all formations
+     *
+     * /formations GET
      */
     public function getFormationsAction(Request $request)
     {
@@ -56,6 +58,8 @@ class FormationController extends Controller
      * @return Response
      *
      * Get a formation from his id
+     *
+     * /formations/{id} GET
      */
     public function getFormationAction(Request $request, $id)
     {
@@ -85,6 +89,8 @@ class FormationController extends Controller
      * }
      *
      * The parameter "closingDate" is optional
+     *
+     * /formations POST
      */
     public function addFormationAction(Request $request)
     {
@@ -111,6 +117,8 @@ class FormationController extends Controller
      * @return Response
      *
      * Delete one formation
+     *
+     * /formations/{id} DELETE
      */
     public function deleteFormationAction(Request $request, $id)
     {
@@ -131,8 +139,10 @@ class FormationController extends Controller
      * Delete several formations from an array of IDs
      * JSON:
      * {
-     *      [3, 5]
+     *      "formations": [3, 5]
      * }
+     *
+     * /formations DELETE
      */
     public function deleteFormationsAction(Request $request)
     {
@@ -166,6 +176,8 @@ class FormationController extends Controller
      * }
      *
      * All parameters are optional
+     *
+     * /formations/{id} PUT
      */
     public function editFormationAction(Request $request, $id)
     {

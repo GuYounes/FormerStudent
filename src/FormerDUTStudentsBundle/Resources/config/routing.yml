@@ -22,6 +22,12 @@ add_student:
         _controller: FormerDUTStudentsBundle:Student:addStudent
     methods:  [POST]
 
+add_student:
+    path:     /students/import
+    defaults:
+        _controller: FormerDUTStudentsBundle:Student:addStudents
+    methods:  [POST]
+
 delete_student:
     path:     /students/{id}
     defaults:
@@ -50,7 +56,7 @@ add_formations_to_student:
     path:     /students/{id}/formations
     defaults:
         _controller: FormerDUTStudentsBundle:Student:addFormationsToStudent
-    methods:  [POST]
+    methods:  [PUT]
     requirements:
         id: \d+
 
@@ -58,7 +64,7 @@ remove_formations_from_student:
     path:     /students/{id}/formations
     defaults:
         _controller: FormerDUTStudentsBundle:Student:removeFormationsFromStudent
-    methods:  [PUT]
+    methods:  [DELETE]
     requirements:
         id: \d+
 
@@ -66,6 +72,13 @@ self:
     path:     /self
     defaults:
         _controller: FormerDUTStudentsBundle:Student:self
+        _format: json
+    methods:  [GET]
+
+validate_student:
+    path:     /students/validate
+    defaults:
+        _controller: FormerDUTStudentsBundle:Student:validate
         _format: json
     methods:  [GET]
 
@@ -84,14 +97,6 @@ check_if_logged:
         _controller: FormerDUTStudentsBundle:Login:isLogged
         _format: json
     methods:  [GET]
-
-check_if_right_student:
-    path: /login/student/{id}
-    defaults:
-        _controller: FormerDUTStudentsBundle:Login:rightStudent
-    methods:  [GET]
-    requirements:
-            id: \d+
 
 login:
     path: /login
@@ -154,7 +159,7 @@ edit_formation:
 ################################ Route to credentials methods ######################################
 
 edit_user:
-    path:     /user/{id}
+    path:     /user/{id}/password
     defaults:
         _controller: FormerDUTStudentsBundle:User:editUser
     methods:  [PUT]

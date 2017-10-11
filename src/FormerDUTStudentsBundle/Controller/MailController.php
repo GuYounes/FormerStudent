@@ -18,6 +18,8 @@ use Symfony\Component\HttpFoundation\Response;
  * @package FormerDUTStudentsBundle\Controller
  *
  * Send mails
+ *
+ * /mail POST
  */
 class MailController extends Controller
 {

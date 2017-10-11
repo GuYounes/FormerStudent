@@ -41,6 +41,7 @@ class UserController extends Controller
      *      "password": "newpassword"
      * }
      *
+     * /user/{id}/password PUT
      */
     public function editPasswordAction(Request $request, $id)
     {
