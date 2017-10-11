@@ -15,9 +15,9 @@ use JMS\Serializer\Annotation as Serializer;
 class Formation
 {
     /**
-     * @ORM\ManyToMany(targetEntity="FormerDUTStudentsBundle\Entity\Student", cascade={"persist"}, mappedBy="formations")
+     * @ORM\OneToMany(targetEntity="FormerDUTStudentsBundle\Entity\StudentFormation", cascade={"persist", "remove"}, mappedBy="formation")
      */
-    private $students;
+    private $studentFormations;
 
     /**
      * @var int
@@ -58,6 +58,22 @@ class Formation
      * @Serializer\SerializedName("closingDate")
      */
     private $closingDate;
+
+
+    /**
+     * Formation constructor.
+     * @param $name
+     * @param $creationDate
+     * @param $closingDate
+     *
+     */
+    public function __construct($name, $creationDate, $closingDate)
+    {
+        $this->name = $name;
+        $this->creationDate = $creationDate;
+        $this->closingDate = $closingDate;
+        $this->studentFormations = new ArrayCollection();
+    }
 
 
     /**
@@ -141,13 +157,7 @@ class Formation
     {
         return $this->closingDate;
     }
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->students = new \Doctrine\Common\Collections\ArrayCollection();
-    }
+
 
     /**
      * Add student
@@ -181,5 +191,39 @@ class Formation
     public function getStudents()
     {
         return $this->students;
+    }
+
+    /**
+     * Add studentFormation
+     *
+     * @param \FormerDUTStudentsBundle\Entity\StudentFormation $studentFormation
+     *
+     * @return Formation
+     */
+    public function addStudentFormation(StudentFormation $studentFormation)
+    {
+        $this->studentFormations[] = $studentFormation;
+
+        return $this;
+    }
+
+    /**
+     * Remove studentFormation
+     *
+     * @param \FormerDUTStudentsBundle\Entity\StudentFormation $studentFormation
+     */
+    public function removeStudentFormation(StudentFormation $studentFormation)
+    {
+        $this->studentFormations->removeElement($studentFormation);
+    }
+
+    /**
+     * Get studentFormations
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getStudentFormations()
+    {
+        return $this->studentFormations;
     }
 }

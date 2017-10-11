@@ -5,8 +5,8 @@ security:
     FormerDUTStudentsBundle\Entity\User: plaintext
 
   role_hierarchy:
-    ROLE_STUDENT: ROLE_STUDENT
-    ROLE_ADMIN: [ROLE_STUDENT, ROLE_ADMIN, ROLE_ALLOWED_TO_SWITCH]
+    ROLE_ADMIN: ROLE_STUDENT
+    #ROLE_ADMIN: [ROLE_STUDENT, ROLE_ADMIN, ROLE_ALLOWED_TO_SWITCH]
 
   providers:
     main:
@@ -22,18 +22,6 @@ security:
     dev:
       pattern: ^/(_(profiler|wdt)|css|images|js)/
       security: false
-
-    #main_login:
-       #Allow to login
-      #pattern:   ^/login$
-      #anonymous: true
-      #provider: main
-
-    #is_logged:
-      # Allow to check if logged
-      #pattern:   ^/isLogged$
-      #anonymous: true
-      #provider: main
 
     main:
       pattern: ^/

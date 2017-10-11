@@ -85,6 +85,14 @@ check_if_logged:
         _format: json
     methods:  [GET]
 
+check_if_right_student:
+    path: /login/student/{id}
+    defaults:
+        _controller: FormerDUTStudentsBundle:Login:rightStudent
+    methods:  [GET]
+    requirements:
+            id: \d+
+
 login:
     path: /login
     defaults:

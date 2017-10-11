@@ -3,6 +3,8 @@
 namespace FormerDUTStudentsBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use JMS\Serializer\Annotation as Serializer;
+
 
 /**
  * Student
@@ -13,15 +15,14 @@ use Doctrine\ORM\Mapping as ORM;
 class Student
 {
     /**
-     * @ORM\OneToOne(targetEntity="FormerDUTStudentsBundle\Entity\User", cascade={"persist"}, inversedBy="users")
-     * @ORM\JoinColumn(nullable=false)
+     * @ORM\OneToMany(targetEntity="FormerDUTStudentsBundle\Entity\StudentFormation", cascade={"persist", "remove"}, mappedBy="student")
      */
-    private $user;
+    private $studentFormations;
 
     /**
-     * @ORM\ManyToMany(targetEntity="FormerDUTStudentsBundle\Entity\Formation", cascade={"persist"}, inversedBy="students")
+     * @ORM\OneToOne(targetEntity="FormerDUTStudentsBundle\Entity\User", cascade={"persist", "remove"}, inversedBy="student")
      */
-    private $formations;
+    private $user;
 
     /**
      * @var int
@@ -29,6 +30,8 @@ class Student
      * @ORM\Column(name="id", type="integer")
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="AUTO")
+     *
+     * @Serializer\Groups({"toSerialize"})
      */
     private $id;
 
@@ -36,6 +39,8 @@ class Student
      * @var string
      *
      * @ORM\Column(name="name", type="string", length=255)
+     *
+     * @Serializer\Groups({"toSerialize"})
      */
     private $name;
 
@@ -43,27 +48,27 @@ class Student
      * @var string
      *
      * @ORM\Column(name="last_name", type="string", length=255)
+     *
+     * @Serializer\Groups({"toSerialize"})
+     * @Serializer\SerializedName("lastName")
      */
     private $lastName;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="mail", type="string", length=255)
+     * @ORM\Column(name="mail", type="string", unique = true, length=255)
+     *
+     * @Serializer\Groups({"toSerialize"})
      */
     private $mail;
-
-    /**
-     * @var \DateTime
-     *
-     * @ORM\Column(name="graduation_year", type="string", length=4)
-     */
-    private $graduationYear;
 
     /**
      * @var int
      *
      * @ORM\Column(name="phone", type="string", length=255, nullable=true)
+     *
+     * @Serializer\Groups({"toSerialize"})
      */
     private $phone;
 
@@ -71,6 +76,8 @@ class Student
      * @var string
      *
      * @ORM\Column(name="company", type="string", length=255, nullable=true)
+     *
+     * @Serializer\Groups({"toSerialize"})
      */
     private $company;
 
@@ -78,20 +85,20 @@ class Student
      * @var string
      *
      * @ORM\Column(name="job", type="string", length=255, nullable=true)
+     *
+     * @Serializer\Groups({"toSerialize"})
      */
     private $job;
 
 
-    public function __construct($name, $lastName, $mail, $graduationYear, $phone, $company, $job, $idFormation)
+    public function __construct($name, $lastName, $mail, $phone, $company, $job)
     {
         $this->name = $name;
         $this->lastName = $lastName;
         $this->mail = $mail;
-        $this->graduationYear = $graduationYear;
         $this->phone = $phone;
         $this->company = $company;
         $this->job = $job;
-        $this->idFormation = $idFormation;
     }
 
 
@@ -178,30 +185,6 @@ class Student
     }
 
     /**
-     * Set graduationYear
-     *
-     * @param \DateTime $graduationYear
-     *
-     * @return Student
-     */
-    public function setGraduationYear($graduationYear)
-    {
-        $this->graduationYear = $graduationYear;
-
-        return $this;
-    }
-
-    /**
-     * Get graduationYear
-     *
-     * @return \DateTime
-     */
-    public function getGraduationYear()
-    {
-        return $this->graduationYear;
-    }
-
-    /**
      * Set phone
      *
      * @param integer $phone
@@ -285,6 +268,8 @@ class Student
     {
         $this->user = $user;
 
+        $user->setStudent($this);
+
         return $this;
     }
 
@@ -296,39 +281,5 @@ class Student
     public function getUser()
     {
         return $this->user;
-    }
-
-    /**
-     * Add formation
-     *
-     * @param \FormerDUTStudentsBundle\Entity\Formation $formation
-     *
-     * @return Student
-     */
-    public function addFormation(\FormerDUTStudentsBundle\Entity\Formation $formation)
-    {
-        $this->formations[] = $formation;
-
-        return $this;
-    }
-
-    /**
-     * Remove formation
-     *
-     * @param \FormerDUTStudentsBundle\Entity\Formation $formation
-     */
-    public function removeFormation(\FormerDUTStudentsBundle\Entity\Formation $formation)
-    {
-        $this->formations->removeElement($formation);
-    }
-
-    /**
-     * Get formations
-     *
-     * @return \Doctrine\Common\Collections\Collection
-     */
-    public function getFormations()
-    {
-        return $this->formations;
     }
 }

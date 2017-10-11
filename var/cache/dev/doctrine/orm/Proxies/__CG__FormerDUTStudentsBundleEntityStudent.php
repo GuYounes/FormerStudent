@@ -64,10 +64,10 @@ class Student extends \FormerDUTStudentsBundle\Entity\Student implements \Doctri
     public function __sleep()
     {
         if ($this->__isInitialized__) {
-            return ['__isInitialized__', '' . "\0" . 'FormerDUTStudentsBundle\\Entity\\Student' . "\0" . 'user', '' . "\0" . 'FormerDUTStudentsBundle\\Entity\\Student' . "\0" . 'formations', '' . "\0" . 'FormerDUTStudentsBundle\\Entity\\Student' . "\0" . 'id', '' . "\0" . 'FormerDUTStudentsBundle\\Entity\\Student' . "\0" . 'name', '' . "\0" . 'FormerDUTStudentsBundle\\Entity\\Student' . "\0" . 'lastName', '' . "\0" . 'FormerDUTStudentsBundle\\Entity\\Student' . "\0" . 'mail', '' . "\0" . 'FormerDUTStudentsBundle\\Entity\\Student' . "\0" . 'graduationYear', '' . "\0" . 'FormerDUTStudentsBundle\\Entity\\Student' . "\0" . 'phone', '' . "\0" . 'FormerDUTStudentsBundle\\Entity\\Student' . "\0" . 'company', '' . "\0" . 'FormerDUTStudentsBundle\\Entity\\Student' . "\0" . 'job'];
+            return ['__isInitialized__', '' . "\0" . 'FormerDUTStudentsBundle\\Entity\\Student' . "\0" . 'studentFormations', '' . "\0" . 'FormerDUTStudentsBundle\\Entity\\Student' . "\0" . 'user', '' . "\0" . 'FormerDUTStudentsBundle\\Entity\\Student' . "\0" . 'id', '' . "\0" . 'FormerDUTStudentsBundle\\Entity\\Student' . "\0" . 'name', '' . "\0" . 'FormerDUTStudentsBundle\\Entity\\Student' . "\0" . 'lastName', '' . "\0" . 'FormerDUTStudentsBundle\\Entity\\Student' . "\0" . 'mail', '' . "\0" . 'FormerDUTStudentsBundle\\Entity\\Student' . "\0" . 'phone', '' . "\0" . 'FormerDUTStudentsBundle\\Entity\\Student' . "\0" . 'company', '' . "\0" . 'FormerDUTStudentsBundle\\Entity\\Student' . "\0" . 'job'];
         }
 
-        return ['__isInitialized__', '' . "\0" . 'FormerDUTStudentsBundle\\Entity\\Student' . "\0" . 'user', '' . "\0" . 'FormerDUTStudentsBundle\\Entity\\Student' . "\0" . 'formations', '' . "\0" . 'FormerDUTStudentsBundle\\Entity\\Student' . "\0" . 'id', '' . "\0" . 'FormerDUTStudentsBundle\\Entity\\Student' . "\0" . 'name', '' . "\0" . 'FormerDUTStudentsBundle\\Entity\\Student' . "\0" . 'lastName', '' . "\0" . 'FormerDUTStudentsBundle\\Entity\\Student' . "\0" . 'mail', '' . "\0" . 'FormerDUTStudentsBundle\\Entity\\Student' . "\0" . 'graduationYear', '' . "\0" . 'FormerDUTStudentsBundle\\Entity\\Student' . "\0" . 'phone', '' . "\0" . 'FormerDUTStudentsBundle\\Entity\\Student' . "\0" . 'company', '' . "\0" . 'FormerDUTStudentsBundle\\Entity\\Student' . "\0" . 'job'];
+        return ['__isInitialized__', '' . "\0" . 'FormerDUTStudentsBundle\\Entity\\Student' . "\0" . 'studentFormations', '' . "\0" . 'FormerDUTStudentsBundle\\Entity\\Student' . "\0" . 'user', '' . "\0" . 'FormerDUTStudentsBundle\\Entity\\Student' . "\0" . 'id', '' . "\0" . 'FormerDUTStudentsBundle\\Entity\\Student' . "\0" . 'name', '' . "\0" . 'FormerDUTStudentsBundle\\Entity\\Student' . "\0" . 'lastName', '' . "\0" . 'FormerDUTStudentsBundle\\Entity\\Student' . "\0" . 'mail', '' . "\0" . 'FormerDUTStudentsBundle\\Entity\\Student' . "\0" . 'phone', '' . "\0" . 'FormerDUTStudentsBundle\\Entity\\Student' . "\0" . 'company', '' . "\0" . 'FormerDUTStudentsBundle\\Entity\\Student' . "\0" . 'job'];
     }
 
     /**
@@ -257,28 +257,6 @@ class Student extends \FormerDUTStudentsBundle\Entity\Student implements \Doctri
     /**
      * {@inheritDoc}
      */
-    public function setGraduationYear($graduationYear)
-    {
-
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setGraduationYear', [$graduationYear]);
-
-        return parent::setGraduationYear($graduationYear);
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    public function getGraduationYear()
-    {
-
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getGraduationYear', []);
-
-        return parent::getGraduationYear();
-    }
-
-    /**
-     * {@inheritDoc}
-     */
     public function setPhone($phone)
     {
 
@@ -367,34 +345,34 @@ class Student extends \FormerDUTStudentsBundle\Entity\Student implements \Doctri
     /**
      * {@inheritDoc}
      */
-    public function addFormation(\FormerDUTStudentsBundle\Entity\Formation $formation)
+    public function addStudentFormation(\FormerDUTStudentsBundle\Entity\StudentFormation $studentFormation)
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'addFormation', [$formation]);
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'addStudentFormation', [$studentFormation]);
 
-        return parent::addFormation($formation);
+        return parent::addStudentFormation($studentFormation);
     }
 
     /**
      * {@inheritDoc}
      */
-    public function removeFormation(\FormerDUTStudentsBundle\Entity\Formation $formation)
+    public function removeStudentFormation(\FormerDUTStudentsBundle\Entity\StudentFormation $studentFormation)
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'removeFormation', [$formation]);
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'removeStudentFormation', [$studentFormation]);
 
-        return parent::removeFormation($formation);
+        return parent::removeStudentFormation($studentFormation);
     }
 
     /**
      * {@inheritDoc}
      */
-    public function getFormations()
+    public function getStudentFormations()
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getFormations', []);
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getStudentFormations', []);
 
-        return parent::getFormations();
+        return parent::getStudentFormations();
     }
 
 }

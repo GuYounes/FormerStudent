@@ -22,7 +22,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
  * CRUD on formations
  * Only available to admin
  *
- *
+ * @Security("is_granted('ROLE_ADMIN')")
  */
 class FormationController extends Controller
 {
@@ -38,8 +38,10 @@ class FormationController extends Controller
             ->getManager()
             ->getRepository('FormerDUTStudentsBundle:Formation');
 
+        // Get all formations
         $formations = $repository->findAll();
 
+        // Serialize
         $data = $this->get('jms_serializer')->serialize($formations, 'json', SerializationContext::create()->setGroups(array('toSerialize')));
 
         return new Response($data);
@@ -61,8 +63,10 @@ class FormationController extends Controller
             ->getManager()
             ->getRepository('FormerDUTStudentsBundle:Formation');
 
+        // Get the formation
         $formation = $repository->find($id);
 
+        // Serialize
         $data = $this->get('jms_serializer')->serialize($formation, 'json', SerializationContext::create()->setGroups(array('toSerialize')));
 
         return new Response($data);
@@ -73,15 +77,26 @@ class FormationController extends Controller
      * @return Response
      *
      * Add a new formation
+     * JSON:
+     * {
+     *      "name": "DUT Informatique"
+     *      "creationDate": 2000,
+     *      "closingDate": 2017
+     * }
+     *
+     * The parameter "closingDate" is optional
      */
     public function addFormationAction(Request $request)
     {
         $em = $this->getDoctrine()->getManager();
 
+        // Get the json
         $data = $request->getContent();
 
+        // Deserialize the json into an object
         $formation = $this->get('jms_serializer')->deserialize($data, 'FormerDUTStudentsBundle\Entity\Formation', 'json');
 
+        // Save
         $em->persist($formation);
         $em->flush();
 
@@ -103,8 +118,7 @@ class FormationController extends Controller
             ->getManager()
             ->getRepository('FormerDUTStudentsBundle:Formation');
 
-        // This method will delete student but also the related user
-        // No need to flush
+        // Delete the formation
         $repository->deleteFormationById($id);
 
         return new Response("true");
@@ -115,6 +129,10 @@ class FormationController extends Controller
      * @return Response
      *
      * Delete several formations from an array of IDs
+     * JSON:
+     * {
+     *      [3, 5]
+     * }
      */
     public function deleteFormationsAction(Request $request)
     {
@@ -140,6 +158,14 @@ class FormationController extends Controller
      * @return Response
      *
      * Update a formation's information
+     * JSON:
+     * {
+     *      "name": "DUT Informatique"
+     *      "creationDate": 2000,
+     *      "closingDate": 2017
+     * }
+     *
+     * All parameters are optional
      */
     public function editFormationAction(Request $request, $id)
     {
@@ -147,6 +173,7 @@ class FormationController extends Controller
             ->getManager()
             ->getRepository('FormerDUTStudentsBundle:Formation');
 
+        // Get the formation we want to edit
         $formation = $repository->findOneById($id);
 
         // Get the body of the request
@@ -155,6 +182,8 @@ class FormationController extends Controller
         // Deserialize the json into an object
         $newFormation = $this->get('jms_serializer')->deserialize($data, 'FormerDUTStudentsBundle\Entity\Formation', 'json');
 
+        // If the value of a parameter is send in the json, we replace the old parameter by this one
+        // Else we don't change it
         if($newFormation->getName() != null) $formation->setName($newFormation->getName());
         if($newFormation->getCreationDate() != null) $formation->setCreationDate($newFormation->getCreationDate());
         if($newFormation->getClosingDate() != null) $formation->setClosingDate($newFormation->getClosingDate());

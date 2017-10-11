@@ -5,8 +5,8 @@ parameters:
     database_name: former_students
     database_user: root
     database_password: null
-    mailer_transport: smtp
-    mailer_host: mail.smtp2go.com
-    mailer_user: vincent.skora@laposte.net
-    mailer_password: amFzZ3d5ZG92MDAw
+    mailer_transport: gmail
+    mailer_host: smtp.gmail.com
+    mailer_user: younes.gua@gmail.com
+    mailer_password: amdnvidia07
     secret: 5140dac90df263cd719ffd8970694d978f4417b0

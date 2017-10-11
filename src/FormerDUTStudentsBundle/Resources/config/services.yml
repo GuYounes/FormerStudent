@@ -17,5 +17,5 @@ services:
               class: FormerDUTStudentsBundle\Model\Mail
               arguments:
                   - "@mailer"
-                  - %mailer_user%
+                  - '%mailer_user%'
 

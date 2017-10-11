@@ -233,6 +233,17 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
         not_check_if_logged:
 
         if (0 === strpos($pathinfo, '/login')) {
+            // check_if_right_student
+            if (0 === strpos($pathinfo, '/login/student') && preg_match('#^/login/student/(?P<id>\\d+)$#s', $pathinfo, $matches)) {
+                if ('GET' !== $canonicalMethod) {
+                    $allow[] = 'GET';
+                    goto not_check_if_right_student;
+                }
+
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'check_if_right_student')), array (  '_controller' => 'FormerDUTStudentsBundle\\Controller\\LoginController::rightStudentAction',));
+            }
+            not_check_if_right_student:
+
             // login
             if ('/login' === $pathinfo) {
                 return array (  '_controller' => 'FormerDUTStudentsBundle\\Controller\\LoginController::loginAction',  '_route' => 'login',);

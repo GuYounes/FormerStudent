@@ -19,7 +19,7 @@ use JMS\Serializer\SerializationContext;
  * Class LoginController
  * @package FormerDUTStudentsBundle\Controller\Security
  *
- * Get informations on the connection of the user
+ * Get information on the connection of the user
  * If connected or not per example
  */
 class LoginController extends Controller
@@ -33,6 +33,8 @@ class LoginController extends Controller
      * !!!!!!!!!! NOT USED !!!!!!!!!!!!!!!
      * Since we work only via API calls and AJAX, this action is useless
      * But obligatory
+     *
+     * Call login_check directly
      */
     public function loginAction(Request $request)
     {
@@ -46,18 +48,23 @@ class LoginController extends Controller
      * @param Request $request
      * @return Reponse|Response
      *
-     * If the user connected return his inforrmations, else return false
+     * If the user connected return his information, else return false
      */
     public function isLoggedAction(Request $request)
     {
+        // Get the current user
+        // Return null if not connected
         $user = $this->getUser();
 
+        // If we are not connected return false
         if($user === null) return new Response("false");
 
+        // Else
         // Serialize the user to send it
-        $data = $this->get('jms_serializer')->serialize($user, 'json', SerializationContext::create()->setGroups(array('toSerialize')));
+        $data = $this->get('jms_serializer')->serialize($user, 'json', SerializationContext::create()->setGroups(array('withoutStudent')));
         return new Response($data);
 
     }
+
 
 }

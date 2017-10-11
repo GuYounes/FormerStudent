@@ -20,7 +20,8 @@ class User implements UserInterface
     /**
     * @ORM\OneToOne(targetEntity="FormerDUTStudentsBundle\Entity\Student", cascade={"persist", "remove"}, mappedBy="user")
     * @ORM\JoinColumn(name="student_id", referencedColumnName="id", nullable=true)
-     * @Serializer\Groups({"toSerialize"})
+    *
+    * @Serializer\Groups({"toSerialize"})
     */
     private $student;
 
@@ -31,7 +32,8 @@ class User implements UserInterface
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="AUTO")
      *
-     * @Serializer\Groups({"toSerialize"})
+     * @Serializer\Groups({"toSerialize", "withoutStudent"})
+     *
      */
     private $id;
 
@@ -40,7 +42,7 @@ class User implements UserInterface
      *
      * @ORM\Column(name="username", type="string", length=255, unique=true)
      *
-     * @Serializer\Groups({"toSerialize"})
+     * @Serializer\Groups({"toSerialize", "withoutStudent"})
      */
     private $username;
 
@@ -63,16 +65,26 @@ class User implements UserInterface
      *
      * @ORM\Column(name="roles", type="array")
      *
-     * @Serializer\Groups({"toSerialize"})
+     * @Serializer\Groups({"toSerialize", "withoutStudent"})
      */
     private $roles = array();
 
-    public function __construct($username, $password, $salt, $roles)
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="validated", type="boolean")
+     *
+     * @Serializer\Groups({"toSerialize", "withoutStudent"})
+     */
+    private $validated;
+
+    public function __construct($username, $password, $salt, $roles, $validated)
     {
         $this->username = $username;
         $this->password = $password;
         $this->salt = $salt;
         $this->roles = $roles;
+        $this->validated = $validated;
     }
 
     /**
@@ -210,4 +222,28 @@ class User implements UserInterface
         return $this->student;
     }
 
+
+    /**
+     * Set validated
+     *
+     * @param boolean $validated
+     *
+     * @return User
+     */
+    public function setValidated($validated)
+    {
+        $this->validated = $validated;
+
+        return $this;
+    }
+
+    /**
+     * Get validated
+     *
+     * @return boolean
+     */
+    public function getValidated()
+    {
+        return $this->validated;
+    }
 }

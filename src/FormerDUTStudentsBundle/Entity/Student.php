@@ -15,17 +15,16 @@ use JMS\Serializer\Annotation as Serializer;
 class Student
 {
     /**
-     * @ORM\OneToOne(targetEntity="FormerDUTStudentsBundle\Entity\User", cascade={"persist", "remove"}, inversedBy="student")
-     * @ORM\JoinColumn(name="user_id", referencedColumnName="id", nullable=false)
-     */
-    private $user;
-
-    /**
-     * @ORM\ManyToMany(targetEntity="FormerDUTStudentsBundle\Entity\Formation", cascade={"persist"}, inversedBy="students")
+     * @ORM\OneToMany(targetEntity="FormerDUTStudentsBundle\Entity\StudentFormation", cascade={"persist", "remove"}, mappedBy="student")
      *
      * @Serializer\Groups({"toSerialize"})
      */
-    private $formations;
+    private $studentFormations;
+
+    /**
+     * @ORM\OneToOne(targetEntity="FormerDUTStudentsBundle\Entity\User", cascade={"persist", "remove"}, inversedBy="student")
+     */
+    private $user;
 
     /**
      * @var int
@@ -67,14 +66,13 @@ class Student
     private $mail;
 
     /**
-     * @var \DateTime
+     * @var string
      *
-     * @ORM\Column(name="graduation_year", type="integer")
+     * @ORM\Column(name="mail2", type="string", unique = true, length=255, nullabe=true)
      *
      * @Serializer\Groups({"toSerialize"})
-     * @Serializer\SerializedName("graduationYear")
      */
-    private $graduationYear;
+    private $mail2;
 
     /**
      * @var int
@@ -104,15 +102,16 @@ class Student
     private $job;
 
 
-    public function __construct($name, $lastName, $mail, $graduationYear, $phone, $company, $job)
+    public function __construct($name, $lastName, $mail, $mail2, $phone, $company, $job)
     {
         $this->name = $name;
         $this->lastName = $lastName;
         $this->mail = $mail;
-        $this->graduationYear = $graduationYear;
+        $this->mail2 = $mail2;
         $this->phone = $phone;
         $this->company = $company;
         $this->job = $job;
+        $this->studentFormations = new ArrayCollection();
     }
 
 
@@ -175,12 +174,12 @@ class Student
     }
 
     /**
-     * Set mail
-     *
-     * @param string $mail
-     *
-     * @return Student
-     */
+ * Set mail
+ *
+ * @param string $mail
+ *
+ * @return Student
+ */
     public function setMail($mail)
     {
         $this->mail = $mail;
@@ -199,27 +198,27 @@ class Student
     }
 
     /**
-     * Set graduationYear
+     * Set mail2
      *
-     * @param \DateTime $graduationYear
+     * @param string $mail2
      *
      * @return Student
      */
-    public function setGraduationYear($graduationYear)
+    public function setMail2($mail2)
     {
-        $this->graduationYear = $graduationYear;
+        $this->mail = $mail2;
 
         return $this;
     }
 
     /**
-     * Get graduationYear
+     * Get mail2
      *
-     * @return \DateTime
+     * @return string
      */
-    public function getGraduationYear()
+    public function getMail2()
     {
-        return $this->graduationYear;
+        return $this->mail2;
     }
 
     /**
@@ -322,40 +321,36 @@ class Student
     }
 
     /**
-     * Add formation
+     * Add studentFormation
      *
-     * @param \FormerDUTStudentsBundle\Entity\Formation $formation
+     * @param \FormerDUTStudentsBundle\Entity\StudentFormation $studentFormation
      *
      * @return Student
      */
-    public function addFormation(Formation $formation)
+    public function addStudentFormation(StudentFormation $studentFormation)
     {
-        $this->formations[] = $formation;
-
-        $formation->addStudent($this);
+        $this->studentFormations[] = $studentFormation;
 
         return $this;
     }
 
     /**
-     * Remove formation
+     * Remove studentFormation
      *
-     * @param \FormerDUTStudentsBundle\Entity\Formation $formation
+     * @param \FormerDUTStudentsBundle\Entity\StudentFormation $studentFormation
      */
-    public function removeFormation(Formation $formation)
+    public function removeStudentFormation(StudentFormation $studentFormation)
     {
-        $this->formations->removeElement($formation);
-
-        $formation->removeStudent($this);
+        $this->studentFormations->removeElement($studentFormation);
     }
 
     /**
-     * Get formations
+     * Get studentFormations
      *
      * @return \Doctrine\Common\Collections\Collection
      */
-    public function getFormations()
+    public function getStudentFormations()
     {
-        return $this->formations;
+        return $this->studentFormations;
     }
 }

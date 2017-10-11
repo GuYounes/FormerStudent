@@ -25,29 +25,45 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
  */
 class UserController extends Controller
 {
+
     /**
      * @param Request $request
-     * @param int $id
+     * @param $id
      * Id of user we want to edit password
-     * Be careful, That's the USER id and not the STUDENT
+     *
+     * @return Response
+     *
+     * Be careful, That's the USER's id and not the STUDENT's
      *
      * Edit a user password
+     * JSON:
+     * {
+     *      "password": "newpassword"
+     * }
+     *
      */
     public function editPasswordAction(Request $request, $id)
     {
-        // Get the body of the request
-        $data = $request->getContent();
+        // Check if this student id is ours, or if we are admin
+        // If not we are not authorized to remove formations from a student
+        if($this->getUser()->getStudent()->getId() != $id && !($this->get('security.authorization_checker')->isGranted('ROLE_ADMIN')))
+        {
+            return new Response("You are not authorized");
+        }
 
-        // Deserialize the json into a User entity and get the new password
-        $newPassword = $this->get('jms_serializer')->deserialize($data, 'FormerDUTStudentsBundle\Entity\Student', 'json')->getPassword();
+        // Deserialize the json into an array
+        $data = json_decode($request->getContent(), true);
+        $password = $data["password"];
 
         $em = $this->getDoctrine()->getManager();
-
         $repository = $em->getRepository('FormerDUTStudentsBundle:User');
 
         $user = $repository->find($id);
-        $user->setPassword($newPassword);
+        $user->setPassword($password);
 
+        // Save
         $em->flush();
+
+        return new Response("true");
     }
 }
