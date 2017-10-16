@@ -7,6 +7,13 @@ students:
         _format: json
     methods:  [GET]
 
+unvalidated_students:
+    path:     /students/unvalidated
+    defaults:
+        _controller: FormerDUTStudentsBundle:Student:getUnvalidatedStudents
+        _format: json
+    methods:  [GET]
+
 student:
     path:     /students/{id}
     defaults:
@@ -48,6 +55,7 @@ edit_student:
     path:     /students/{id}
     defaults:
         _controller: FormerDUTStudentsBundle:Student:editStudent
+        _format: json
     methods:  [PUT]
     requirements:
         id: \d+
@@ -161,7 +169,7 @@ edit_formation:
 edit_user:
     path:     /user/{id}/password
     defaults:
-        _controller: FormerDUTStudentsBundle:User:editUser
+        _controller: FormerDUTStudentsBundle:User:editPassword
     methods:  [PUT]
     requirements:
         id: \d+
@@ -173,3 +181,12 @@ send_mails:
     defaults:
         _controller: FormerDUTStudentsBundle:Mail:sendMail
     methods:  [POST]
+
+################################ Route to student formations methods ######################################
+
+edit_student_formation:
+    path:     /studentFormations
+    defaults:
+        _controller: FormerDUTStudentsBundle:StudentFormation:edit
+        _format: json
+    methods:  [PUT]

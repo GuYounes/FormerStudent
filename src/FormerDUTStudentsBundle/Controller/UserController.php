@@ -57,9 +57,10 @@ class UserController extends Controller
         $password = $data["password"];
 
         $em = $this->getDoctrine()->getManager();
-        $repository = $em->getRepository('FormerDUTStudentsBundle:User');
+        $repository = $em->getRepository('FormerDUTStudentsBundle:Student');
 
-        $user = $repository->find($id);
+        $student = $repository->find($id);
+        $user = $student->getUser();
         $user->setPassword($password);
 
         // Save

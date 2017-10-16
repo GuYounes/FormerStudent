@@ -18,6 +18,7 @@ class Student
      * @ORM\OneToMany(targetEntity="FormerDUTStudentsBundle\Entity\StudentFormation", cascade={"persist", "remove"}, mappedBy="student")
      *
      * @Serializer\Groups({"toSerialize"})
+     * @Serializer\SerializedName("studentFormations")
      */
     private $studentFormations;
 
@@ -59,7 +60,7 @@ class Student
     /**
      * @var string
      *
-     * @ORM\Column(name="mail", type="string", length=255)
+     * @ORM\Column(name="mail", type="string", unique = true, length=255)
      *
      * @Serializer\Groups({"toSerialize"})
      */
@@ -68,7 +69,7 @@ class Student
     /**
      * @var string
      *
-     * @ORM\Column(name="mail2", type="string", unique = true, length=255, nullable=true)
+     * @ORM\Column(name="mail2", type="string", length=255, nullable=true)
      *
      * @Serializer\Groups({"toSerialize"})
      */
@@ -206,7 +207,7 @@ class Student
      */
     public function setMail2($mail2)
     {
-        $this->mail = $mail2;
+        $this->mail2 = $mail2;
 
         return $this;
     }

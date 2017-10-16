@@ -108,107 +108,143 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
 
         }
 
-        elseif (0 === strpos($pathinfo, '/students')) {
-            // students
-            if ('/students' === $pathinfo) {
-                if ('GET' !== $canonicalMethod) {
-                    $allow[] = 'GET';
-                    goto not_students;
+        elseif (0 === strpos($pathinfo, '/s')) {
+            if (0 === strpos($pathinfo, '/students')) {
+                // students
+                if ('/students' === $pathinfo) {
+                    if ('GET' !== $canonicalMethod) {
+                        $allow[] = 'GET';
+                        goto not_students;
+                    }
+
+                    return array (  '_controller' => 'FormerDUTStudentsBundle\\Controller\\StudentController::getStudentsAction',  '_format' => 'json',  '_route' => 'students',);
                 }
+                not_students:
 
-                return array (  '_controller' => 'FormerDUTStudentsBundle\\Controller\\StudentController::getStudentsAction',  '_format' => 'json',  '_route' => 'students',);
-            }
-            not_students:
+                // unvalidated_students
+                if ('/students/unvalidated' === $pathinfo) {
+                    if ('GET' !== $canonicalMethod) {
+                        $allow[] = 'GET';
+                        goto not_unvalidated_students;
+                    }
 
-            // student
-            if (preg_match('#^/students/(?P<id>\\d+)$#s', $pathinfo, $matches)) {
-                if ('GET' !== $canonicalMethod) {
-                    $allow[] = 'GET';
-                    goto not_student;
+                    return array (  '_controller' => 'FormerDUTStudentsBundle\\Controller\\StudentController::getUnvalidatedStudentsAction',  '_format' => 'json',  '_route' => 'unvalidated_students',);
                 }
+                not_unvalidated_students:
 
-                return $this->mergeDefaults(array_replace($matches, array('_route' => 'student')), array (  '_controller' => 'FormerDUTStudentsBundle\\Controller\\StudentController::getStudentAction',  '_format' => 'json',));
-            }
-            not_student:
+                // student
+                if (preg_match('#^/students/(?P<id>\\d+)$#s', $pathinfo, $matches)) {
+                    if ('GET' !== $canonicalMethod) {
+                        $allow[] = 'GET';
+                        goto not_student;
+                    }
 
-            // add_student
-            if ('/students' === $pathinfo) {
-                if ('POST' !== $canonicalMethod) {
-                    $allow[] = 'POST';
-                    goto not_add_student;
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'student')), array (  '_controller' => 'FormerDUTStudentsBundle\\Controller\\StudentController::getStudentAction',  '_format' => 'json',));
                 }
+                not_student:
 
-                return array (  '_controller' => 'FormerDUTStudentsBundle\\Controller\\StudentController::addStudentAction',  '_route' => 'add_student',);
-            }
-            not_add_student:
+                // add_student
+                if ('/students' === $pathinfo) {
+                    if ('POST' !== $canonicalMethod) {
+                        $allow[] = 'POST';
+                        goto not_add_student;
+                    }
 
-            // delete_student
-            if (preg_match('#^/students/(?P<id>\\d+)$#s', $pathinfo, $matches)) {
-                if ('DELETE' !== $canonicalMethod) {
-                    $allow[] = 'DELETE';
-                    goto not_delete_student;
+                    return array (  '_controller' => 'FormerDUTStudentsBundle\\Controller\\StudentController::addStudentAction',  '_route' => 'add_student',);
                 }
+                not_add_student:
 
-                return $this->mergeDefaults(array_replace($matches, array('_route' => 'delete_student')), array (  '_controller' => 'FormerDUTStudentsBundle\\Controller\\StudentController::deleteStudentAction',));
-            }
-            not_delete_student:
+                // delete_student
+                if (preg_match('#^/students/(?P<id>\\d+)$#s', $pathinfo, $matches)) {
+                    if ('DELETE' !== $canonicalMethod) {
+                        $allow[] = 'DELETE';
+                        goto not_delete_student;
+                    }
 
-            // delete_students
-            if ('/students' === $pathinfo) {
-                if ('DELETE' !== $canonicalMethod) {
-                    $allow[] = 'DELETE';
-                    goto not_delete_students;
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'delete_student')), array (  '_controller' => 'FormerDUTStudentsBundle\\Controller\\StudentController::deleteStudentAction',));
                 }
+                not_delete_student:
 
-                return array (  '_controller' => 'FormerDUTStudentsBundle\\Controller\\StudentController::deleteStudentsAction',  '_route' => 'delete_students',);
+                // delete_students
+                if ('/students' === $pathinfo) {
+                    if ('DELETE' !== $canonicalMethod) {
+                        $allow[] = 'DELETE';
+                        goto not_delete_students;
+                    }
+
+                    return array (  '_controller' => 'FormerDUTStudentsBundle\\Controller\\StudentController::deleteStudentsAction',  '_route' => 'delete_students',);
+                }
+                not_delete_students:
+
+                // edit_student
+                if (preg_match('#^/students/(?P<id>\\d+)$#s', $pathinfo, $matches)) {
+                    if ('PUT' !== $canonicalMethod) {
+                        $allow[] = 'PUT';
+                        goto not_edit_student;
+                    }
+
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'edit_student')), array (  '_controller' => 'FormerDUTStudentsBundle\\Controller\\StudentController::editStudentAction',  '_format' => 'json',));
+                }
+                not_edit_student:
+
+                // add_formations_to_student
+                if (preg_match('#^/students/(?P<id>\\d+)/formations$#s', $pathinfo, $matches)) {
+                    if ('PUT' !== $canonicalMethod) {
+                        $allow[] = 'PUT';
+                        goto not_add_formations_to_student;
+                    }
+
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'add_formations_to_student')), array (  '_controller' => 'FormerDUTStudentsBundle\\Controller\\StudentController::addFormationsToStudentAction',));
+                }
+                not_add_formations_to_student:
+
+                // remove_formations_from_student
+                if (preg_match('#^/students/(?P<id>\\d+)/formations$#s', $pathinfo, $matches)) {
+                    if ('DELETE' !== $canonicalMethod) {
+                        $allow[] = 'DELETE';
+                        goto not_remove_formations_from_student;
+                    }
+
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'remove_formations_from_student')), array (  '_controller' => 'FormerDUTStudentsBundle\\Controller\\StudentController::removeFormationsFromStudentAction',));
+                }
+                not_remove_formations_from_student:
+
+                // validate_student
+                if ('/students/validate' === $pathinfo) {
+                    if ('GET' !== $canonicalMethod) {
+                        $allow[] = 'GET';
+                        goto not_validate_student;
+                    }
+
+                    return array (  '_controller' => 'FormerDUTStudentsBundle\\Controller\\StudentController::validateAction',  '_format' => 'json',  '_route' => 'validate_student',);
+                }
+                not_validate_student:
+
             }
-            not_delete_students:
 
-            // edit_student
-            if (preg_match('#^/students/(?P<id>\\d+)$#s', $pathinfo, $matches)) {
+            // edit_student_formation
+            if ('/studentFormations' === $pathinfo) {
                 if ('PUT' !== $canonicalMethod) {
                     $allow[] = 'PUT';
-                    goto not_edit_student;
+                    goto not_edit_student_formation;
                 }
 
-                return $this->mergeDefaults(array_replace($matches, array('_route' => 'edit_student')), array (  '_controller' => 'FormerDUTStudentsBundle\\Controller\\StudentController::editStudentAction',));
+                return array (  '_controller' => 'FormerDUTStudentsBundle\\Controller\\StudentFormationController::editAction',  '_format' => 'json',  '_route' => 'edit_student_formation',);
             }
-            not_edit_student:
+            not_edit_student_formation:
 
-            // add_formations_to_student
-            if (preg_match('#^/students/(?P<id>\\d+)/formations$#s', $pathinfo, $matches)) {
-                if ('POST' !== $canonicalMethod) {
-                    $allow[] = 'POST';
-                    goto not_add_formations_to_student;
+            // self
+            if ('/self' === $pathinfo) {
+                if ('GET' !== $canonicalMethod) {
+                    $allow[] = 'GET';
+                    goto not_self;
                 }
 
-                return $this->mergeDefaults(array_replace($matches, array('_route' => 'add_formations_to_student')), array (  '_controller' => 'FormerDUTStudentsBundle\\Controller\\StudentController::addFormationsToStudentAction',));
+                return array (  '_controller' => 'FormerDUTStudentsBundle\\Controller\\StudentController::selfAction',  '_format' => 'json',  '_route' => 'self',);
             }
-            not_add_formations_to_student:
-
-            // remove_formations_from_student
-            if (preg_match('#^/students/(?P<id>\\d+)/formations$#s', $pathinfo, $matches)) {
-                if ('PUT' !== $canonicalMethod) {
-                    $allow[] = 'PUT';
-                    goto not_remove_formations_from_student;
-                }
-
-                return $this->mergeDefaults(array_replace($matches, array('_route' => 'remove_formations_from_student')), array (  '_controller' => 'FormerDUTStudentsBundle\\Controller\\StudentController::removeFormationsFromStudentAction',));
-            }
-            not_remove_formations_from_student:
+            not_self:
 
         }
-
-        // self
-        if ('/self' === $pathinfo) {
-            if ('GET' !== $canonicalMethod) {
-                $allow[] = 'GET';
-                goto not_self;
-            }
-
-            return array (  '_controller' => 'FormerDUTStudentsBundle\\Controller\\StudentController::selfAction',  '_format' => 'json',  '_route' => 'self',);
-        }
-        not_self:
 
         // test
         if (0 === strpos($pathinfo, '/test') && preg_match('#^/test/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
@@ -233,17 +269,6 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
         not_check_if_logged:
 
         if (0 === strpos($pathinfo, '/login')) {
-            // check_if_right_student
-            if (0 === strpos($pathinfo, '/login/student') && preg_match('#^/login/student/(?P<id>\\d+)$#s', $pathinfo, $matches)) {
-                if ('GET' !== $canonicalMethod) {
-                    $allow[] = 'GET';
-                    goto not_check_if_right_student;
-                }
-
-                return $this->mergeDefaults(array_replace($matches, array('_route' => 'check_if_right_student')), array (  '_controller' => 'FormerDUTStudentsBundle\\Controller\\LoginController::rightStudentAction',));
-            }
-            not_check_if_right_student:
-
             // login
             if ('/login' === $pathinfo) {
                 return array (  '_controller' => 'FormerDUTStudentsBundle\\Controller\\LoginController::loginAction',  '_route' => 'login',);
@@ -331,13 +356,13 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
         }
 
         // edit_user
-        if (0 === strpos($pathinfo, '/user') && preg_match('#^/user/(?P<id>\\d+)$#s', $pathinfo, $matches)) {
+        if (0 === strpos($pathinfo, '/user') && preg_match('#^/user/(?P<id>\\d+)/password$#s', $pathinfo, $matches)) {
             if ('PUT' !== $canonicalMethod) {
                 $allow[] = 'PUT';
                 goto not_edit_user;
             }
 
-            return $this->mergeDefaults(array_replace($matches, array('_route' => 'edit_user')), array (  '_controller' => 'FormerDUTStudentsBundle\\Controller\\UserController::editUserAction',));
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'edit_user')), array (  '_controller' => 'FormerDUTStudentsBundle\\Controller\\UserController::editPasswordAction',));
         }
         not_edit_user:
 

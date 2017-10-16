@@ -16,6 +16,7 @@ class Formation
 {
     /**
      * @ORM\OneToMany(targetEntity="FormerDUTStudentsBundle\Entity\StudentFormation", cascade={"persist", "remove"}, mappedBy="formation")
+     * @Serializer\SerializedName("studentFormations")
      */
     private $studentFormations;
 

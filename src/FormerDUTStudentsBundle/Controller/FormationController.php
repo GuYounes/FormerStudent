@@ -32,6 +32,8 @@ class FormationController extends Controller
      *
      * Get all formations
      *
+     * @Security("has_role('ROLE_STUDENT')")
+     *
      * /formations GET
      */
     public function getFormationsAction(Request $request)
@@ -58,6 +60,8 @@ class FormationController extends Controller
      * @return Response
      *
      * Get a formation from his id
+     *
+     * @Security("has_role('ROLE_STUDENT')")
      *
      * /formations/{id} GET
      */

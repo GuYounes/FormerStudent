@@ -35,13 +35,28 @@ class StudentController extends Controller
     {
         $repository = $this->getDoctrine()
             ->getManager()
-            ->getRepository('FormerDUTStudentsBundle:Student');
+            ->getRepository('FormerDUTStudentsBundle:User');
 
         // Get all students
-        $students = $repository->findAll();
+        $users = $repository->findBy(array('validated' => true));
 
         // Serialize
-        $data = $this->get('jms_serializer')->serialize($students, 'json', SerializationContext::create()->setGroups(array('toSerialize')));
+        $data = $this->get('jms_serializer')->serialize($users, 'json', SerializationContext::create()->setGroups(array('toSerialize')));
+
+        return new Response($data);
+    }
+
+    public function getUnvalidatedStudentsAction(Request $request)
+    {
+        $repository = $this->getDoctrine()
+            ->getManager()
+            ->getRepository('FormerDUTStudentsBundle:User');
+
+        // Get all students
+        $users = $repository->findBy(array('validated' => false));
+
+        // Serialize
+        $data = $this->get('jms_serializer')->serialize($users, 'json', SerializationContext::create()->setGroups(array('toSerialize')));
 
         return new Response($data);
     }
@@ -133,15 +148,27 @@ class StudentController extends Controller
      *          {
      *              "name": "Younes",
      *              "lastName": "Guarssifi",
-     *              "mail": "younes.gua@gmail.com"
+     *              "mail": "younes.gua@gmail.com",
+     *
+     *              "mail2": "younes@gmail.com"
+     *              "phone": "0612345678",
+     *              "company": "GuarssifiInc",
+     *              "job": "CEO"
      *          },
      *          {
      *              "name": "Jane",
      *              "lastName": "Doe",
-     *              "mail": "jane.doe@gmail.com"
+     *              "mail": "jane.doe@gmail.com",
+     *
+     *              "mail2": "jane@gmail.com"
+     *              "phone": "0612345678",
+     *              "company": "DoeInc",
+     *              "job": "CEO"
      *          }
      *      ]
      * }
+     *
+     * Parameters from mail2 to job are optionnal
      *
      * @Security("has_role('ROLE_ADMIN')")
      *
@@ -160,7 +187,7 @@ class StudentController extends Controller
 
         foreach($students as $studentArray)
         {
-            $student = new Student($studentArray["name"], $studentArray["lastName"], $studentArray["mail"]);
+            $student = new Student($studentArray["name"], $studentArray["lastName"], $studentArray["mail"], $studentArray["mail2"], $studentArray["phone"], $studentArray["company"], $studentArray["job"]);
 
             // Generate the user => login, password, roles...
             $user = $userGenerator->generateUser($student);
@@ -285,10 +312,10 @@ class StudentController extends Controller
         if($newStudent->getName() != null) $student->setName($newStudent->getName());
         if($newStudent->getLastName() != null) $student->setLastName($newStudent->getLastName());
         if($newStudent->getMail() != null) $student->setMail($newStudent->getMail());
-        if($newStudent->getMail2() != null) $student->setMail2($newStudent->getMail2());
-        if($newStudent->getPhone() != null) $student->setPhone($newStudent->getPhone());
-        if($newStudent->getCompany() != null) $student->setCompany($newStudent->getCompany());
-        if($newStudent->getJob() != null) $student->setJob($newStudent->getJob());
+        $student->setMail2($newStudent->getMail2());
+        $student->setPhone($newStudent->getPhone());
+        $student->setCompany($newStudent->getCompany());
+        $student->setJob($newStudent->getJob());
 
         $this->getDoctrine()
             ->getManager()
