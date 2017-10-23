@@ -12,14 +12,13 @@ namespace FormerDUTStudentsBundle\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 
 /**
  * Class MailController
  * @package FormerDUTStudentsBundle\Controller
  *
- * Send mails
- *
- * /mail POST
+ * @Security("is_granted('ROLE_ADMIN')")
  */
 class MailController extends Controller
 {
@@ -34,12 +33,16 @@ class MailController extends Controller
      *      "subject": "Hello",
      *      "body": "Hello Sir, How are you"
      * }
+     *
+     * Send mails
+     *
+     * /mail POST
      */
     public function sendMailAction(Request $request) {
         $data = json_decode($request->getContent(), true);
 
         $mailer = $this->get("former_dut_students.mail");
-        $mailer->send($data["mails"], $data["subject"], $data["body"]);
+        $mailer->sendText($data["mails"], $data["subject"], $data["body"]);
 
         return new Response("true");
     }

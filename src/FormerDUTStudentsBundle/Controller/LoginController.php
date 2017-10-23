@@ -60,8 +60,12 @@ class LoginController extends Controller
         // Return null if not connected
         $user = $this->getUser();
 
+        $response = new Response();
+        $response->headers->set('Access-Control-Allow-Origin', '*');
+
         // If we are not connected return false
-        if($user === null) return new Response("false");
+        if($user === null) return $response->setContent('false');
+
 
         // Else
         // Serialize the user to send it

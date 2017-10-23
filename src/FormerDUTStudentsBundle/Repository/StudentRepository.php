@@ -75,4 +75,25 @@ class StudentRepository extends \Doctrine\ORM\EntityRepository
             ->getResult();
 
     }
+
+    /**
+     * @param $mail
+     * Mail we want to check if it already exists
+     *
+     * @return int
+     *
+     * Return 1 if the mail already exists and 0 if it doesnt
+     */
+    public function checkIfMailExists($mail)
+    {
+        $qb = $this->createQueryBuilder('s');
+
+        $qb->where($qb->expr()->eq('s.mail', $qb->expr()->literal($mail)));
+
+        $result =  $qb
+            ->getQuery()
+            ->getResult();
+
+        return count($result);
+    }
 }

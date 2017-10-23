@@ -202,7 +202,7 @@ class FormationController extends Controller
         // Else we don't change it
         if($newFormation->getName() != null) $formation->setName($newFormation->getName());
         if($newFormation->getCreationDate() != null) $formation->setCreationDate($newFormation->getCreationDate());
-        if($newFormation->getClosingDate() != null) $formation->setClosingDate($newFormation->getClosingDate());
+        $formation->setClosingDate($newFormation->getClosingDate());
 
         $this->getDoctrine()
             ->getManager()

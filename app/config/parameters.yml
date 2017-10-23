@@ -5,8 +5,15 @@ parameters:
     database_name: former_students
     database_user: root
     database_password: null
-    mailer_transport: gmail
-    mailer_host: smtp.gmail.com
+
+    mailer_transport: smtp
+    mailer_host: mail.smtp2go.com
     mailer_user: younes.gua@gmail.com
-    mailer_password: amdnvidia07
+    mailer_password: prN2MpFqdG00
+    mailer_port: 2525
+
     secret: 5140dac90df263cd719ffd8970694d978f4417b0
+
+    profile_page: http://127.0.0.1/front/compte.html
+
+    path_to_IUT_logo: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcR-reQU9_FTsLDvHNQN6bEcNmcB2JHZFaw7Tv455i6WPM3oLy

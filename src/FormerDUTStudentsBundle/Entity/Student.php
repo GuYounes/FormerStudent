@@ -2,6 +2,7 @@
 
 namespace FormerDUTStudentsBundle\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 use JMS\Serializer\Annotation as Serializer;
 
@@ -101,6 +102,15 @@ class Student
      * @Serializer\Groups({"toSerialize"})
      */
     private $job;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="validated", type="boolean")
+     *
+     * @Serializer\Groups({"toSerialize", "withoutStudent"})
+     */
+    private $validated;
 
 
     public function __construct($name, $lastName, $mail, $mail2, $phone, $company, $job)
@@ -353,5 +363,29 @@ class Student
     public function getStudentFormations()
     {
         return $this->studentFormations;
+    }
+
+    /**
+     * Set validated
+     *
+     * @param boolean $validated
+     *
+     * @return User
+     */
+    public function setValidated($validated)
+    {
+        $this->validated = $validated;
+
+        return $this;
+    }
+
+    /**
+     * Get validated
+     *
+     * @return boolean
+     */
+    public function getValidated()
+    {
+        return $this->validated;
     }
 }

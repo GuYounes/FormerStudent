@@ -5,8 +5,6 @@ use Symfony\Component\Routing\Exception\RouteNotFoundException;
 use Psr\Log\LoggerInterface;
 
 /**
- * appDevDebugProjectContainerUrlGenerator
- *
  * This class has been auto-generated
  * by the Symfony Routing Component.
  */
@@ -14,9 +12,6 @@ class appDevDebugProjectContainerUrlGenerator extends Symfony\Component\Routing\
 {
     private static $declaredRoutes;
 
-    /**
-     * Constructor.
-     */
     public function __construct(RequestContext $context, LoggerInterface $logger = null)
     {
         $this->context = $context;
@@ -38,7 +33,8 @@ class appDevDebugProjectContainerUrlGenerator extends Symfony\Component\Routing\
         'students' => array (  0 =>   array (  ),  1 =>   array (    '_controller' => 'FormerDUTStudentsBundle\\Controller\\StudentController::getStudentsAction',    '_format' => 'json',  ),  2 =>   array (  ),  3 =>   array (    0 =>     array (      0 => 'text',      1 => '/students',    ),  ),  4 =>   array (  ),  5 =>   array (  ),),
         'unvalidated_students' => array (  0 =>   array (  ),  1 =>   array (    '_controller' => 'FormerDUTStudentsBundle\\Controller\\StudentController::getUnvalidatedStudentsAction',    '_format' => 'json',  ),  2 =>   array (  ),  3 =>   array (    0 =>     array (      0 => 'text',      1 => '/students/unvalidated',    ),  ),  4 =>   array (  ),  5 =>   array (  ),),
         'student' => array (  0 =>   array (    0 => 'id',  ),  1 =>   array (    '_controller' => 'FormerDUTStudentsBundle\\Controller\\StudentController::getStudentAction',    '_format' => 'json',  ),  2 =>   array (    'id' => '\\d+',  ),  3 =>   array (    0 =>     array (      0 => 'variable',      1 => '/',      2 => '\\d+',      3 => 'id',    ),    1 =>     array (      0 => 'text',      1 => '/students',    ),  ),  4 =>   array (  ),  5 =>   array (  ),),
-        'add_student' => array (  0 =>   array (  ),  1 =>   array (    '_controller' => 'FormerDUTStudentsBundle\\Controller\\StudentController::addStudentAction',  ),  2 =>   array (  ),  3 =>   array (    0 =>     array (      0 => 'text',      1 => '/students',    ),  ),  4 =>   array (  ),  5 =>   array (  ),),
+        'add_student' => array (  0 =>   array (  ),  1 =>   array (    '_controller' => 'FormerDUTStudentsBundle\\Controller\\StudentController::addStudentAction',    '_format' => 'json',  ),  2 =>   array (  ),  3 =>   array (    0 =>     array (      0 => 'text',      1 => '/students',    ),  ),  4 =>   array (  ),  5 =>   array (  ),),
+        'add_students' => array (  0 =>   array (  ),  1 =>   array (    '_controller' => 'FormerDUTStudentsBundle\\Controller\\StudentController::addStudentsAction',    '_format' => 'json',  ),  2 =>   array (  ),  3 =>   array (    0 =>     array (      0 => 'text',      1 => '/students/import',    ),  ),  4 =>   array (  ),  5 =>   array (  ),),
         'delete_student' => array (  0 =>   array (    0 => 'id',  ),  1 =>   array (    '_controller' => 'FormerDUTStudentsBundle\\Controller\\StudentController::deleteStudentAction',  ),  2 =>   array (    'id' => '\\d+',  ),  3 =>   array (    0 =>     array (      0 => 'variable',      1 => '/',      2 => '\\d+',      3 => 'id',    ),    1 =>     array (      0 => 'text',      1 => '/students',    ),  ),  4 =>   array (  ),  5 =>   array (  ),),
         'delete_students' => array (  0 =>   array (  ),  1 =>   array (    '_controller' => 'FormerDUTStudentsBundle\\Controller\\StudentController::deleteStudentsAction',  ),  2 =>   array (    'id' => '\\d+',  ),  3 =>   array (    0 =>     array (      0 => 'text',      1 => '/students',    ),  ),  4 =>   array (  ),  5 =>   array (  ),),
         'edit_student' => array (  0 =>   array (    0 => 'id',  ),  1 =>   array (    '_controller' => 'FormerDUTStudentsBundle\\Controller\\StudentController::editStudentAction',    '_format' => 'json',  ),  2 =>   array (    'id' => '\\d+',  ),  3 =>   array (    0 =>     array (      0 => 'variable',      1 => '/',      2 => '\\d+',      3 => 'id',    ),    1 =>     array (      0 => 'text',      1 => '/students',    ),  ),  4 =>   array (  ),  5 =>   array (  ),),

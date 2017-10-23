@@ -5,16 +5,11 @@ use Symfony\Component\Routing\Exception\ResourceNotFoundException;
 use Symfony\Component\Routing\RequestContext;
 
 /**
- * appDevDebugProjectContainerUrlMatcher.
- *
  * This class has been auto-generated
  * by the Symfony Routing Component.
  */
 class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\RedirectableUrlMatcher
 {
-    /**
-     * Constructor.
-     */
     public function __construct(RequestContext $context)
     {
         $this->context = $context;
@@ -150,9 +145,20 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                         goto not_add_student;
                     }
 
-                    return array (  '_controller' => 'FormerDUTStudentsBundle\\Controller\\StudentController::addStudentAction',  '_route' => 'add_student',);
+                    return array (  '_controller' => 'FormerDUTStudentsBundle\\Controller\\StudentController::addStudentAction',  '_format' => 'json',  '_route' => 'add_student',);
                 }
                 not_add_student:
+
+                // add_students
+                if ('/students/import' === $pathinfo) {
+                    if ('POST' !== $canonicalMethod) {
+                        $allow[] = 'POST';
+                        goto not_add_students;
+                    }
+
+                    return array (  '_controller' => 'FormerDUTStudentsBundle\\Controller\\StudentController::addStudentsAction',  '_format' => 'json',  '_route' => 'add_students',);
+                }
+                not_add_students:
 
                 // delete_student
                 if (preg_match('#^/students/(?P<id>\\d+)$#s', $pathinfo, $matches)) {

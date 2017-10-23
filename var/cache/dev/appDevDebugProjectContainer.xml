@@ -6,7 +6,7 @@
     <parameter key="kernel.environment">dev</parameter>
     <parameter key="kernel.debug">true</parameter>
     <parameter key="kernel.name">app</parameter>
-    <parameter key="kernel.cache_dir">C:/xampp/htdocs/FormerDUTStudents/var/cache/dev</parameter>
+    <parameter key="kernel.cache_dir">C:\xampp\htdocs\FormerDUTStudents\var\cache\dev</parameter>
     <parameter key="kernel.logs_dir">C:\xampp\htdocs\FormerDUTStudents\var\logs</parameter>
     <parameter key="kernel.bundles" type="collection">
       <parameter key="FrameworkBundle">Symfony\Bundle\FrameworkBundle\FrameworkBundle</parameter>
@@ -103,11 +103,14 @@
     <parameter key="database_name">former_students</parameter>
     <parameter key="database_user">root</parameter>
     <parameter key="database_password">null</parameter>
-    <parameter key="mailer_transport">gmail</parameter>
-    <parameter key="mailer_host">smtp.gmail.com</parameter>
+    <parameter key="mailer_transport">smtp</parameter>
+    <parameter key="mailer_host">mail.smtp2go.com</parameter>
     <parameter key="mailer_user">younes.gua@gmail.com</parameter>
-    <parameter key="mailer_password">amdnvidia07</parameter>
+    <parameter key="mailer_password">prN2MpFqdG00</parameter>
+    <parameter key="mailer_port">2525</parameter>
     <parameter key="secret">5140dac90df263cd719ffd8970694d978f4417b0</parameter>
+    <parameter key="profile_page">http://127.0.0.1/front/compte.html</parameter>
+    <parameter key="path_to_iut_logo">https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcR-reQU9_FTsLDvHNQN6bEcNmcB2JHZFaw7Tv455i6WPM3oLy</parameter>
     <parameter key="locale">en</parameter>
     <parameter key="fragment.renderer.hinclude.global_template">null</parameter>
     <parameter key="fragment.path">/_fragment</parameter>
@@ -131,13 +134,13 @@
       <parameter>twig</parameter>
     </parameter>
     <parameter key="validator.mapping.cache.prefix"></parameter>
-    <parameter key="validator.mapping.cache.file">C:/xampp/htdocs/FormerDUTStudents/var/cache/dev/validation.php</parameter>
+    <parameter key="validator.mapping.cache.file">C:\xampp\htdocs\FormerDUTStudents\var\cache\dev/validation.php</parameter>
     <parameter key="validator.translation_domain">validators</parameter>
     <parameter key="profiler_listener.only_exceptions">false</parameter>
     <parameter key="profiler_listener.only_master_requests">false</parameter>
-    <parameter key="profiler.storage.dsn">file:C:/xampp/htdocs/FormerDUTStudents/var/cache/dev/profiler</parameter>
+    <parameter key="profiler.storage.dsn">file:C:\xampp\htdocs\FormerDUTStudents\var\cache\dev/profiler</parameter>
     <parameter key="debug.error_handler.throw_at">-1</parameter>
-    <parameter key="debug.container.dump">C:/xampp/htdocs/FormerDUTStudents/var/cache/dev/appDevDebugProjectContainer.xml</parameter>
+    <parameter key="debug.container.dump">C:\xampp\htdocs\FormerDUTStudents\var\cache\dev/appDevDebugProjectContainer.xml</parameter>
     <parameter key="router.options.generator_class">Symfony\Component\Routing\Generator\UrlGenerator</parameter>
     <parameter key="router.options.generator_base_class">Symfony\Component\Routing\Generator\UrlGenerator</parameter>
     <parameter key="router.options.generator_dumper_class">Symfony\Component\Routing\Generator\Dumper\PhpGeneratorDumper</parameter>
@@ -153,7 +156,7 @@
     <parameter key="router.cache_class_prefix">appDevDebugProjectContainer</parameter>
     <parameter key="request_listener.http_port">80</parameter>
     <parameter key="request_listener.https_port">443</parameter>
-    <parameter key="serializer.mapping.cache.file">C:/xampp/htdocs/FormerDUTStudents/var/cache/dev/serialization.php</parameter>
+    <parameter key="serializer.mapping.cache.file">C:\xampp\htdocs\FormerDUTStudents\var\cache\dev/serialization.php</parameter>
     <parameter key="serializer.mapping.cache.prefix"></parameter>
     <parameter key="security.authentication.trust_resolver.anonymous_class">Symfony\Component\Security\Core\Authentication\Token\AnonymousToken</parameter>
     <parameter key="security.authentication.trust_resolver.rememberme_class">Symfony\Component\Security\Core\Authentication\Token\RememberMeToken</parameter>
@@ -205,16 +208,16 @@
     <parameter key="swiftmailer.email_sender.listener.class">Symfony\Bundle\SwiftmailerBundle\EventListener\EmailSenderListener</parameter>
     <parameter key="swiftmailer.data_collector.class">Symfony\Bundle\SwiftmailerBundle\DataCollector\MessageDataCollector</parameter>
     <parameter key="swiftmailer.mailer.default.transport.name">smtp</parameter>
-    <parameter key="swiftmailer.mailer.default.transport.smtp.encryption">ssl</parameter>
-    <parameter key="swiftmailer.mailer.default.transport.smtp.port">465</parameter>
-    <parameter key="swiftmailer.mailer.default.transport.smtp.host">smtp.gmail.com</parameter>
+    <parameter key="swiftmailer.mailer.default.transport.smtp.encryption">tls</parameter>
+    <parameter key="swiftmailer.mailer.default.transport.smtp.port">2525</parameter>
+    <parameter key="swiftmailer.mailer.default.transport.smtp.host">mail.smtp2go.com</parameter>
     <parameter key="swiftmailer.mailer.default.transport.smtp.username">younes.gua@gmail.com</parameter>
-    <parameter key="swiftmailer.mailer.default.transport.smtp.password">amdnvidia07</parameter>
+    <parameter key="swiftmailer.mailer.default.transport.smtp.password">prN2MpFqdG00</parameter>
     <parameter key="swiftmailer.mailer.default.transport.smtp.auth_mode">login</parameter>
     <parameter key="swiftmailer.mailer.default.transport.smtp.timeout">30</parameter>
     <parameter key="swiftmailer.mailer.default.transport.smtp.source_ip">null</parameter>
     <parameter key="swiftmailer.mailer.default.transport.smtp.local_domain">null</parameter>
-    <parameter key="swiftmailer.spool.default.memory.path">C:/xampp/htdocs/FormerDUTStudents/var/cache/dev/swiftmailer/spool/default</parameter>
+    <parameter key="swiftmailer.spool.default.memory.path">C:\xampp\htdocs\FormerDUTStudents\var\cache\dev/swiftmailer/spool/default</parameter>
     <parameter key="swiftmailer.mailer.default.spool.enabled">true</parameter>
     <parameter key="swiftmailer.mailer.default.plugin.impersonate">null</parameter>
     <parameter key="swiftmailer.mailer.default.single_address">null</parameter>
@@ -333,7 +336,7 @@
     <parameter key="doctrine.orm.second_level_cache.cache_configuration.class">Doctrine\ORM\Cache\CacheConfiguration</parameter>
     <parameter key="doctrine.orm.second_level_cache.regions_configuration.class">Doctrine\ORM\Cache\RegionsConfiguration</parameter>
     <parameter key="doctrine.orm.auto_generate_proxy_classes">true</parameter>
-    <parameter key="doctrine.orm.proxy_dir">C:/xampp/htdocs/FormerDUTStudents/var/cache/dev/doctrine/orm/Proxies</parameter>
+    <parameter key="doctrine.orm.proxy_dir">C:\xampp\htdocs\FormerDUTStudents\var\cache\dev/doctrine/orm/Proxies</parameter>
     <parameter key="doctrine.orm.proxy_namespace">Proxies</parameter>
     <parameter key="sensio_framework_extra.view.guesser.class">Sensio\Bundle\FrameworkExtraBundle\Templating\TemplateGuesser</parameter>
     <parameter key="sensio_framework_extra.controller.listener.class">Sensio\Bundle\FrameworkExtraBundle\EventListener\ControllerListener</parameter>
@@ -462,6 +465,10 @@
     </parameter>
     <parameter key="console.command.ids" type="collection">
       <parameter key="console.command.symfony_bundle_securitybundle_command_userpasswordencodercommand">console.command.symfony_bundle_securitybundle_command_userpasswordencodercommand</parameter>
+      <parameter key="console.command.doctrine_bundle_doctrinecachebundle_command_containscommand">doctrine_cache.contains_command</parameter>
+      <parameter key="console.command.doctrine_bundle_doctrinecachebundle_command_deletecommand">doctrine_cache.delete_command</parameter>
+      <parameter key="console.command.doctrine_bundle_doctrinecachebundle_command_flushcommand">doctrine_cache.flush_command</parameter>
+      <parameter key="console.command.doctrine_bundle_doctrinecachebundle_command_statscommand">doctrine_cache.stats_command</parameter>
       <parameter key="console.command.sensiolabs_security_command_securitycheckercommand">sensio_distribution.security_checker.command</parameter>
       <parameter key="console.command.symfony_bundle_webserverbundle_command_serverruncommand">console.command.symfony_bundle_webserverbundle_command_serverruncommand</parameter>
       <parameter key="console.command.symfony_bundle_webserverbundle_command_serverstartcommand">console.command.symfony_bundle_webserverbundle_command_serverstartcommand</parameter>
@@ -666,8 +673,8 @@
       <tag name="monolog.logger" channel="cache"/>
       <argument></argument>
       <argument>0</argument>
-      <argument>3RXXDsBUCupOs5Fni0hfzD</argument>
-      <argument>C:/xampp/htdocs/FormerDUTStudents/var/cache/dev/pools</argument>
+      <argument>vmPu1kvNpiaI1rXGcjLEqp</argument>
+      <argument>C:\xampp\htdocs\FormerDUTStudents\var\cache\dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
@@ -676,7 +683,7 @@
       <tag name="monolog.logger" channel="cache"/>
       <argument></argument>
       <argument>0</argument>
-      <argument>3RXXDsBUCupOs5Fni0hfzD</argument>
+      <argument>vmPu1kvNpiaI1rXGcjLEqp</argument>
       <call method="setLogger">
         <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       </call>
@@ -696,7 +703,7 @@
       <tag name="monolog.logger" channel="cache"/>
       <argument></argument>
       <argument>0</argument>
-      <argument>C:/xampp/htdocs/FormerDUTStudents/var/cache/dev/pools</argument>
+      <argument>C:\xampp\htdocs\FormerDUTStudents\var\cache\dev/pools</argument>
       <call method="setLogger">
         <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       </call>
@@ -765,7 +772,7 @@
     <service id="session.flash_bag" class="Symfony\Component\HttpFoundation\Session\Flash\FlashBag" public="false"/>
     <service id="session.attribute_bag" class="Symfony\Component\HttpFoundation\Session\Attribute\AttributeBag" public="false"/>
     <service id="session.storage.mock_file" class="Symfony\Component\HttpFoundation\Session\Storage\MockFileSessionStorage" public="false">
-      <argument>C:/xampp/htdocs/FormerDUTStudents/var/cache/dev/sessions</argument>
+      <argument>C:\xampp\htdocs\FormerDUTStudents\var\cache\dev/sessions</argument>
       <argument>MOCKSESSID</argument>
       <argument type="service" id="session.storage.metadata_bag"/>
     </service>
@@ -1028,7 +1035,7 @@
     <service id="templating.filename_parser" class="Symfony\Bundle\FrameworkBundle\Templating\TemplateFilenameParser"/>
     <service id="templating.locator" class="Symfony\Bundle\FrameworkBundle\Templating\Loader\TemplateLocator" public="false">
       <argument type="service" id="file_locator"/>
-      <argument>C:/xampp/htdocs/FormerDUTStudents/var/cache/dev</argument>
+      <argument>C:\xampp\htdocs\FormerDUTStudents\var\cache\dev</argument>
     </service>
     <service id="templating.finder" class="Symfony\Bundle\FrameworkBundle\CacheWarmer\TemplateFinder" public="false">
       <argument type="service" id="kernel"/>
@@ -1063,7 +1070,7 @@
       </call>
     </service>
     <service id="1_a566768fe51aa4b202dd354da8e0be9c6f20104e77ead90f8239a0b87489e1b1" class="Symfony\Component\Cache\Adapter\PhpArrayAdapter" public="false">
-      <argument>C:/xampp/htdocs/FormerDUTStudents/var/cache/dev/validation.php</argument>
+      <argument>C:\xampp\htdocs\FormerDUTStudents\var\cache\dev/validation.php</argument>
       <argument type="service" id="cache.validator"/>
       <factory class="Symfony\Component\Cache\Adapter\PhpArrayAdapter" method="create"/>
     </service>
@@ -1101,7 +1108,7 @@
     <service id="validator.mapping.cache_warmer" class="Symfony\Bundle\FrameworkBundle\CacheWarmer\ValidatorCacheWarmer" public="false">
       <tag name="kernel.cache_warmer"/>
       <argument type="service" id="validator.builder"/>
-      <argument>C:/xampp/htdocs/FormerDUTStudents/var/cache/dev/validation.php</argument>
+      <argument>C:\xampp\htdocs\FormerDUTStudents\var\cache\dev/validation.php</argument>
       <argument type="service" id="cache.validator"/>
     </service>
     <service id="validator.mapping.cache.symfony" class="Symfony\Component\Validator\Mapping\Cache\Psr6Cache" public="false">
@@ -1179,7 +1186,7 @@
       </call>
     </service>
     <service id="profiler.storage" class="Symfony\Component\HttpKernel\Profiler\FileProfilerStorage" public="false">
-      <argument>file:C:/xampp/htdocs/FormerDUTStudents/var/cache/dev/profiler</argument>
+      <argument>file:C:\xampp\htdocs\FormerDUTStudents\var\cache\dev/profiler</argument>
     </service>
     <service id="profiler_listener" class="Symfony\Component\HttpKernel\EventListener\ProfilerListener">
       <tag name="kernel.event_subscriber"/>
@@ -1213,7 +1220,7 @@
       <tag name="data_collector" template="@WebProfiler/Collector/logger.html.twig" id="logger" priority="300"/>
       <tag name="monolog.logger" channel="profiler"/>
       <argument type="service" id="monolog.logger.profiler" on-invalid="ignore"/>
-      <argument>C:/xampp/htdocs/FormerDUTStudents/var/cache/dev/appDevDebugProjectContainer</argument>
+      <argument>C:\xampp\htdocs\FormerDUTStudents\var\cache\dev/appDevDebugProjectContainer</argument>
     </service>
     <service id="data_collector.time" class="Symfony\Component\HttpKernel\DataCollector\TimeDataCollector" public="false">
       <tag name="data_collector" template="@WebProfiler/Collector/time.html.twig" id="time" priority="330"/>
@@ -1433,14 +1440,6 @@
       </call>
       <call method="addListener">
         <argument>kernel.request</argument>
-        <argument type="collection">
-          <argument type="service" id="debug.debug_handlers_listener"/>
-          <argument>configure</argument>
-        </argument>
-        <argument>2048</argument>
-      </call>
-      <call method="addListener">
-        <argument>console.command</argument>
         <argument type="collection">
           <argument type="service" id="debug.debug_handlers_listener"/>
           <argument>configure</argument>
@@ -1689,7 +1688,7 @@
       <argument type="service" id="service_container"/>
       <argument>C:\xampp\htdocs\FormerDUTStudents/app/config/routing_dev.yml</argument>
       <argument type="collection">
-        <argument key="cache_dir">C:/xampp/htdocs/FormerDUTStudents/var/cache/dev</argument>
+        <argument key="cache_dir">C:\xampp\htdocs\FormerDUTStudents\var\cache\dev</argument>
         <argument key="debug">true</argument>
         <argument key="generator_class">Symfony\Component\Routing\Generator\UrlGenerator</argument>
         <argument key="generator_base_class">Symfony\Component\Routing\Generator\UrlGenerator</argument>
@@ -1728,7 +1727,7 @@
       <argument type="service" id="monolog.logger.request" on-invalid="ignore"/>
     </service>
     <service id="3_039fd6df0cdad6b2042eca05832b659758f0cfc7c865311b568d8dc7e3570499" class="Symfony\Component\Cache\Adapter\PhpArrayAdapter" public="false">
-      <argument>C:/xampp/htdocs/FormerDUTStudents/var/cache/dev/annotations.php</argument>
+      <argument>C:\xampp\htdocs\FormerDUTStudents\var\cache\dev/annotations.php</argument>
       <argument type="service" id="cache.annotations"/>
       <factory class="Symfony\Component\Cache\Adapter\PhpArrayAdapter" method="create"/>
     </service>
@@ -1750,7 +1749,7 @@
     <service id="annotations.cache_warmer" class="Symfony\Bundle\FrameworkBundle\CacheWarmer\AnnotationsCacheWarmer" public="false">
       <tag name="kernel.cache_warmer"/>
       <argument type="service" id="annotations.reader"/>
-      <argument>C:/xampp/htdocs/FormerDUTStudents/var/cache/dev/annotations.php</argument>
+      <argument>C:\xampp\htdocs\FormerDUTStudents\var\cache\dev/annotations.php</argument>
       <argument type="service" id="cache.annotations"/>
     </service>
     <service id="annotations.cache" class="Symfony\Component\Cache\DoctrineProvider" public="false">
@@ -1818,11 +1817,11 @@
           </service>
         </argument>
       </argument>
-      <argument>C:/xampp/htdocs/FormerDUTStudents/var/cache/dev/serialization.php</argument>
+      <argument>C:\xampp\htdocs\FormerDUTStudents\var\cache\dev/serialization.php</argument>
       <argument type="service" id="cache.serializer"/>
     </service>
     <service id="serializer.mapping.cache.symfony" class="Symfony\Component\Cache\Adapter\PhpArrayAdapter">
-      <argument>C:/xampp/htdocs/FormerDUTStudents/var/cache/dev/serialization.php</argument>
+      <argument>C:\xampp\htdocs\FormerDUTStudents\var\cache\dev/serialization.php</argument>
       <argument type="service" id="cache.serializer"/>
       <factory class="Symfony\Component\Cache\Adapter\PhpArrayAdapter" method="create"/>
     </service>
@@ -2448,12 +2447,12 @@
     </service>
     <service id="security.authentication.listener.anonymous.main" class="Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener" public="false">
       <argument type="service" id="security.token_storage"/>
-      <argument>59de021833de52.47158529</argument>
+      <argument>59ecf1f677af71.35887613</argument>
       <argument type="service" id="monolog.logger.security" on-invalid="null"/>
       <argument type="service" id="security.authentication.manager"/>
     </service>
     <service id="security.authentication.provider.anonymous.main" class="Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider" public="false">
-      <argument>59de021833de52.47158529</argument>
+      <argument>59ecf1f677af71.35887613</argument>
     </service>
     <service id="security.exception_listener.main" class="Symfony\Component\Security\Http\Firewall\ExceptionListener" public="false">
       <argument type="service" id="security.token_storage"/>
@@ -2508,7 +2507,7 @@
           <argument>form_div_layout.html.twig</argument>
         </argument>
         <argument key="autoescape">name</argument>
-        <argument key="cache">C:/xampp/htdocs/FormerDUTStudents/var/cache/dev/twig</argument>
+        <argument key="cache">C:\xampp\htdocs\FormerDUTStudents\var\cache\dev/twig</argument>
         <argument key="charset">UTF-8</argument>
         <argument key="paths" type="collection"/>
         <argument key="date" type="collection">
@@ -2932,7 +2931,7 @@
         <argument>younes.gua@gmail.com</argument>
       </call>
       <call method="setPassword">
-        <argument>amdnvidia07</argument>
+        <argument>prN2MpFqdG00</argument>
       </call>
       <call method="setAuthMode">
         <argument>login</argument>
@@ -2952,13 +2951,13 @@
       </argument>
       <argument type="service" id="swiftmailer.mailer.default.transport.eventdispatcher"/>
       <call method="setHost">
-        <argument>smtp.gmail.com</argument>
+        <argument>mail.smtp2go.com</argument>
       </call>
       <call method="setPort">
-        <argument>465</argument>
+        <argument>2525</argument>
       </call>
       <call method="setEncryption">
-        <argument>ssl</argument>
+        <argument>tls</argument>
       </call>
       <call method="setTimeout">
         <argument>30</argument>
@@ -3000,6 +2999,18 @@
     <service id="doctrine_cache.abstract.wincache" class="Doctrine\Common\Cache\WinCacheCache" abstract="true"/>
     <service id="doctrine_cache.abstract.xcache" class="Doctrine\Common\Cache\XcacheCache" abstract="true"/>
     <service id="doctrine_cache.abstract.zenddata" class="Doctrine\Common\Cache\ZendDataCache" abstract="true"/>
+    <service id="doctrine_cache.contains_command" class="Doctrine\Bundle\DoctrineCacheBundle\Command\ContainsCommand">
+      <tag name="console.command"/>
+    </service>
+    <service id="doctrine_cache.delete_command" class="Doctrine\Bundle\DoctrineCacheBundle\Command\DeleteCommand">
+      <tag name="console.command"/>
+    </service>
+    <service id="doctrine_cache.flush_command" class="Doctrine\Bundle\DoctrineCacheBundle\Command\FlushCommand">
+      <tag name="console.command"/>
+    </service>
+    <service id="doctrine_cache.stats_command" class="Doctrine\Bundle\DoctrineCacheBundle\Command\StatsCommand">
+      <tag name="console.command"/>
+    </service>
     <service id="doctrine.dbal.logger.chain" class="Doctrine\DBAL\Logging\LoggerChain" public="false" abstract="true">
       <call method="addLogger">
         <argument type="service" id="doctrine.dbal.logger"/>
@@ -3138,7 +3149,7 @@
         <argument type="service" id="doctrine.orm.default_metadata_driver"/>
       </call>
       <call method="setProxyDir">
-        <argument>C:/xampp/htdocs/FormerDUTStudents/var/cache/dev/doctrine/orm/Proxies</argument>
+        <argument>C:\xampp\htdocs\FormerDUTStudents\var\cache\dev/doctrine/orm/Proxies</argument>
       </call>
       <call method="setProxyNamespace">
         <argument>Proxies</argument>
@@ -3176,17 +3187,17 @@
     </service>
     <service id="doctrine_cache.providers.doctrine.orm.default_metadata_cache" class="Doctrine\Common\Cache\ArrayCache">
       <call method="setNamespace">
-        <argument>sf2orm_default_36f00c65883ee59274bc8918c2f5e19925f9b7b589e8b608c414a09676108af7</argument>
+        <argument>sf_orm_default_ecce4deaa8242ba4162607a1674701f5e4f7e2ce80981784f85cebb039532395</argument>
       </call>
     </service>
     <service id="doctrine_cache.providers.doctrine.orm.default_result_cache" class="Doctrine\Common\Cache\ArrayCache">
       <call method="setNamespace">
-        <argument>sf2orm_default_36f00c65883ee59274bc8918c2f5e19925f9b7b589e8b608c414a09676108af7</argument>
+        <argument>sf_orm_default_ecce4deaa8242ba4162607a1674701f5e4f7e2ce80981784f85cebb039532395</argument>
       </call>
     </service>
     <service id="doctrine_cache.providers.doctrine.orm.default_query_cache" class="Doctrine\Common\Cache\ArrayCache">
       <call method="setNamespace">
-        <argument>sf2orm_default_36f00c65883ee59274bc8918c2f5e19925f9b7b589e8b608c414a09676108af7</argument>
+        <argument>sf_orm_default_ecce4deaa8242ba4162607a1674701f5e4f7e2ce80981784f85cebb039532395</argument>
       </call>
     </service>
     <service id="doctrine.orm.default_entity_listener_resolver" class="Doctrine\Bundle\DoctrineBundle\Mapping\ContainerAwareEntityListenerResolver">
@@ -3729,7 +3740,7 @@
       <argument>jms_serializer.metadata_driver</argument>
     </service>
     <service id="jms_serializer.metadata.cache.file_cache" class="Metadata\Cache\FileCache" public="false">
-      <argument>C:/xampp/htdocs/FormerDUTStudents/var/cache/dev/jms_serializer</argument>
+      <argument>C:\xampp\htdocs\FormerDUTStudents\var\cache\dev/jms_serializer</argument>
     </service>
     <service id="jms_serializer.metadata_factory" class="Metadata\MetadataFactory" public="false">
       <argument type="service" id="jms_serializer.metadata.lazy_loading_driver"/>
@@ -4237,7 +4248,7 @@
     <service id="cache.app.recorder_inner" class="Symfony\Component\Cache\Adapter\FilesystemAdapter" public="false" lazy="true">
       <argument>dAp1A7aRV9</argument>
       <argument>0</argument>
-      <argument>C:/xampp/htdocs/FormerDUTStudents/var/cache/dev/pools</argument>
+      <argument>C:\xampp\htdocs\FormerDUTStudents\var\cache\dev/pools</argument>
       <call method="setLogger">
         <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       </call>
@@ -4245,32 +4256,32 @@
     <service id="cache.system.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false" lazy="true">
       <argument>U+e41XSllD</argument>
       <argument>0</argument>
-      <argument>3RXXDsBUCupOs5Fni0hfzD</argument>
-      <argument>C:/xampp/htdocs/FormerDUTStudents/var/cache/dev/pools</argument>
+      <argument>vmPu1kvNpiaI1rXGcjLEqp</argument>
+      <argument>C:\xampp\htdocs\FormerDUTStudents\var\cache\dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
     <service id="cache.validator.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false" lazy="true">
       <argument>vAtZ1uOCo1</argument>
       <argument>0</argument>
-      <argument>3RXXDsBUCupOs5Fni0hfzD</argument>
-      <argument>C:/xampp/htdocs/FormerDUTStudents/var/cache/dev/pools</argument>
+      <argument>vmPu1kvNpiaI1rXGcjLEqp</argument>
+      <argument>C:\xampp\htdocs\FormerDUTStudents\var\cache\dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
     <service id="cache.serializer.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false" lazy="true">
       <argument>SnSG7bDoPw</argument>
       <argument>0</argument>
-      <argument>3RXXDsBUCupOs5Fni0hfzD</argument>
-      <argument>C:/xampp/htdocs/FormerDUTStudents/var/cache/dev/pools</argument>
+      <argument>vmPu1kvNpiaI1rXGcjLEqp</argument>
+      <argument>C:\xampp\htdocs\FormerDUTStudents\var\cache\dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
     <service id="cache.annotations.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false" lazy="true">
       <argument>PEhk+ENofM</argument>
       <argument>0</argument>
-      <argument>3RXXDsBUCupOs5Fni0hfzD</argument>
-      <argument>C:/xampp/htdocs/FormerDUTStudents/var/cache/dev/pools</argument>
+      <argument>vmPu1kvNpiaI1rXGcjLEqp</argument>
+      <argument>C:\xampp\htdocs\FormerDUTStudents\var\cache\dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
@@ -4359,6 +4370,7 @@
     <service id="Swift_Transport" alias="swiftmailer.mailer.default.transport.spool" public="false"/>
     <service id="mailer" alias="swiftmailer.mailer.default"/>
     <service id="Doctrine\DBAL\Driver\Connection" alias="doctrine.dbal.default_connection" public="false"/>
+    <service id="Doctrine\DBAL\Connection" alias="doctrine.dbal.default_connection" public="false"/>
     <service id="Doctrine\Common\Persistence\ManagerRegistry" alias="doctrine" public="false"/>
     <service id="database_connection" alias="doctrine.dbal.default_connection"/>
     <service id="doctrine.dbal.event_manager" alias="doctrine.dbal.default_connection.event_manager" public="false"/>

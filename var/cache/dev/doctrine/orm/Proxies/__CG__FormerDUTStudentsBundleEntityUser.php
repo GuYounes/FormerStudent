@@ -64,10 +64,10 @@ class User extends \FormerDUTStudentsBundle\Entity\User implements \Doctrine\ORM
     public function __sleep()
     {
         if ($this->__isInitialized__) {
-            return ['__isInitialized__', '' . "\0" . 'FormerDUTStudentsBundle\\Entity\\User' . "\0" . 'student', '' . "\0" . 'FormerDUTStudentsBundle\\Entity\\User' . "\0" . 'id', '' . "\0" . 'FormerDUTStudentsBundle\\Entity\\User' . "\0" . 'username', '' . "\0" . 'FormerDUTStudentsBundle\\Entity\\User' . "\0" . 'password', '' . "\0" . 'FormerDUTStudentsBundle\\Entity\\User' . "\0" . 'salt', '' . "\0" . 'FormerDUTStudentsBundle\\Entity\\User' . "\0" . 'roles', '' . "\0" . 'FormerDUTStudentsBundle\\Entity\\User' . "\0" . 'validated'];
+            return ['__isInitialized__', '' . "\0" . 'FormerDUTStudentsBundle\\Entity\\User' . "\0" . 'student', '' . "\0" . 'FormerDUTStudentsBundle\\Entity\\User' . "\0" . 'id', '' . "\0" . 'FormerDUTStudentsBundle\\Entity\\User' . "\0" . 'username', '' . "\0" . 'FormerDUTStudentsBundle\\Entity\\User' . "\0" . 'password', '' . "\0" . 'FormerDUTStudentsBundle\\Entity\\User' . "\0" . 'salt', '' . "\0" . 'FormerDUTStudentsBundle\\Entity\\User' . "\0" . 'roles'];
         }
 
-        return ['__isInitialized__', '' . "\0" . 'FormerDUTStudentsBundle\\Entity\\User' . "\0" . 'student', '' . "\0" . 'FormerDUTStudentsBundle\\Entity\\User' . "\0" . 'id', '' . "\0" . 'FormerDUTStudentsBundle\\Entity\\User' . "\0" . 'username', '' . "\0" . 'FormerDUTStudentsBundle\\Entity\\User' . "\0" . 'password', '' . "\0" . 'FormerDUTStudentsBundle\\Entity\\User' . "\0" . 'salt', '' . "\0" . 'FormerDUTStudentsBundle\\Entity\\User' . "\0" . 'roles', '' . "\0" . 'FormerDUTStudentsBundle\\Entity\\User' . "\0" . 'validated'];
+        return ['__isInitialized__', '' . "\0" . 'FormerDUTStudentsBundle\\Entity\\User' . "\0" . 'student', '' . "\0" . 'FormerDUTStudentsBundle\\Entity\\User' . "\0" . 'id', '' . "\0" . 'FormerDUTStudentsBundle\\Entity\\User' . "\0" . 'username', '' . "\0" . 'FormerDUTStudentsBundle\\Entity\\User' . "\0" . 'password', '' . "\0" . 'FormerDUTStudentsBundle\\Entity\\User' . "\0" . 'salt', '' . "\0" . 'FormerDUTStudentsBundle\\Entity\\User' . "\0" . 'roles'];
     }
 
     /**
@@ -307,28 +307,6 @@ class User extends \FormerDUTStudentsBundle\Entity\User implements \Doctrine\ORM
         $this->__initializer__ && $this->__initializer__->__invoke($this, 'getStudent', []);
 
         return parent::getStudent();
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    public function setValidated($validated)
-    {
-
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setValidated', [$validated]);
-
-        return parent::setValidated($validated);
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    public function getValidated()
-    {
-
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getValidated', []);
-
-        return parent::getValidated();
     }
 
 }

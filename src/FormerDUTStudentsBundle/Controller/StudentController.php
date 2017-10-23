@@ -4,8 +4,10 @@ namespace FormerDUTStudentsBundle\Controller;
 
 use FormerDUTStudentsBundle\Entity\StudentFormation;
 use FormerDUTStudentsBundle\Entity\Student;
+use FormerDUTStudentsBundle\Entity\ArrayCollection;
 use JMS\Serializer\SerializationContext;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\Config\Definition\Exception\Exception;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
@@ -35,13 +37,13 @@ class StudentController extends Controller
     {
         $repository = $this->getDoctrine()
             ->getManager()
-            ->getRepository('FormerDUTStudentsBundle:User');
+            ->getRepository('FormerDUTStudentsBundle:Student');
 
         // Get all students
-        $users = $repository->findBy(array('validated' => true));
+        $students = $repository->findBy(array('validated' => true));
 
         // Serialize
-        $data = $this->get('jms_serializer')->serialize($users, 'json', SerializationContext::create()->setGroups(array('toSerialize')));
+        $data = $this->get('jms_serializer')->serialize($students, 'json', SerializationContext::create()->setGroups(array('toSerialize')));
 
         return new Response($data);
     }
@@ -50,13 +52,13 @@ class StudentController extends Controller
     {
         $repository = $this->getDoctrine()
             ->getManager()
-            ->getRepository('FormerDUTStudentsBundle:User');
+            ->getRepository('FormerDUTStudentsBundle:Student');
 
         // Get all students
-        $users = $repository->findBy(array('validated' => false));
+        $students = $repository->findBy(array('validated' => false));
 
         // Serialize
-        $data = $this->get('jms_serializer')->serialize($users, 'json', SerializationContext::create()->setGroups(array('toSerialize')));
+        $data = $this->get('jms_serializer')->serialize($students, 'json', SerializationContext::create()->setGroups(array('toSerialize')));
 
         return new Response($data);
     }
@@ -125,13 +127,19 @@ class StudentController extends Controller
         // Generate the user => login, password, roles...
         $userGenerator = $this->get('former_dut_students.user');
         $user = $userGenerator->generateUser($student);
+
+        if($this->get('security.authorization_checker')->isGranted('ROLE_ADMIN')) { $user->setValidated(true);}
+
         $student->setUser($user);
 
         // Save
         $em->persist($user);
         $em->flush();
 
-        return new Response("true");
+        // Serialize
+        $data = $this->get('jms_serializer')->serialize($student, 'json', SerializationContext::create()->setGroups(array('toSerialize')));
+
+        return new Response($data);
     }
 
 
@@ -176,36 +184,83 @@ class StudentController extends Controller
      */
     public function addStudentsAction(Request $request)
     {
+        // Student already in db
+        // Determined on mail
+        $alreadyExists = 0;
+
+        // Student added in db
+        $addedStudent = 0;
+
+        // Path to the profile page
+        $page = $this->container->getParameter('profile_page');
+
+        // Mail sender
+        $sender = $this->container->getParameter('mailer_user');
+
+        // Path to IUT logo
+        $pathToIUTLogo = $this->container->getParameter('path_to_IUT_logo');
+
         $em = $this->getDoctrine()->getManager();
+        $repository = $em->getRepository('FormerDUTStudentsBundle:Student');
         $userGenerator = $this->get('former_dut_students.user');
 
         // Get the json
         $data = $request->getContent();
 
         // Get an array of students
-        $students = json_decode($request->getContent(), true)["students"];
+        $students = json_decode($data, true)["students"];
 
         foreach($students as $studentArray)
         {
+            if($repository->checkIfMailExists($studentArray["mail"]))
+            {
+                $alreadyExists++;
+                continue;
+            }
+
             $student = new Student($studentArray["name"], $studentArray["lastName"], $studentArray["mail"], $studentArray["mail2"], $studentArray["phone"], $studentArray["company"], $studentArray["job"]);
+            $student->setValidated(true);
 
             // Generate the user => login, password, roles...
             $user = $userGenerator->generateUser($student);
-            $user->setValidated(true);
             $student->setUser($user);
 
             // Save
             $em->persist($user);
+            $addedStudent++;
 
-            //TODO send mail to student
+            $em->flush();
+
+            $message = (new \Swift_Message())
+                ->setFrom($sender)
+                ->setTo($student->getMail())
+                ->setSubject("Bienvenue sur l'annuaire des anciens !");
+
+            // Data for the template
+            $params = array('username' => $user->getUsername(),
+                'password' => $user->getPassword(),
+                'page' => $page,
+                'id' => $student->getId(),
+                'img_src' => $pathToIUTLogo
+            );
+
+            //$params['img_src'] = $message->embed(\Swift_Image::fromPath($pathToIUTLogo));
+
+            $content = $this->renderView('FormerDUTStudentsBundle:Emails:welcome.html.twig', $params);
+
+            $message->setBody($content, 'text/html');
+
+            $this->get('mailer')->send($message);
         }
 
-        $em->flush();
+        $data = array(
+            "alreadyExists" => $alreadyExists,
+            "addedStudents" => $addedStudent,
+        );
+        $data = $this->get('jms_serializer')->serialize($data, 'json');
 
-        return new Response("true");
+        return new Response($data);
     }
-
-
 
     /**
      * @param Request $request
@@ -475,7 +530,7 @@ class StudentController extends Controller
         $student = $repository->find($id);
 
         // Validate the student
-        $student->getUser()->setValidated(true);
+        $student->setValidated(true);
 
         // Serialize the student into a json with the "toSerialize" Group
         $data = $this->get('jms_serializer')->serialize($student, 'json', SerializationContext::create()->setGroups(array('toSerialize')));

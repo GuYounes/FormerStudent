@@ -64,10 +64,10 @@ class Student extends \FormerDUTStudentsBundle\Entity\Student implements \Doctri
     public function __sleep()
     {
         if ($this->__isInitialized__) {
-            return ['__isInitialized__', '' . "\0" . 'FormerDUTStudentsBundle\\Entity\\Student' . "\0" . 'studentFormations', '' . "\0" . 'FormerDUTStudentsBundle\\Entity\\Student' . "\0" . 'user', '' . "\0" . 'FormerDUTStudentsBundle\\Entity\\Student' . "\0" . 'id', '' . "\0" . 'FormerDUTStudentsBundle\\Entity\\Student' . "\0" . 'name', '' . "\0" . 'FormerDUTStudentsBundle\\Entity\\Student' . "\0" . 'lastName', '' . "\0" . 'FormerDUTStudentsBundle\\Entity\\Student' . "\0" . 'mail', '' . "\0" . 'FormerDUTStudentsBundle\\Entity\\Student' . "\0" . 'mail2', '' . "\0" . 'FormerDUTStudentsBundle\\Entity\\Student' . "\0" . 'phone', '' . "\0" . 'FormerDUTStudentsBundle\\Entity\\Student' . "\0" . 'company', '' . "\0" . 'FormerDUTStudentsBundle\\Entity\\Student' . "\0" . 'job'];
+            return ['__isInitialized__', '' . "\0" . 'FormerDUTStudentsBundle\\Entity\\Student' . "\0" . 'studentFormations', '' . "\0" . 'FormerDUTStudentsBundle\\Entity\\Student' . "\0" . 'user', '' . "\0" . 'FormerDUTStudentsBundle\\Entity\\Student' . "\0" . 'id', '' . "\0" . 'FormerDUTStudentsBundle\\Entity\\Student' . "\0" . 'name', '' . "\0" . 'FormerDUTStudentsBundle\\Entity\\Student' . "\0" . 'lastName', '' . "\0" . 'FormerDUTStudentsBundle\\Entity\\Student' . "\0" . 'mail', '' . "\0" . 'FormerDUTStudentsBundle\\Entity\\Student' . "\0" . 'mail2', '' . "\0" . 'FormerDUTStudentsBundle\\Entity\\Student' . "\0" . 'phone', '' . "\0" . 'FormerDUTStudentsBundle\\Entity\\Student' . "\0" . 'company', '' . "\0" . 'FormerDUTStudentsBundle\\Entity\\Student' . "\0" . 'job', '' . "\0" . 'FormerDUTStudentsBundle\\Entity\\Student' . "\0" . 'validated'];
         }
 
-        return ['__isInitialized__', '' . "\0" . 'FormerDUTStudentsBundle\\Entity\\Student' . "\0" . 'studentFormations', '' . "\0" . 'FormerDUTStudentsBundle\\Entity\\Student' . "\0" . 'user', '' . "\0" . 'FormerDUTStudentsBundle\\Entity\\Student' . "\0" . 'id', '' . "\0" . 'FormerDUTStudentsBundle\\Entity\\Student' . "\0" . 'name', '' . "\0" . 'FormerDUTStudentsBundle\\Entity\\Student' . "\0" . 'lastName', '' . "\0" . 'FormerDUTStudentsBundle\\Entity\\Student' . "\0" . 'mail', '' . "\0" . 'FormerDUTStudentsBundle\\Entity\\Student' . "\0" . 'mail2', '' . "\0" . 'FormerDUTStudentsBundle\\Entity\\Student' . "\0" . 'phone', '' . "\0" . 'FormerDUTStudentsBundle\\Entity\\Student' . "\0" . 'company', '' . "\0" . 'FormerDUTStudentsBundle\\Entity\\Student' . "\0" . 'job'];
+        return ['__isInitialized__', '' . "\0" . 'FormerDUTStudentsBundle\\Entity\\Student' . "\0" . 'studentFormations', '' . "\0" . 'FormerDUTStudentsBundle\\Entity\\Student' . "\0" . 'user', '' . "\0" . 'FormerDUTStudentsBundle\\Entity\\Student' . "\0" . 'id', '' . "\0" . 'FormerDUTStudentsBundle\\Entity\\Student' . "\0" . 'name', '' . "\0" . 'FormerDUTStudentsBundle\\Entity\\Student' . "\0" . 'lastName', '' . "\0" . 'FormerDUTStudentsBundle\\Entity\\Student' . "\0" . 'mail', '' . "\0" . 'FormerDUTStudentsBundle\\Entity\\Student' . "\0" . 'mail2', '' . "\0" . 'FormerDUTStudentsBundle\\Entity\\Student' . "\0" . 'phone', '' . "\0" . 'FormerDUTStudentsBundle\\Entity\\Student' . "\0" . 'company', '' . "\0" . 'FormerDUTStudentsBundle\\Entity\\Student' . "\0" . 'job', '' . "\0" . 'FormerDUTStudentsBundle\\Entity\\Student' . "\0" . 'validated'];
     }
 
     /**
@@ -395,6 +395,28 @@ class Student extends \FormerDUTStudentsBundle\Entity\Student implements \Doctri
         $this->__initializer__ && $this->__initializer__->__invoke($this, 'getStudentFormations', []);
 
         return parent::getStudentFormations();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setValidated($validated)
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setValidated', [$validated]);
+
+        return parent::setValidated($validated);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getValidated()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getValidated', []);
+
+        return parent::getValidated();
     }
 
 }

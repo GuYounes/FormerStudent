@@ -69,22 +69,12 @@ class User implements UserInterface
      */
     private $roles = array();
 
-    /**
-     * @var boolean
-     *
-     * @ORM\Column(name="validated", type="boolean")
-     *
-     * @Serializer\Groups({"toSerialize", "withoutStudent"})
-     */
-    private $validated;
-
-    public function __construct($username, $password, $salt, $roles, $validated)
+    public function __construct($username, $password, $salt, $roles)
     {
         $this->username = $username;
         $this->password = $password;
         $this->salt = $salt;
         $this->roles = $roles;
-        $this->validated = $validated;
     }
 
     /**
@@ -222,28 +212,4 @@ class User implements UserInterface
         return $this->student;
     }
 
-
-    /**
-     * Set validated
-     *
-     * @param boolean $validated
-     *
-     * @return User
-     */
-    public function setValidated($validated)
-    {
-        $this->validated = $validated;
-
-        return $this;
-    }
-
-    /**
-     * Get validated
-     *
-     * @return boolean
-     */
-    public function getValidated()
-    {
-        return $this->validated;
-    }
 }
