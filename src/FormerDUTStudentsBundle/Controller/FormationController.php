@@ -20,9 +20,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
  * @package FormerDUTStudentsBundle\Controller
  *
  * CRUD on formations
- * Only available to admin
  *
- * @Security("is_granted('ROLE_ADMIN')")
  */
 class FormationController extends Controller
 {
@@ -31,8 +29,6 @@ class FormationController extends Controller
      * @return Response
      *
      * Get all formations
-     *
-     * @Security("has_role('ROLE_STUDENT')")
      *
      * /formations GET
      */
@@ -94,6 +90,8 @@ class FormationController extends Controller
      *
      * The parameter "closingDate" is optional
      *
+     * @Security("is_granted('ROLE_ADMIN')")
+     *
      * /formations POST
      */
     public function addFormationAction(Request $request)
@@ -122,6 +120,8 @@ class FormationController extends Controller
      *
      * Delete one formation
      *
+     * @Security("is_granted('ROLE_ADMIN')")
+     *
      * /formations/{id} DELETE
      */
     public function deleteFormationAction(Request $request, $id)
@@ -146,6 +146,8 @@ class FormationController extends Controller
      *      "formations": [3, 5]
      * }
      *
+     * @Security("is_granted('ROLE_ADMIN')")
+     *
      * /formations DELETE
      */
     public function deleteFormationsAction(Request $request)
@@ -155,7 +157,7 @@ class FormationController extends Controller
             ->getRepository('FormerDUTStudentsBundle:Formation');
 
         // Get an array of formation's IDs
-        $formations = json_decode($request->getContent(), true);
+        $formations = json_decode($request->getContent(), true)["formations"];
 
         // This method will delete formation
         // No need to flush
@@ -180,6 +182,8 @@ class FormationController extends Controller
      * }
      *
      * All parameters are optional
+     *
+     * @Security("is_granted('ROLE_ADMIN')")
      *
      * /formations/{id} PUT
      */

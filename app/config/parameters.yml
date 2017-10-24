@@ -15,5 +15,3 @@ parameters:
     secret: 5140dac90df263cd719ffd8970694d978f4417b0
 
     profile_page: http://127.0.0.1/front/compte.html
-
-    path_to_IUT_logo: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcR-reQU9_FTsLDvHNQN6bEcNmcB2JHZFaw7Tv455i6WPM3oLy

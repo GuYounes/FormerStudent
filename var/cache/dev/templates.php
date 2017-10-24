@@ -84,6 +84,8 @@
   'DoctrineBundle:Collector:explain.html.twig' => __DIR__.'/../../../vendor/doctrine/doctrine-bundle/Resources/views/Collector/explain.html.twig',
   'FormerDUTStudentsBundle:Default:formulaire.html.twig' => __DIR__.'/../../../src/FormerDUTStudentsBundle/Resources/views/Default/formulaire.html.twig',
   'FormerDUTStudentsBundle:Default:index.html.twig' => __DIR__.'/../../../src/FormerDUTStudentsBundle/Resources/views/Default/index.html.twig',
+  'FormerDUTStudentsBundle:Emails:confirmation.html.twig' => __DIR__.'/../../../src/FormerDUTStudentsBundle/Resources/views/Emails/confirmation.html.twig',
+  'FormerDUTStudentsBundle:Emails:welcome.html.twig' => __DIR__.'/../../../src/FormerDUTStudentsBundle/Resources/views/Emails/welcome.html.twig',
   'DebugBundle:Profiler:dump.html.twig' => __DIR__.'/../../../vendor/symfony/symfony/src/Symfony/Bundle/DebugBundle/Resources/views/Profiler/dump.html.twig',
   'WebProfilerBundle:Collector:ajax.html.twig' => __DIR__.'/../../../vendor/symfony/symfony/src/Symfony/Bundle/WebProfilerBundle/Resources/views/Collector/ajax.html.twig',
   'WebProfilerBundle:Collector:cache.html.twig' => __DIR__.'/../../../vendor/symfony/symfony/src/Symfony/Bundle/WebProfilerBundle/Resources/views/Collector/cache.html.twig',

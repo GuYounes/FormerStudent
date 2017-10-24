@@ -15,11 +15,11 @@ class __TwigTemplate_6970094be538d18fe906aa4c1d7e4e867b522adae22c46506f0cdee6da9
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_d95c571e934d6e25fc6c7f7b6f2e451db8f8824f401d5f0c454833767163f5d3 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_d95c571e934d6e25fc6c7f7b6f2e451db8f8824f401d5f0c454833767163f5d3->enter($__internal_d95c571e934d6e25fc6c7f7b6f2e451db8f8824f401d5f0c454833767163f5d3_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "FormerDUTStudentsBundle:Emails:welcome.html.twig"));
+        $__internal_6546b2fee00209cac71a1d0505908555ad13695e2ee418202bdbeda924e2c819 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_6546b2fee00209cac71a1d0505908555ad13695e2ee418202bdbeda924e2c819->enter($__internal_6546b2fee00209cac71a1d0505908555ad13695e2ee418202bdbeda924e2c819_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "FormerDUTStudentsBundle:Emails:welcome.html.twig"));
 
-        $__internal_e284e0429665a5645cc959200934236d8e319ed408f50e68a475bdb15e4d987d = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_e284e0429665a5645cc959200934236d8e319ed408f50e68a475bdb15e4d987d->enter($__internal_e284e0429665a5645cc959200934236d8e319ed408f50e68a475bdb15e4d987d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "FormerDUTStudentsBundle:Emails:welcome.html.twig"));
+        $__internal_aa2808bdb43b629892a8fd22635c9bc70e5ae2ad2870a49a8e74f2e0fa4c0ad7 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_aa2808bdb43b629892a8fd22635c9bc70e5ae2ad2870a49a8e74f2e0fa4c0ad7->enter($__internal_aa2808bdb43b629892a8fd22635c9bc70e5ae2ad2870a49a8e74f2e0fa4c0ad7_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "FormerDUTStudentsBundle:Emails:welcome.html.twig"));
 
         // line 1
         echo "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">
@@ -41,11 +41,7 @@ class __TwigTemplate_6970094be538d18fe906aa4c1d7e4e867b522adae22c46506f0cdee6da9
 
 \t</table><!-- /HEADER -->
 
-\t<!-- {
-\t    font-size: 14px;
-\t    font-family: Arial,Helvetica,sans-serif, sans-serif;
-\t    color: #3c4858;
-\t} -->
+\t
 
 
 \t<!-- BODY -->
@@ -59,28 +55,25 @@ class __TwigTemplate_6970094be538d18fe906aa4c1d7e4e867b522adae22c46506f0cdee6da9
 \t\t\t\t\t\t<tr>
 \t\t\t\t\t\t\t<td>
 
-\t\t\t\t\t\t\t\t<p><img src=\"";
-        // line 38
-        echo twig_escape_filter($this->env, (isset($context["img_src"]) || array_key_exists("img_src", $context) ? $context["img_src"] : (function () { throw new Twig_Error_Runtime('Variable "img_src" does not exist.', 38, $this->getSourceContext()); })()), "html", null, true);
-        echo "\" style=\"display: block; margin: auto; margin-bottom: 5%;\" /></p>
+\t\t\t\t\t\t\t\t<p><img src=\"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcR-reQU9_FTsLDvHNQN6bEcNmcB2JHZFaw7Tv455i6WPM3oLy\" style=\"display: block; margin: auto; margin-bottom: 5%;\" /></p>
 
 \t\t\t\t\t\t\t\t<h4 style=\"text-align: center; margin-bottom: 10%\">Bienvenue sur l'annuaire des anciens !</h4>
-\t\t\t\t\t\t\t\t<p>Félicitation ! Votre inscription au sein de l'annuaire des anciens du départment informatique de l'IUT de Metz à bien été validé.</p>
-\t\t\t\t\t\t\t\t<p style=\"margin-bottom: 5%\">Les informations pour se connecter à votre compte sont ci-dessous </p>
+\t\t\t\t\t\t\t\t<p>Félicitation ! Votre inscription au sein de l'annuaire des anciens du départment informatique de l'IUT de Metz a bien été validée.</p>
+\t\t\t\t\t\t\t\t<p style=\"margin-bottom: 5%\">Les informations pour se connecter à votre compte personnel se trouvent ci dessous </p>
 
 \t\t\t\t\t\t\t\t<p style=\"margin-bottom: 5%\">Login : ";
-        // line 44
-        echo twig_escape_filter($this->env, (isset($context["username"]) || array_key_exists("username", $context) ? $context["username"] : (function () { throw new Twig_Error_Runtime('Variable "username" does not exist.', 44, $this->getSourceContext()); })()), "html", null, true);
+        // line 40
+        echo twig_escape_filter($this->env, (isset($context["username"]) || array_key_exists("username", $context) ? $context["username"] : (function () { throw new Twig_Error_Runtime('Variable "username" does not exist.', 40, $this->getSourceContext()); })()), "html", null, true);
         echo "
-\t\t\t\t\t\t\t\t<br>
+\t\t\t\t\t\t\t\t\t<br>
 \t\t\t\t\t\t\t\tMot de passe : ";
-        // line 46
-        echo twig_escape_filter($this->env, (isset($context["password"]) || array_key_exists("password", $context) ? $context["password"] : (function () { throw new Twig_Error_Runtime('Variable "password" does not exist.', 46, $this->getSourceContext()); })()), "html", null, true);
+        // line 42
+        echo twig_escape_filter($this->env, (isset($context["password"]) || array_key_exists("password", $context) ? $context["password"] : (function () { throw new Twig_Error_Runtime('Variable "password" does not exist.', 42, $this->getSourceContext()); })()), "html", null, true);
         echo " </p>
 
-\t\t\t\t\t\t\t\t<p>Vous pouvez vous connectez à votre compte en cliquant <a href=";
-        // line 48
-        echo twig_escape_filter($this->env, (((isset($context["page"]) || array_key_exists("page", $context) ? $context["page"] : (function () { throw new Twig_Error_Runtime('Variable "page" does not exist.', 48, $this->getSourceContext()); })()) . "?id=") . (isset($context["id"]) || array_key_exists("id", $context) ? $context["id"] : (function () { throw new Twig_Error_Runtime('Variable "id" does not exist.', 48, $this->getSourceContext()); })())), "html", null, true);
+\t\t\t\t\t\t\t\t<p>Vous pouvez dès à présent vous connectez à votre compte en cliquant <a href=";
+        // line 44
+        echo twig_escape_filter($this->env, (((isset($context["page"]) || array_key_exists("page", $context) ? $context["page"] : (function () { throw new Twig_Error_Runtime('Variable "page" does not exist.', 44, $this->getSourceContext()); })()) . "?id=") . (isset($context["id"]) || array_key_exists("id", $context) ? $context["id"] : (function () { throw new Twig_Error_Runtime('Variable "id" does not exist.', 44, $this->getSourceContext()); })())), "html", null, true);
         echo ">ici</a> pour modifier vos informations personnelles.</p>\t\t\t\t\t\t
 
 
@@ -123,10 +116,10 @@ class __TwigTemplate_6970094be538d18fe906aa4c1d7e4e867b522adae22c46506f0cdee6da9
 </body>
 </html>";
         
-        $__internal_d95c571e934d6e25fc6c7f7b6f2e451db8f8824f401d5f0c454833767163f5d3->leave($__internal_d95c571e934d6e25fc6c7f7b6f2e451db8f8824f401d5f0c454833767163f5d3_prof);
+        $__internal_6546b2fee00209cac71a1d0505908555ad13695e2ee418202bdbeda924e2c819->leave($__internal_6546b2fee00209cac71a1d0505908555ad13695e2ee418202bdbeda924e2c819_prof);
 
         
-        $__internal_e284e0429665a5645cc959200934236d8e319ed408f50e68a475bdb15e4d987d->leave($__internal_e284e0429665a5645cc959200934236d8e319ed408f50e68a475bdb15e4d987d_prof);
+        $__internal_aa2808bdb43b629892a8fd22635c9bc70e5ae2ad2870a49a8e74f2e0fa4c0ad7->leave($__internal_aa2808bdb43b629892a8fd22635c9bc70e5ae2ad2870a49a8e74f2e0fa4c0ad7_prof);
 
     }
 
@@ -142,7 +135,7 @@ class __TwigTemplate_6970094be538d18fe906aa4c1d7e4e867b522adae22c46506f0cdee6da9
 
     public function getDebugInfo()
     {
-        return array (  83 => 48,  78 => 46,  73 => 44,  64 => 38,  25 => 1,);
+        return array (  76 => 44,  71 => 42,  66 => 40,  25 => 1,);
     }
 
     public function getSourceContext()
@@ -166,11 +159,7 @@ class __TwigTemplate_6970094be538d18fe906aa4c1d7e4e867b522adae22c46506f0cdee6da9
 
 \t</table><!-- /HEADER -->
 
-\t<!-- {
-\t    font-size: 14px;
-\t    font-family: Arial,Helvetica,sans-serif, sans-serif;
-\t    color: #3c4858;
-\t} -->
+\t
 
 
 \t<!-- BODY -->
@@ -184,17 +173,17 @@ class __TwigTemplate_6970094be538d18fe906aa4c1d7e4e867b522adae22c46506f0cdee6da9
 \t\t\t\t\t\t<tr>
 \t\t\t\t\t\t\t<td>
 
-\t\t\t\t\t\t\t\t<p><img src=\"{{ img_src }}\" style=\"display: block; margin: auto; margin-bottom: 5%;\" /></p>
+\t\t\t\t\t\t\t\t<p><img src=\"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcR-reQU9_FTsLDvHNQN6bEcNmcB2JHZFaw7Tv455i6WPM3oLy\" style=\"display: block; margin: auto; margin-bottom: 5%;\" /></p>
 
 \t\t\t\t\t\t\t\t<h4 style=\"text-align: center; margin-bottom: 10%\">Bienvenue sur l'annuaire des anciens !</h4>
-\t\t\t\t\t\t\t\t<p>Félicitation ! Votre inscription au sein de l'annuaire des anciens du départment informatique de l'IUT de Metz à bien été validé.</p>
-\t\t\t\t\t\t\t\t<p style=\"margin-bottom: 5%\">Les informations pour se connecter à votre compte sont ci-dessous </p>
+\t\t\t\t\t\t\t\t<p>Félicitation ! Votre inscription au sein de l'annuaire des anciens du départment informatique de l'IUT de Metz a bien été validée.</p>
+\t\t\t\t\t\t\t\t<p style=\"margin-bottom: 5%\">Les informations pour se connecter à votre compte personnel se trouvent ci dessous </p>
 
 \t\t\t\t\t\t\t\t<p style=\"margin-bottom: 5%\">Login : {{ username }}
-\t\t\t\t\t\t\t\t<br>
+\t\t\t\t\t\t\t\t\t<br>
 \t\t\t\t\t\t\t\tMot de passe : {{ password }} </p>
 
-\t\t\t\t\t\t\t\t<p>Vous pouvez vous connectez à votre compte en cliquant <a href={{ page ~ '?id=' ~ id }}>ici</a> pour modifier vos informations personnelles.</p>\t\t\t\t\t\t
+\t\t\t\t\t\t\t\t<p>Vous pouvez dès à présent vous connectez à votre compte en cliquant <a href={{ page ~ '?id=' ~ id }}>ici</a> pour modifier vos informations personnelles.</p>\t\t\t\t\t\t
 
 
 

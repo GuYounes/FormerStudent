@@ -18,7 +18,6 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
  *
  * CRUD on students
  *
- * @Security("is_granted('ROLE_STUDENT')")
  */
 class StudentController extends Controller
 {
@@ -48,6 +47,16 @@ class StudentController extends Controller
         return new Response($data);
     }
 
+    /**
+     * @param Request $request
+     * @return Response
+     *
+     * Get all unvalidated students
+     *
+     * @Security("is_granted('ROLE_ADMIN')")
+     *
+     *  /students/unvalidated GET
+     */
     public function getUnvalidatedStudentsAction(Request $request)
     {
         $repository = $this->getDoctrine()
@@ -73,7 +82,7 @@ class StudentController extends Controller
      *
      * Get a student from his id
      *
-     * @Security("has_role('ROLE_ADMIN')")
+     * @Security("is_granted('ROLE_ADMIN')")
      *
      * /students/{id} GET
      */
@@ -118,17 +127,65 @@ class StudentController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
 
+        $repository = $em->getRepository('FormerDUTStudentsBundle:Student');
+
         // Get the json
         $data = $request->getContent();
+
+        // Path to the profile page
+        $page = $this->container->getParameter('profile_page');
+
+        // Mail sender
+        $sender = $this->container->getParameter('mailer_user');
 
         // Deserialize the json into a student object
         $student = $this->get('jms_serializer')->deserialize($data, 'FormerDUTStudentsBundle\Entity\Student', 'json');
 
+        if($repository->checkIfMailExists($student->getMail()))
+        {
+
+            return new Response("false");
+        }
+
         // Generate the user => login, password, roles...
-        $userGenerator = $this->get('former_dut_students.user');
+            $userGenerator = $this->get('former_dut_students.user');
         $user = $userGenerator->generateUser($student);
 
-        if($this->get('security.authorization_checker')->isGranted('ROLE_ADMIN')) { $user->setValidated(true);}
+        if($this->get('security.authorization_checker')->isGranted('ROLE_ADMIN'))
+        {
+            $student->setValidated(true);
+
+            $message = (new \Swift_Message())
+                ->setFrom($sender)
+                ->setTo($student->getMail())
+                ->setSubject("Bienvenue sur l'annuaire des anciens !");
+
+            // Data for the template
+            $params = array('username' => $user->getUsername(),
+                'password' => $user->getPassword(),
+                'page' => $page,
+                'id' => $student->getId()
+            );
+
+            $content = $this->renderView('FormerDUTStudentsBundle:Emails:welcome.html.twig', $params);
+
+            $message->setBody($content, 'text/html');
+
+            $this->get('mailer')->send($message);
+        }
+        else
+        {
+            $message = (new \Swift_Message())
+                ->setFrom($sender)
+                ->setTo($student->getMail())
+                ->setSubject("Bienvenue sur l'annuaire des anciens !");
+
+            $content = $this->renderView('FormerDUTStudentsBundle:Emails:confirmation.html.twig');
+
+            $message->setBody($content, 'text/html');
+
+            $this->get('mailer')->send($message);
+        }
 
         $student->setUser($user);
 
@@ -243,8 +300,6 @@ class StudentController extends Controller
                 'id' => $student->getId(),
                 'img_src' => $pathToIUTLogo
             );
-
-            //$params['img_src'] = $message->embed(\Swift_Image::fromPath($pathToIUTLogo));
 
             $content = $this->renderView('FormerDUTStudentsBundle:Emails:welcome.html.twig', $params);
 
@@ -526,11 +581,37 @@ class StudentController extends Controller
 
         $repository = $em->getRepository('FormerDUTStudentsBundle:Student');
 
+        // Path to the profile page
+        $page = $this->container->getParameter('profile_page');
+
+        // Mail sender
+        $sender = $this->container->getParameter('mailer_user');
+
         // Get student
         $student = $repository->find($id);
 
+        $user = $student->getUser();
+
         // Validate the student
         $student->setValidated(true);
+
+        $message = (new \Swift_Message())
+            ->setFrom($sender)
+            ->setTo($student->getMail())
+            ->setSubject("Bienvenue sur l'annuaire des anciens !");
+
+        // Data for the template
+        $params = array('username' => $user->getUsername(),
+            'password' => $user->getPassword(),
+            'page' => $page,
+            'id' => $student->getId()
+        );
+
+        $content = $this->renderView('FormerDUTStudentsBundle:Emails:welcome.html.twig', $params);
+
+        $message->setBody($content, 'text/html');
+
+        $this->get('mailer')->send($message);
 
         // Serialize the student into a json with the "toSerialize" Group
         $data = $this->get('jms_serializer')->serialize($student, 'json', SerializationContext::create()->setGroups(array('toSerialize')));

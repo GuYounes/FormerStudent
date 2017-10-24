@@ -110,7 +110,7 @@ class Student
      *
      * @Serializer\Groups({"toSerialize", "withoutStudent"})
      */
-    private $validated;
+    private $validated = false;
 
 
     public function __construct($name, $lastName, $mail, $mail2, $phone, $company, $job)
